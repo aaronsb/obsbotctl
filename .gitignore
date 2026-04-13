@@ -1,0 +1,8 @@
+/target
+**/*.rs.bk
+.direnv/
+.envrc.local
+
+# Local-only working notes — not published
+/notes/
+/CLAUDE.md

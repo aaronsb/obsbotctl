@@ -1,0 +1,70 @@
+<!DOCTYPE node PUBLIC
+ "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!--
+  com.obsbot.Control1 — D-Bus interface for obsbotd
+
+  SCAFFOLD. This file sketches the intended interface tree. None of it is
+  served yet.
+
+  Bus:    system
+  Service: com.obsbot.Control1
+  Root:   /com/obsbot/Control1
+
+  Objects:
+    /com/obsbot/Control1/Manager         (always present)
+    /com/obsbot/Control1/Device/N        (one per connected camera)
+-->
+<node>
+
+  <!-- Manager: device enumeration and lifecycle signals. -->
+  <interface name="com.obsbot.Control1.Manager">
+    <method name="ListDevices">
+      <arg type="ao" name="devices" direction="out"/>
+    </method>
+    <signal name="DeviceAdded">
+      <arg type="o" name="path"/>
+    </signal>
+    <signal name="DeviceRemoved">
+      <arg type="o" name="path"/>
+    </signal>
+  </interface>
+
+  <!-- Device: identity and capability introspection. -->
+  <interface name="com.obsbot.Control1.Device">
+    <property type="s" name="Model"        access="read"/>
+    <property type="s" name="Serial"       access="read"/>
+    <property type="s" name="UsbPath"      access="read"/>
+    <property type="as" name="Capabilities" access="read"/>
+  </interface>
+
+  <!-- Camera: the actual control surface. Only operations supported by the
+       device's capability profile are valid; unsupported calls return the
+       org.freedesktop.DBus.Error.NotSupported error. -->
+  <interface name="com.obsbot.Control1.Camera">
+    <!-- PTZ. Values are normalized [-1.0, 1.0] for pan/tilt, [1.0, N] for zoom. -->
+    <method name="Pan">     <arg type="d" name="delta" direction="in"/></method>
+    <method name="Tilt">    <arg type="d" name="delta" direction="in"/></method>
+    <method name="Zoom">    <arg type="d" name="factor" direction="in"/></method>
+    <method name="Center"/>
+
+    <!-- Focus. -->
+    <method name="SetFocusAuto"/>
+    <method name="SetFocusAbsolute"><arg type="i" name="position" direction="in"/></method>
+
+    <!-- HDR. -->
+    <method name="SetHdrEnabled"><arg type="b" name="enabled" direction="in"/></method>
+
+    <!-- AI mode: one of none/group/human/hand/whiteboard/desk. -->
+    <method name="SetAiMode"><arg type="s" name="mode" direction="in"/></method>
+
+    <!-- Async events forwarded from REMO_* notification stream. -->
+    <signal name="EventTargetLost"/>
+    <signal name="EventAutoFlip"/>
+    <signal name="EventBatteryLow"/>
+    <signal name="EventModeSwitched">
+      <arg type="s" name="new_mode"/>
+    </signal>
+  </interface>
+
+</node>

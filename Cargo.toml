@@ -1,0 +1,40 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/obsbotctl-core",
+    "crates/obsbotd",
+    "crates/obsbotctl",
+]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+authors = ["Aaron Bockelie"]
+repository = "https://github.com/aaronsb/obsbotctl"
+rust-version = "1.75"
+
+# Workspace-wide dependency versions. Individual crates pick what they need.
+# Entries commented with "(planned)" are not used by the current scaffold but
+# document the intended stack for future sessions.
+[workspace.dependencies]
+thiserror = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# (planned) D-Bus server for obsbotd
+zbus = { version = "4", default-features = false, features = ["tokio"] }
+
+# (planned) USB and device access
+nusb = "0.1"
+udev = "0.8"
+rustix = { version = "0.38", features = ["fs"] }
+
+# (planned) Binary protocol parsing for XU payloads
+zerocopy = { version = "0.7", features = ["derive"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "debuginfo"

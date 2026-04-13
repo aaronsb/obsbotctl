@@ -1,0 +1,16 @@
+[package]
+name = "obsbotctl"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Command-line client for obsbotd (OBSBOT camera control)."
+
+[[bin]]
+name = "obsbotctl"
+path = "src/main.rs"
+
+[dependencies]
+obsbotctl-core = { path = "../obsbotctl-core" }
