@@ -1,0 +1,27 @@
+HTTP/2 200 
+server: Tengine
+content-type: application/zip
+content-length: 67095241
+strict-transport-security: max-age=31104000
+date: Mon, 23 Nov 2026 16:37:18 GMT
+x-oss-request-id: 6B046BBEBCB28E3630B2B5B0
+x-oss-cdn-auth: success
+accept-ranges: bytes
+etag: "6D92D2B7E499597D2C55F1BCBAED4482-64"
+last-modified: Wed, 30 Jul 2025 08:53:14 GMT
+x-oss-object-type: Multipart
+x-oss-hash-crc64ecma: 11451645843180752584
+x-oss-storage-class: Standard
+cache-control: max-age=31104000
+x-oss-version-id: null
+x-oss-server-time: 28
+access-control-allow-origin: *
+via: ens-cache18.l2us5[909,909,200-0,M], ens-cache18.l2us5[912,0], ens-cache3.us26[931,931,200-0,M], ens-cache7.us26[934,0]
+ali-swift-global-savetime: 1795451838
+x-cache: MISS TCP_MISS dirn:-2:-2
+x-swift-savetime: Mon, 23 Nov 2026 16:37:18 GMT
+x-swift-cachetime: 31104000
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+timing-allow-origin: *
+eagleid: 0819529b17954518376837502e
+

@@ -1,0 +1,8 @@
+capture time (local clock, UTC): 2026-11-23T16:31:53Z
+url: https://www.obsbot.com/service/docs/intellectual-property-rights
+date: Mon, 23 Nov 2026 16:31:52 GMT
+etag: "1702b-XhiFTZ4DdlbUV0GyGsQJxbRU5wQ"
+96056b2e5d6520d4ed5fa1a165aefa322d44889cbc34319934a640f544c7f72a  ip-rights.html
+rendered capture: loaded in Chrome (DevTools) at 2026-11-23T16:32:29Z; after 4 s the page's
+visible text was 1,258 characters of site navigation and footer only, with no body text
+(no occurrence of "trademark", "open source", "GPL", "third party" or "source code").

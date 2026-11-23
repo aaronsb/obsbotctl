@@ -1,0 +1,237 @@
+
+== 0. Tools
+work directory: <workdir>
+GNU strings (GNU Binutils) 2.47
+grep (GNU grep) 3.12-modified
+Python 3.14.10
+
+== 1. Download hashes (compare with SHA256SUMS)
+240591d4ab2dd39bf785e5fe289160af590138d83e0b011dac2fe4ca11b3fedd  <downloads>/Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin
+5e1ce4986fd4b140e3c67ce31ba3b209961cb3303fd88aac4cd2b85d4a2ae201  <downloads>/Obsbot_Center_OA_E_MacOS_Intel_2.0.16.433_release.dmg
+65ad247693e88cb78c52b7e3336b6d4df4b6bf0825aab3a48e0dec2a9e5f7d3d  <downloads>/Obsbot_Center_OA_E_Win_x64_2.0.16.433_release.exe
+c48512c90407224f1bc2cffbf331dfe0c9efe9166014b5bb674dfdc708f875d1  <downloads>/OBSBOTMeet2UserManual_ENv1.1.pdf
+53ef18253fe53f724dff227b660ad50fdd77bc27d1f7a92bfcc4e152678fde5a  <downloads>/libdev_v2_1_0_7.zip
+
+== 2. Firmware partition table
+AIFS.ubi       file offset 0x00000b00  size 0x00780000 (7864320 bytes)
+config         file offset 0x00780b00  size 0x00000d00 (3328 bytes)
+KERNEL.bin     file offset 0x00781800  size 0x003a0f20 (3804960 bytes)
+RECOVERY.bin   file offset 0x00b22720  size 0x003a0f20 (3804960 bytes)
+ROOTFS.ubi     file offset 0x00ec3640  size 0x021a0000 (35258368 bytes)
+UBOOT0.bin     file offset 0x03063640  size 0x00032e50 (208464 bytes)
+UBOOT1.bin     file offset 0x03096490  size 0x00032e50 (208464 bytes)
+UPDATERFS.ubi  file offset 0x030c92e0  size 0x00ce0000 (13500416 bytes)
+
+== 3. Kernel and bootloader images (U-Boot legacy uImage headers; times in UTC)
+KERNEL.bin    magic=0x27051956 os=Linux arch=2 built=2026-10-07 21:32:34 UTC name(32 bytes)='MVX4##I6C#gb2a3761KL_LX510##[BR:'
+RECOVERY.bin  magic=0x27051956 os=Linux arch=2 built=2026-10-07 21:32:34 UTC name(32 bytes)='MVX4##I6C#gb2a3761KL_LX510##[BR:'
+UBOOT0.bin    magic=0x27051956 os=U-Boot firmware arch=2 built=2026-10-07 21:28:04 UTC name(32 bytes)='MVX4##I6C#gb2a3761CM_UBT1501#XVM'
+UBOOT1.bin    magic=0x27051956 os=U-Boot firmware arch=2 built=2026-10-07 21:28:04 UTC name(32 bytes)='MVX4##I6C#gb2a3761CM_UBT1501#XVM'
+kernel version banner in KERNEL.bin:
+Linux version 5.10.61 (jenkins@ubuntu-server) (arm-linux-gnueabihf-sigmastar-11.1.0-gcc (GCC) 11.1.0, GNU ld (Linaro_Binutils-20210608-sigmastar-glibc-arm-linux-gnueabihf) 2.35.2.20210110) #8 PREEMPT Thu Oct 8 05:32:30 CST 2026
+
+== 4. Unpack the three UBI filesystems (ubi_reader 0.8.16; messages in ubi-*.log)
+ROOTFS: 576 files, 1 error lines in log
+UPDATERFS: 218 files, 1 error lines in log
+AIFS: 31 files, 1 error lines in log
+
+== 5. Operating system identity (root filesystem)
+Welcome to Obsbot Linux
+NAME=Buildroot
+VERSION=-gb2a3761-dirty
+VERSION_ID=2022.02
+kernel modules dir: 5.10.61
+BusyBox v1.35.0 (2026-10-08 05:01:45 CST)
+GNU C Library (GNU libc) release release version 2.33.
+[uMTPrd - %s - Info] uMTP Responder
+
+== 6. Open-source components present (by file name), and hashes of cited files
+avahi dbus hostapd libasound libavahi libboost_atomic libboost_chrono libboost_date libboost_filesystem libboost_regex libboost_system libboost_thread libcrypto libdbus libgflags libglog libjpeg libnanomsg libnl-3 libprotobuf libssl libturbojpeg libz libzmq libzmqpp umtprd wpa_supplicant z 
+918fac1d8eb50e4bbb2eb4c89a4f11ae2ca1e9de47e074da882b4da713bc9bd2  fw/KERNEL.bin
+918fac1d8eb50e4bbb2eb4c89a4f11ae2ca1e9de47e074da882b4da713bc9bd2  fw/RECOVERY.bin
+bc49e33c29c6d654d2f4a4a73a4951e3a6160ba4aec864498295925260a10727  fw/UBOOT0.bin
+bc49e33c29c6d654d2f4a4a73a4951e3a6160ba4aec864498295925260a10727  fw/UBOOT1.bin
+aa2dc600aee142666dd2aab9f14ee3627727be5901608de7a0690c46a9d80be3  fw/AIFS.ubi
+ea74b195ade16ff6079951255bc6f4130a7a7eab0d86f03f2d0f25187d3dc932  fw/ROOTFS.ubi
+a361953b1b0f73800fc8749dddef6240cab1e55274eb5fdc1fdba6a23aea8e4d  fw/UPDATERFS.ubi
+be72419d0a82308da329fb73a10ee3f672ae52f95ddd9b405900f5b78e44fdba  fw/config
+c7aaafd26c8b1b20f9d7b953842a34754da65f23571ec1ce2211985cc77d46fa  ROOTFS/852945963/root/bin/busybox
+3ba80c93807d2cf743b825a77b5dabf2b9c3a3efcd600669ae49f28f38f728e6  ROOTFS/852945963/root/lib/libc-2.33.so
+b845cdc060ef26c65c317ed647226977be68a3e14cc1246456f0ed6172fec42c  ROOTFS/852945963/root/usr/sbin/umtprd
+d14f848883f48000ca04facdf1ccc7a2a0d29172dd84283f30bf2143d8ba7c9e  ROOTFS/852945963/root/etc/os-release
+bba78c2c23c142efdc0c36c4f82898f2d5a0a8e00cea1ecda46a8ef2bca3cb9b  ROOTFS/852945963/root/etc/issue
+d95b4de7d84af27c286328851aaaff98593c8876e83a4e0f36e78151461f7095  ROOTFS/852945963/root/lib/AEC_LICENSE_1.txt
+f5296ceeb55b9596d3f5c35e75c36052fbcfe78b54b7dccca54adc4cc1502100  ROOTFS/852945963/root/lib/AEC_LICENSE_2.txt
+d95b4de7d84af27c286328851aaaff98593c8876e83a4e0f36e78151461f7095  ROOTFS/852945963/root/lib/APC_LICENSE_1.txt
+f5296ceeb55b9596d3f5c35e75c36052fbcfe78b54b7dccca54adc4cc1502100  ROOTFS/852945963/root/lib/APC_LICENSE_2.txt
+
+== 7. Notices that do exist in the firmware
+BusyBox:  BusyBox is copyrighted by many authors between 1998-2015. / Licensed under GPLv2. See source distribution for detailed
+glibc:    Copyright (C) 2021 Free Software Foundation, Inc.
+umtprd:   [uMTPrd - %s - Info] (c) 2018 - 2021 Viveris Technologies
+inittab:  # Copyright (C) 2001 Erik Andersen <andersen@codepoet.org>
+Avahi:    LGPL header comments in 12 config/interface files
+AEC_LICENSE_1.txt: http://www.kurims.kyoto-u.ac.jp/~ooura/fft.html
+AEC_LICENSE_2.txt: Copyright (c) 2011, The WebRTC project authors. All rights reserved.
+APC_LICENSE_1.txt: http://www.kurims.kyoto-u.ac.jp/~ooura/fft.html
+APC_LICENSE_2.txt: Copyright (c) 2011, The WebRTC project authors. All rights reserved.
+
+== 8. Licence declarations of OBSBOT's own kernel modules (root and updater filesystems)
+ROOTFS/852945963/root/lib/modules/5.10.61/extra/remo_drivers_gyro.ko: author=Lv laiwei license=GPL 
+ROOTFS/852945963/root/lib/modules/5.10.61/extra/remo_multi_usb.ko: author=ChengQun.Zhong license=GPL 
+ROOTFS/852945963/root/lib/modules/5.10.61/extra/remonetlink.ko: author=vianowu license=GPL 
+ROOTFS/852945963/root/lib/modules/5.10.61/extra/remo_sensor_imx582.ko: author=SigmaStar license=Proprietary 
+UPDATERFS/725341313/updater/lib/modules/5.10.61/extra/remo_drivers_gyro.ko: author=Lv laiwei license=GPL 
+UPDATERFS/725341313/updater/lib/modules/5.10.61/extra/remo_multi_usb.ko: author=ChengQun.Zhong license=GPL 
+UPDATERFS/725341313/updater/lib/modules/5.10.61/extra/remonetlink.ko: author=vianowu license=GPL 
+UPDATERFS/725341313/updater/lib/modules/5.10.61/extra/remo_sensor_imx582.ko: author=SigmaStar license=Proprietary 
+
+== 9. Full licence texts and source offers anywhere in the firmware
+searched: root fs, updater fs, AI fs (all files, binaries included), KERNEL.bin, UBOOT0.bin, config
+positive control 1 - the text pattern finds the LGPL-3.0 text in the macOS app's LICENSE:
+  (run in section 10)
+positive control 2 - the phrase 'GNU Lesser General Public License' in Avahi's files:
+  ROOTFS/852945963/root/etc/avahi/hosts
+  ROOTFS/852945963/root/etc/avahi/avahi-dnsconfd.action
+files with full licence text:
+  (end of list)
+files with source-offer wording:
+  (end of list)
+note: UBOOT0.bin's payload has no readable strings (compressed); the search covers its header only.
+
+== 10. OBSBOT Center for macOS: both bundles in the DMG
+--- dmg/OBSBOT Center/OBSBOT_Center.app
+version: 2.0.16
+licence-like files (outside nested bundles):
+  dmg/OBSBOT Center/OBSBOT_Center.app/Contents/license/LICENSE
+source-offer wording (whole bundle, binaries included), with the matched text:
+  PlugIns/multimedia/libffmpegmediaplugin.dylib: material track %d: no corresponding source package found
+  PlugIns/multimedia/libffmpegmediaplugin.dylib: material track %d: no corresponding source track found
+  license/LICENSE:        0) Convey the Minimal Corresponding Source under the terms of this
+  license/LICENSE:        Corresponding Source.
+  license/LICENSE: Corresponding Source for the Combined Work, excluding any so
+  Frameworks/libavformat.dylib: material track %d: no corresponding source package found
+  Frameworks/libavformat.dylib: material track %d: no corresponding source track found
+  (end of list)
+libavcodec license: GPL version 3 or later
+  --prefix=/
+  --enable-version3
+  --enable-gpl
+  --enable-libx264
+FFmpeg version n6.0-12-ga6dc92968a
+x264 - core %d%s - H.264/MPEG-4 AVC codec - Copy%s 2003-2023 - http://www.videolan.org/x26
+91cf90f7249e2101645e0c43bea70ed5b0a8d918c550d7435e0c2afeea5c5b81  Frameworks/libavcodec.dylib
+f549de56dabab05c304b48d59e8e77fcbccd3a380062a38f1f8bee3eb202acb4  Frameworks/libx264.dylib
+a48d3fe9f34839def46dd39e7f236aa2189cdd02bf63abd35328f6f75139d92f  Frameworks/libdev.dylib
+be325206f4a360bcce6bfd7873a1edc34e86f67e4e9b2271b2f8eab503fa289b  license/LICENSE
+--- dmg/OBSBOT Center/OBSBOT_Center.app/Contents/Modules/OBSBOT_Center.app
+version: 2.0.10
+licence-like files (outside nested bundles):
+source-offer wording (whole bundle, binaries included), with the matched text:
+  Frameworks/libavformat.dylib: material track %d: no corresponding source package found
+  Frameworks/libavformat.dylib: material track %d: no corresponding source track found
+  (end of list)
+libavcodec license: GPL version 3 or later
+  --prefix=/
+  --enable-version3
+  --enable-gpl
+  --enable-libx264
+FFmpeg version n6.0-12-ga6dc92968a
+x264 - core %d%s - H.264/MPEG-4 AVC codec - Copy%s 2003-2023 - http://www.videolan.org/x26
+fdf7dc548ae55a5a0c34291121e3f9fdc5559e877bf801f91b7c8e7d44fc7dcb  Frameworks/libavcodec.dylib
+b1bd6fc3982afa10f48ae79229dc514e2dfedd91a03fdf82b5cace31614e0c8c  Frameworks/libx264.dylib
+positive control 1 - the full-text pattern matches the outer app's LICENSE:
+  dmg/OBSBOT Center/OBSBOT_Center.app/Contents/license/LICENSE
+first lines of the outer app's Contents/license/LICENSE:
+  
+  This project is licensed under the GNU Lesser General Public License v3.0 (LGPL-3.0).
+  For full details, see the LICENSE file below.
+  
+  This project incorporates Qt libraries, which are also licensed under 
+  the LGPLv3. You are free to use, modify, and distribute this project
+  under the terms of the LGPLv3 license. If you modify the Qt libraries
+  themselves, those modifications must be made available under the same license.
+nested librm: libobs API symbols = 36
+nested bicubic_scale.effect line 3:  * note - this shader is adapted from the GPL bsnes shader, very good stuff
+
+== 11. OBSBOT SDK library: MTP and FTP code
+macOS libdev.dylib (public download): a48d3fe9f34839def46dd39e7f236aa2189cdd02bf63abd35328f6f75139d92f
+  mangled symbols: Device::camera API=288 mtp=239 mtp::Session=49 ftplib=25 licence-text strings=0
+  __ZN6ftplib8readrespEcP9ftphandle
+  __ZN6ftplib10FtpSendCmdEPKccP9ftphandle
+  __ZN6ftplib19CorrectPasvResponseEPh
+  __ZN3mtp7Session14GetStorageInfoENS_9StorageIdE
+  __ZN6ftplib19CorrectPasvResponseEPh.cold.1
+d9fc9cd7f6743a3eefd50dbae104ccaff9c3d45ee37816722cb0bd683854e7a4  <sdk>/libdev.so.1.0.2
+  mangled symbols: Device::camera API=617 mtp::Session=229 ftplib=116 licence-text strings=0
+  _ZN3mtp7Session16GetPartialObjectENS_8ObjectIdEmj
+  _ZN3mtp7Session14GetStorageInfoENS_9StorageIdE
+  _ZN3mtp7Session14GetStorageInfoENS_9StorageIdE.cold
+  _ZN3mtp7Session16GetPartialObjectENS_8ObjectIdEmj.cold
+  _ZN3mtp7Session16GetPartialObjectENS_8ObjectIdEmj
+  _ZN3mtp7Session14GetStorageInfoENS_9StorageIdE
+  build path: /home/qy/workspace/obsbot_device_new/obsbot_device/libdev/ftp/ftplib.cpp
+  build path: /home/qy/workspace/obsbot_device_new/obsbot_device/libdev/mtp/linux/mtp/backend/linux/usb/Context.cpp
+3eef907f5eec5cc4ee3d3df3a89cd736458bf48f815612b6bed879ea62b08c55  <sdk>/libdev.so.1.0.0
+  mangled symbols: Device::camera API=871 mtp::Session=229 ftplib=116 licence-text strings=0
+  _ZN3mtp7Session16GetPartialObjectENS_8ObjectIdEmj
+  _ZN3mtp7Session14GetStorageInfoENS_9StorageIdE
+  _ZN3mtp7Session14GetStorageInfoENS_9StorageIdE.cold
+  _ZN3mtp7Session16GetPartialObjectENS_8ObjectIdEmj.cold
+  _ZN3mtp7Session16GetPartialObjectENS_8ObjectIdEmj
+  _ZN3mtp7Session14GetStorageInfoENS_9StorageIdE
+  build path: /home/qy/workspace/make-target/2026-5-29/obsbot_device/libdev/ftp/ftplib.cpp
+  build path: /home/qy/workspace/make-target/2026-5-29/obsbot_device/libdev/mtp/linux/mtp/backend/linux/usb/Context.cpp
+
+== 12. OBSBOT Center for Windows
+files unpacked: 2041
+licence-like files:
+  win/app/license/LICENSE
+app/license/LICENSE: same text as the macOS LICENSE (line endings aside)
+source-offer wording (whole install tree, binaries included), with the matched text:
+  win/app/license/LICENSE:        0) Convey the Minimal Corresponding Source under the terms of this
+  win/app/license/LICENSE:        Corresponding Source.
+  win/app/bin/avformat-60.dll: material track %d: no corresponding source package found
+  win/app/bin/avformat-60.dll: material track %d: no corresponding source track found
+  win/app/bin/multimedia/ffmpegmediaplugin.dll: material track %d: no corresponding source package found
+  win/app/bin/multimedia/ffmpegmediaplugin.dll: material track %d: no corresponding source track found
+  (end of list)
+libavcodec license: GPL version 3 or later
+  --enable-version3
+  --enable-gpl
+  --enable-libx264
+FFmpeg version: n6.0-12-ga6dc92968a
+>x264 - core %d%s - H.264/MPEG-4 AVC codec - Copy%s 2003-2023 - http://www.videolan.org/x2
+rm.dll: libobs API names = 35
+win/app/data/librm/bicubic_scale.effect line 3:  * note - this shader is adapted from the GPL bsnes shader, very good stuff
+rmfunc/win-capture.dll: exported entry points:
+  rm_module_description rm_module_free_locale rm_module_get_string rm_module_load rm_module_set_locale rm_module_set_pointer rm_module_unload rm_module_ver 
+  log lines with OBS game-capture's prefix "[game-capture: '%s']": 52
+  references graphics-hook64.dll: 1
+bin/libdev.dll: a9707f18f6648b5ffe625ec70099fbeb1c89b8a6a37e7e4cd265991e9da0ab22
+  Device::camera methods=287 ftplib strings=0 mtp-namespace symbols=0 Windows Portable Devices strings=13
+9a779903350dd39e88415cb6502b1feafbf44b72be80ad13fce10ae7fcb368d1  license/LICENSE
+bb3e3a04feaf3389154ad0355cdfe981ee67aaa3dc09b903901d20f3f9e77f07  bin/avcodec-60.dll
+8602cab3444c9e11f58b33a9216b52b5fab58edd7853aa2971358d27ed4de98d  bin/libx264-164.dll
+2c716e47b4cd3159e33ea47582ef528a7de4aca908bc324684d577dd7c54e33b  bin/rm.dll
+a9707f18f6648b5ffe625ec70099fbeb1c89b8a6a37e7e4cd265991e9da0ab22  bin/libdev.dll
+08f6eb3e188effff0939f85a87d1b5180fcc66bcc845c4828107bdcd1b3c698c  rmfunc/win-capture.dll
+
+== 13. Meet 2 user manual
+Title:           OBSBOT Meet 2 User Manual_EN v1.1
+CreationDate:    Wed Oct 23 05:59:42 2024 CDT
+Pages:           5
+lines mentioning open source, GPL, licences, copyright, source code or third parties:
+  96:    ➃ 4K streaming requires compatible third-party software.
+  (end of list)
+
+== 14. OBSBOT SDK package
+top folder: libdev_v2.1.0_7, files: 28
+licence-like or readme files:
+  (end of list)
+d9fc9cd7f6743a3eefd50dbae104ccaff9c3d45ee37816722cb0bd683854e7a4  linux(beta)/x86_64-release/libdev.so.1.0.2
+cd123e3a735b61adeb5b3f6e14b374df550c3732a6947240541692c4704fd53f  include/dev/dev.hpp
+  linux x86_64 libdev.so.1.0.2: mtp::Session=229 ftplib=116 licence-text strings=0
+  identical to --libdev libdev.so.1.0.2
+
+== done

@@ -1,0 +1,174 @@
+OBSBOT SDK: Unleash the Full Potential of Your OBSBOT Devices
+This website requires JavaScript.
+Product
+Accessories
+Solutions
+OBSBOT Esports
+Support
+Where To Buy
+Unleash the Full Potential of Your OBSBOT
+SDK for OBSBOT Center
+SDK for OBSBOT Tail 2
+SDK for OBSBOT Tail Air
+Linux SDK for OBSBOT Product
+Compatible with all OBSBOT webcams and streaming cameras. Support Linux (Ubuntu), Windows, and macOS operating systems.
+Inquiry
+You Didn't Sign in Yet
+Please sign in first, the SDK file will be sent to the email address that associated to your OBSBOT account.
+Cancel
+Sign in
+OBSBOT SDK application
+Please fill out the information below, after we receive your application, you will receive an email with our SDK tool kit. And if needed, our tech support team will help you with your developing.
+1. Do you own an OBSBOT product?
+Yes
+No
+2. Why you need the SDK?
+Submit
+Compatible Products
+OBSBOT Tail 2
+OBSBOT Tail Air
+OBSBOT Tiny 3
+OBSBOT Tiny 3 Lite
+OBSBOT Tiny 2
+OBSBOT Tiny 2 Lite
+OBSBOT Tiny 4K
+OBSBOT Tiny
+OBSBOT Tiny SE
+OBSBOT Meet 2
+OBSBOT Meet 4K
+OBSBOT Meet
+OBSBOT Meet SE
+OBSBOT Meet Flip
+Supported Features
+Universal
+General
+Device Connection
+Sleep/Wake Up
+Device Management
+AI
+Tracking On/Off
+Tracking Speed
+Control
+Gimbal Control
+Zoom
+PTZ Reset
+Preset Position
+FOV
+Image
+HDR
+Manual/Auto Focus
+Auto Focus Mode
+Set Manual Focus
+Manual/Auto Exposure
+Auto Exposure Mode
+Exposure Compensation
+Shutter Speed
+ISO
+Anti-Flicker
+White Balance
+Temperature
+Saturation
+Contrast
+Sharpness
+Hue
+OBSBOT Tail Series
+Control
+Recording
+Photograph
+Open a File
+AI
+Human Tracking Mode
+Animal Tracking
+Group
+Gesture Control
+Device settings
+Device Power On/Off
+Audio Settings
+NDI/RTSP
+HDMI Output
+UVC Mode
+Media Settings
+Mirror Image
+View and Gimbal Reversed
+Device Initial State
+Power-on Shooting
+Buzzer
+Indicator status
+OBSBOT Tiny Series
+AI
+Zone Tracking
+Human Tracking Mode
+Desk Mode
+Hand
+Whiteboard
+Group
+Gesture Control
+Voice Control
+Device Settings
+Device Sleep
+Sleep Background
+Audio Settings
+Mirror Image
+View and Gimbal Reversed
+Device Initial State
+Indicator status
+OBSBOT Meet Series
+AI
+Auto Framing
+Virtual Background
+Device Settings
+Device Sleep
+Button Configuration
+Audio Settings
+Mirror Image
+Products
+OBSBOT Talent 2
+OBSBOT Tail 2 ADV
+OBSBOT Tail Air 2
+OBSBOT Tail 2
+OBSBOT Tail Air
+OBSBOT Tiny 3 Series
+OBSBOT Tiny 2
+OBSBOT Tiny 2 Lite
+OBSBOT Tiny SE
+OBSBOT Meet 2
+OBSBOT Meet Flip
+OBSBOT Meet SE Series
+Customer Care
+Support
+Contact Us
+Warranty & Refund
+Shipping Policy
+Payment Method
+Download
+Student Discount
+About Us
+Our Company
+Latest News
+Careers
+Terms of Use
+Privacy Policy
+Intellectual Property Rights
+Media Kit
+Incident Response
+Blog
+Where To Buy
+Official Online Store
+Online Retailers
+Find a Store
+DEVELOP
+OSC
+SDK
+VISCA
+Pelco D & Pelco P
+Partners
+Influencer Program
+Affiliate Program
+Tail Series Referral Campaign
+Ambassador Program
+Copyright © 2026 OBSBOT All Rights Reserved.
+United States (English/USD)
+Facebook Messenger
+WhatsApp
+Facebook Messenger
+tag -->
