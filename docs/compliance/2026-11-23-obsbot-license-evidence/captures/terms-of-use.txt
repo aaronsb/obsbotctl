@@ -1,0 +1,807 @@
+Terms of Use | OBSBOT
+This website requires JavaScript.
+Product
+Accessories
+Solutions
+OBSBOT Esports
+Support
+Where To Buy
+CUSTOMER SERVICE
+Contact Us
+Shipping Policy
+Payment Method
+Warranty & Refund
+LEGAL AREA
+Terms of Use
+Privacy Policy
+Intellectual Property Rights
+OBSBOT User Service Agreement
+Welcome to OBSBOT!
+Please read carefully and fully understand the terms of the OBSBOT User
+Service Agreement (this "Agreement") before you use any of OBSBOT products or
+services,
+especially the terms of exemption or limitation of liability, restriction
+of user rights, license and restriction of rights, special individual
+services, applicable law and dispute resolution, among others.
+Unless you have carefully read, fully understood and accepted all the terms of
+this Agreement, you have no right to use OBSBOT products or services. By
+downloading, installation, use, login, visiting our site and/ or purchasing
+from us, you shall read and accept the constraints of this Agreement and other
+operations, you shall read and agree to be bound by this agreement, including
+those additional terms and conditions and policies referenced herein and/or
+available by hyperlink.
+If you are a minor under the age of 18 (or the legal age of majority in
+your country/region), please read this Agreement accompanied by your legal
+guardian, pay special attention to the terms of use for minors, and use
+OBSBOT products or services (the “Services") after obtaining the consent of
+your legal guardian.
+1. Scope of Agreement
+i. This Agreement is an agreement between you and Remo Intelligent Technology
+(Shenzhen) Co., Ltd. (
+OBSBOT
+) and its affiliated companies
+(“our” or "us") regarding the relevant rights and obligations for using our
+Services.
+When you use this service, it is deemed that you have read in detail and
+fully understood this Agreement, and agree to be bound by this Agreement as
+a party to this Agreement hereto. If you do not agree to this Agreement, you
+may choose not to use this service.
+ii. The "
+OBSBOT Privacy Policy
+" included in this Agreement is an integral part of this Agreement, you
+should also abide by it.
+iii. The terms and conditions set forth in this Agreement concluded by you and
+us cannot fully enumerate and cover all rights and obligations of you and us,
+and the existing agreement cannot guarantee full compliance with the needs of
+future development.
+Therefore, the relevant statements, instructions, notices, policies, rules,
+and agreements related to this service (collectively referred to as
+"Platform Rules") that we may subsequently issue and modify from time to
+time are an inseparable part of this Agreement and have the same legal
+effect.
+If you do not agree to the aforesaid Platform Rules , please do not continue
+to use our Services.
+Regarding the subsequently issued and modified Platform Rules, we will
+provide them to you or notify you separately in an appropriate manner when
+providing you with corresponding services.
+2. About Services
+i. Content of Services
+Our Services or this Service specifically refer to all information, tools and
+services you obtain through our official website (www.obsbot.com) , and
+connecting and controlling our products through the OBSBOT WebCam client,
+Obsbot Start Software, Obsbot Live Software, and other technologies and/or
+services provided by us (the “Other Technologies and Services”). This website
+(www.obsbot.com), OBSBOT WebCam client, Obsbot Start, and Obsbot Live are
+collectively referred to as "our platform".
+ii. Form of Services
+This Service in the form of the software program or web page, and the specific
+information and corresponding functions provided by us shall prevail. When you
+use this Service, you should choose the version of our platform that matches
+your terminal, system, etc. Otherwise, you may not be able to use this Service
+normally. Any problems or damages caused by the mismatch between the software
+and the model of the terminal device shall be borne by the user. If you do not
+obtain our services from the official channels mentioned above, we cannot
+guarantee that the version is the official version.
+If you suffer losses due to the use of an unofficial version that we do not
+recognize, unless otherwise explicitly stipulated by laws and regulations,
+we shall not be liable for any compensation or indemnity.
+iii. Acquisition of Services
+The official website published by us (https://www.obsbot.com/download) and the
+authorized mobile client application markets are the only legitimate ways to
+download and use our services. Any of our services obtained by you through any
+other channels, avenues, or methods are illegally acquired, we do not
+recognize its validity, and once found, we have the right to immediately
+delete, cancel, clear, block, etc. Any adverse consequences resulting from
+this shall be borne by you.
+iv. Value-added Services
+We reserve the right to provide you with various paid value-added services
+through our Platform from time to time, based on our platform operation plan.
+All value-added services are subject to your voluntary activation and
+independent payment. You may independently judge and decide whether to
+purchase and activate the corresponding services according to your actual
+needs.
+For specific value-added services, we will explicitly inform you of key
+contents including but not limited to service content, service terms, pricing,
+rights and obligations, etc., via service detail pages, separate service
+agreements, rule descriptions or other documents. The aforementioned separate
+agreements and rules shall constitute an integral part of this Agreement and
+shall have the same legal force and effect as this Agreement.
+You acknowledge that once you choose to activate, purchase and pay for the
+corresponding value-added services, you shall be deemed to have fully read,
+understood and unconditionally accepted all separate agreements and rules
+applicable to such value-added services, and voluntarily bound yourself
+thereto. In the event of any inconsistency between a separate agreement and
+this Agreement in respect of the same matter, the separate agreement and rules
+applicable to such value-added services shall prevail.
+v. Services Update
+We have the right to announce to you (including but not limited to pop-up
+pages, website announcements, site messages, etc.) about the modification,
+replacement and upgrade of any website content, software and firmware related
+to this Service.
+If you do not agree or accept the modification, replacement, or upgrade of
+the software, firmware and website information related to this Service,
+please directly refuse the relevant upgrade service and stop using our
+Services, otherwise you are deemed to agree and accept the modification,
+replacement, or upgrade of the software, firmware and website information
+provided by us, and such agreement and acceptance are still subject to this
+Agreement. If you choose not to update, some functions of our services may
+be restricted or may not function properly.
+3. Grant of License
+We grant you a limited, personal, revocable, non-exclusive, non-commercial,
+non-transferable and non-sublicensable license to use the our platform for
+your personal non-commercial use on your computer system or to store our
+platform on your home computer and other devices. You acknowledge and
+understand that our platform is licensed and not sold to you and may only be
+used in a manner consistent with the terms of this Agreement.
+All other rights not expressly authorized in this Agreement remain reserved
+by us. Unless explicitly authorized in writing by us in advance, you shall
+not use our services in any unauthorized form, including but not limited to
+adaptation, copying, dissemination, crawling, mirroring, or trading.
+4. Account Information Management
+i. User Qualification
+You acknowledge that you shall be a natural person, legal person or other
+organization with full capacity for civil conduct when you start to register,
+login and actually use our services. If you do not have the aforementioned
+qualifications, you and your guardian shall bear all the consequences caused
+by the in accordance with the laws and regulations. In particular, if you are
+a minor, please access and/or use our platform services with the consent and
+guidance of your guardian.
+ii. Account Description
+(1) After you fill in the information as prompted on the registration page,
+read and agree to this Agreement and complete the entire registration process,
+you may obtain an account on our Platform and become a user of our Platform.
+In addition, you can also choose to use the third-party platform account (such
+as Facebook, Google) authorized login function provided by us to register and
+log into our platform account through the user account of a third-party
+software or platform legally owned by you.
+(2) You have the right to log in to our Platform using the username, email
+address or cell phone number ("User Name") you set or confirm for our Platform
+and the password you set ("Account").
+(3) You can modify and delete personal data and registration information on
+your account. However, it should be noted that deleting the relevant
+information will also delete the text and pictures stored in the system, and
+you must bear this risk.
+(4) If the account you registered has not been actually used for a long time,
+we have the right to clean up and recycle the account and stop providing
+relevant services for it, so as to avoid waste of resources, and you will bear
+the adverse consequences caused by it.
+(5) You may use our platform without registering or logging into an account,
+but within specific clients, you may not be able to experience complete the
+full range of our services. Before using certain functions and/or certain
+specific services, such as live streaming via our platform, you need to
+register or log into our platform account.
+(6) Unless otherwise specified, our platform utilizes a unified account
+service. The account you registered is universally used across our platform
+simultaneously, and your relevant data within our platform (such as
+third-party platform account bindings) will be synchronized across all
+clients.
+(7) You understand and agree that when you log in using your account on our
+platform to use other products or services provided by our platform's partners
+(such as live streaming platforms), you shall be bound by the user agreements
+and other agreement clauses of the actual providers of those other products
+and services.
+iii. Truthfulness and Legality
+(1) When using our platform services, you are obligated to maintain the
+authenticity and validity of the information provided. If the registration
+information you provide is illegal, untrue, inaccurate, or incomplete, you
+shall bear the corresponding responsibilities and consequences arising
+therefrom, and we reserve the right to terminate your use of our platform
+services.
+(2) Username, avatar, profile and other information you set must not violate
+national laws and regulations, and must not contain illegal, infringing or
+harmful information. If we discover or a third party complains that you have
+used false information to defraud of account registration and login, or your
+avatar, name, etc. contain illegal, infringing or harmful information, we have
+the right to ask you to take corrections within a time limit, suspend use,
+cancel account, take back account and other measures.
+iv. Account Security
+(1) Your account is set up by you and kept by you, and we will never ask you
+to provide your account password at any time. Therefore, it is recommended
+that you keep your account safe and ensure that you log out at the end of each
+online session and leave our platform in correct manner.
+We are not responsible for the losses and consequences caused by your
+voluntary disclosure, improper storage, or attacks, theft, fraud, etc. of
+your account. You should seek compensation from the infringer through
+judicial, administrative and other remedies.
+(2) Your Account is for your personal use only and may not be lent or shared
+with others. When your account is used without authorization, you should
+immediately notify us, otherwise unauthorized use is considered your own
+actions, and you will be responsible for all the resulting losses and
+consequences.
+If you find that others are using your account without permission, or find
+any other security loopholes, you are obligated to notify us immediately and
+take measures such as changing the password to protect the security of your
+account.
+(3) Except for our fault, you shall be responsible for all behavior results
+under your account (including but not limited to signing various agreements
+online, publishing information, purchasing goods and services, and disclosing
+information, etc.).
+(4) If you find any unauthorized use of your account to log in to our platform
+or other situations that may lead to theft or loss of your account, we
+recommend you notify us immediately. You understand that it takes reasonable
+time for us to act on any of your requests. Unless we are at fault, we do not
+accept any liability for consequences that have occurred prior to the action
+being taken.
+(5) You may apply to deactivate your account on our platform. You can only
+apply to deactivate your own account and should follow the corresponding
+process to complete security verification. After deactivation, we will
+delete or anonymize the information within the account, unless otherwise
+specified by laws, regulations, or relevant norms regarding the retention
+time or processing method of information. Once your account has been
+deactivated, you will no longer be able to log in to our platform using that
+account, and you will not be able to retrieve any content or information
+related to the account. You shall remain liable for all activities conducted
+on our platform prior to the deactivation of your account.
+5. Purchase of Products/Services
+i. Online Store Terms
+(1) In certain countries and regions, we offer users an Online Store for our
+products or services through our official website (www.obsbot.com). If the
+Online Store is available in your country/region, you shall comply with all
+provisions set forth in this Section 5i “Online Store Terms”. You may also
+purchase our products and services through our official third-party e-commerce
+platform stores.
+(2) By agreeing with these Terms of Service, you represent that you are at
+least the age of majority in your state or country of residence, and you have
+given us your consent to allow any of your minor dependents to use this site.
+(3) The Online Store provides self-operated services including online display,
+consultation, order placement, payment, delivery, and after-sales support for
+products. We reserve the right to adjust the service content, product
+categories, and service rules as our business requires. We will notify users
+of such adjustments via website announcements, internal messages, or other
+appropriate means. Users’ continued use of the services following such
+adjustments shall constitute acceptance of the revised terms.
+(4) When you browse products on the Online Store and confirm purchase details
+(including product model, quantity, shipping address, payment method, etc.),
+submitting your order constitutes an offer to purchase from us.
+(5) After we receive your payment for the order, we will review the order
+information (including product inventory, validity of the shipping address,
+payment details, etc.). Upon approval of the review, the order shall take
+effect formally, and we will arrange for product shipment and delivery. If any
+issues are identified during the review (e.g., insufficient inventory, invalid
+shipping address, etc.), we will notify you promptly and negotiate to cancel
+the order or adjust the order information. If no agreement can be reached, we
+will refund the full amount you have paid.
+(6) After the order is submitted but before payment, the user can modify or
+cancel the order by himself/herself on the order page; after payment but
+before the product is outbound, the user needs to contact customer service to
+apply for modifying or canceling the order. We will review according to the
+actual situation. If the review is passed, we will fully refund the payment
+already made by the user (if a payment handling fee is incurred, the handling
+fee shall be borne by the user).
+(7) After the product is outbound, the order cannot be modified. If the user
+needs to cancel the order, he/she shall bear the relevant losses such as
+logistics fees and customs duties after the product is outbound. We will
+refund the remaining amount after deducting the relevant fees.
+(8) If the order cannot be fulfilled due to force majeure, product quality
+problems, our operational errors and other reasons, we have the right to
+cancel the order and fully refund the payment already made by the user, and
+shall not bear additional liability for compensation (except as otherwise
+agreed by both parties).
+(9) You may not use our products for any illegal or unauthorized purpose nor
+may you, in the use of the Service, violate any laws in your jurisdiction
+(including but not limited to copyright laws).
+(10) You must not transmit any worms or viruses or any code of a destructive
+nature.
+(11) A breach or violation of any of this Section 5i will result in an
+immediate termination of your Services.
+ii. Modifications to the Service and Prices
+(1) We display the brand, specifications and other information of our products
+on the product detail page. Due to different product batches, minor
+differences in packaging, labels and other aspects may exist. If you have
+special requirements for product packaging, you must contact customer service
+for confirmation in advance; otherwise, you shall be deemed to have accepted
+such normal product differences.
+(2) We will provide you with lawful after-sales services in accordance with
+the laws and regulations applicable in your jurisdiction. We do not provide
+after-sales guarantee services such as return, exchange and maintenance for
+product problems caused by force majeure, improper use by users, natural wear
+and tear of products, damage by third parties, etc., and shall not bear any
+responsibility.
+(3) Prices for our products are subject to change without notice. Prices and
+other relevant fees (such as shipping, customs duties, etc.) are subject to
+the display on the product detail page. Prices are subject to adjustment due
+to factors including exchange rate fluctuations, changes in market supply and
+demand, promotional activities, etc. Adjusted prices will be updated on the
+product detail page and will not apply retroactively to already submitted
+orders.
+(4) We reserve the right at any time to modify or discontinue the Service (or
+any part or content thereof) without notice at any time.
+(5) We shall not be liable to you or to any third-party for any modification,
+price change, suspension or discontinuance of the Service.
+iii. Products or Services (if applicable)
+(1) Certain products or services may be available exclusively online through
+the website. These products or services may have limited quantities and are
+subject to return or exchange only according to our Return Policy.
+(2) We have made every effort to display as accurately as possible the colors
+and images of our products that appear at the store. We cannot guarantee that
+your computer monitor's display of any color will be accurate.
+(3) We reserve the right, but are not obligated, to limit the sales of our
+products or Services to any person, geographic region or jurisdiction. We may
+exercise this right on a case-by-case basis. We reserve the right to limit the
+quantities of any products or services that we offer. All descriptions of
+products or product pricing are subject to change at anytime without notice,
+at the sole discretion of us. We reserve the right to discontinue any product
+at any time. Any offer for any product or service made on this site is void
+where prohibited.
+(4) We do not warrant that the quality of any products, services, information,
+or other material purchased or obtained by you will meet your expectations, or
+that any errors in the Service will be corrected.
+(5) We do not guarantee the service quality or delivery timeliness of
+third-party logistics providers. If you encounter any logistics issues (such
+as long-term lack of updates, lost goods, etc.), you may contact customer
+service for assistance, which is on a
+best-effort basis
+only
+and not a mandatory obligation.
+iv. Accuracy of Billing and Account Information
+(1) We reserve the right to refuse any order you place with us. We may, in our
+sole discretion, limit or cancel quantities purchased per person, per
+household or per order. These restrictions may include orders placed by or
+under the same customer account, the same credit card, and/or orders that use
+the same billing and/or shipping address. In the event that we make a change
+to or cancel an order, we may attempt to notify you by contacting the e-mail
+and/or billing address/phone number provided at the time the order was made.
+We reserve the right to limit or prohibit orders that, in our sole judgment,
+appear to be placed by dealers, re-sellers or distributors.
+(2) You agree to provide current, complete and accurate purchase and account
+information for all purchases made at our store. You agree to promptly update
+your account and other information, including your email address and credit
+card numbers and expiration dates, so that we can complete your transactions
+and contact you as needed. For more detail, please review our Warranty Policy.
+v. User Comments, Feedback and Other Submissions
+(1) If, at our request, you send certain specific submissions (for example
+contest entries) or without a request from us you send creative ideas,
+suggestions, proposals, plans, or other materials, whether online, by email,
+by postal mail, or otherwise (collectively, 'comments'), you agree that we
+may, at any time, without restriction, edit, copy, publish, distribute,
+translate and otherwise use in any medium any comments that you forward to us.
+We are and shall be under no obligation:
+to maintain any comments in confidence;
+to pay compensation for any comments;
+to respond to any comments. We may, but have no obligation to, monitor,
+edit or remove content that we determine in our sole discretion are
+unlawful, offensive, threatening, libelous, defamatory, pornographic,
+obscene or otherwise objectionable or violates any party’s intellectual
+property or these Terms of Service.
+You agree that your comments will not violate any right of any
+third-party, including copyright, trademark, privacy, personality or other
+personal or proprietary right. You further agree that your comments will
+not contain libelous or otherwise unlawful, abusive or obscene material,
+or contain any computer virus or other malware that could in any way
+affect the operation of the Service or any related website. You may not
+use a false e mail address, pretend to be someone other than yourself, or
+otherwise mislead us or third-parties as to the origin of any comments.
+You are solely responsible for any comments you make and their accuracy.
+We take no responsibility and assume no liability for any comments posted
+by you or any third-party.
+6. Service Use Specifications
+i. You shall not use the content or services provided by our services for
+any illegal purposes, or engage in any matters that may harm our reputation
+and interests, or use such content or services in any manner that does not
+comply with these Service Use Specifications.
+ii. We hold ownership of any trademarks, text, information, page designs,
+graphics, images, sounds, company logos, service marks, and other content
+materials presented on our platform, which are protected by copyright laws
+as well as other relevant laws, regulations, normative legal documents, and
+international treaties. Unless otherwise stated, all rights, including
+copyrights, are owned and reserved by us. Unless otherwise specified in
+these terms of service, without our prior written consent, no unit or
+individual shall modify, copy, store in a retrieval system, transmit,
+plagiarize, distribute, reproduce, or use for any commercial or public
+purposes the materials published on our platform. Any infringement of the
+aforementioned rights may result in the relevant unit or individual bearing
+corresponding civil, administrative, or criminal liability in accordance
+with legal provisions.
+iii. During your use of our platform services, you undertake to comply with
+the following provisions:
+(1) All actions carried out during the use of our services comply with the
+provisions and requirements of national laws, regulations, other normative
+documents, and Platform Rules; do not violate social public interests or
+public morality; do not infringe upon the legitimate rights and interests of
+others; and do not violate this Agreement and Platform Rules.
+If you violate the aforementioned promises, resulting in any legal
+consequences, you shall independently bear all legal responsibilities in
+your own name and ensure that this platform is exempt from any resulting
+losses;
+(2) Do not make commercial use of any data on our platform, including but not
+limited to using any materials displayed on our platform by means of copying,
+disseminating, etc., without our prior written consent;
+(3) Do not use any device, software, or routine program to interfere or
+attempt to interfere with the normal operation of this platform or any
+transactions or activities being conducted on this platform; do not
+intentionally spread malicious programs or viruses, as well as other behaviors
+that destroy and interfere with normal network information services; do not
+engage in any behavior that will result in an unreasonable and
+disproportionately large data load on the network equipment of our platform;
+(4) Do not implement activities that endanger network security, such as
+illegally invading networks, interfering with normal network functions, and
+stealing network data;
+(5) Do not provide programs and tools specifically used for engaging in
+activities that endanger network security, such as network intrusion,
+interfering with normal network functions and protective measures, and
+stealing network data;
+(6) Do not provide technical support, advertising promotion, payment
+settlement, and other assistance for others to engage in activities
+endangering network security;
+(7) Do not use unauthorized data or enter unauthorized servers or accounts;
+(8) Do not enter public computer networks or other people's computer systems
+without permission to delete, modify, or add stored information;
+(9) Do not attempt to probe, scan, or test the weaknesses of the platform or
+network or conduct other acts of sabotaging network security without
+permission;
+(10) Do not forge the name or partial name of a TCP/IP packet;
+(11) Do not reverse engineer, reverse assemble, decompile, or otherwise
+attempt to discover the source code of our platform;
+(12) Do not maliciously register accounts on our platform, including but not
+limited to frequent and batch registration of accounts;
+(13) Do not engage in other behaviors that may endanger the security of the
+computer network of this platform or other platforms;
+(14) Do not remove, delete, alter, or obscure any trademarks or notices of any
+copyright, trademark, patent, or other intellectual property or proprietary
+rights, provided on or with the software, including any copies thereof;
+(15) Do not rent, lease, lend, sell, sublicense, assign, distribute, publish,
+transfer, or otherwise provide our platform or any features or functionality
+of our platform to any third party for any reason, whether over a network or
+on a hosted basis, including in connection with the Internet or any web
+hosting, wide area network (WAN), virtual private network (VPN),
+virtualization, time-sharing, service bureau, software as a service, cloud, or
+other technology or service;
+(16) Do not use our platform in violation of any laws, regulations, or rules;
+(17) Do not use our platform for competitive analysis of our services,
+development of competing software products or services, or any other
+commercial purpose that is disadvantageous to us;
+(18) Do not distribute or provide our platform over a network to make it
+accessible to multiple devices simultaneously;
+(19) Do not modify, translate, adapt, or otherwise create derivative works or
+improvements of our platform or any part thereof, whether patentable or not;
+(20) Do not combine our platform or any part thereof with any other program,
+or incorporate our platform or any part thereof into any other program.
+iv. We enjoy legitimate rights and interests to all operating data generated
+during the operation of our platform. Without our prior written consent, no
+one may save, backup, leak, use, or authorize others to use the
+aforementioned operating data for any purpose without permission.
+v. In addition to other prohibitions set forth in these Service Use
+Specifications, you are prohibited from using our platform or its contents:
+(1) For any unlawful purpose;
+(2) To solicit others to perform or participate in any unlawful acts;
+(3) To violate any international, provincial, municipal (county), district
+regulations, rules, laws, or local ordinances;
+(4) To infringe upon or violate our intellectual property rights or the
+intellectual property rights of others;
+(5) To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or
+discriminate based on gender, sexual orientation, religion, ethnicity, race,
+age, national origin, or disability;
+(6) To submit false or misleading information;
+(7) To upload or transmit viruses or any other type of malicious code that
+will or may be used in any way that will affect the functionality or operation
+of the Service or of any related website, other websites, or the Internet;
+(8) To collect or track the personal information of others;
+(9) To spam, phish, pharm, pretext, spider, crawl, or scrape, or facilitate
+the use of any malware or ransomware;
+(10) For any obscene or immoral purpose;
+(11) To interfere with or circumvent the security features of the Service or
+any related website, other websites, or the Internet.
+If you violate any of the prohibited uses, we reserve the right to terminate
+your access to our services or our platform.
+7. Scope and Limitation of Liability
+i. If, at our request, you send certain specific submissions (for example,
+contest entries), or without a request from us you send creative ideas,
+suggestions, proposals, plans, or other materials, whether online, by email,
+by postal mail, or otherwise (collectively, "comments"), you agree that we
+may, at any time, without restriction, edit, copy, publish, distribute,
+translate, and otherwise use in any medium any comments that you forward to
+us. We are and shall be under no obligation:
+(1) To maintain any comments in confidence;
+(2) To pay compensation for any comments;
+(3) To respond to any comments.
+We may, but have no obligation to, monitor, edit, or remove content that we
+determine in our sole discretion to be unlawful, offensive, threatening,
+libelous, defamatory, pornographic, obscene, or otherwise objectionable, or
+that violates any party's intellectual property or this Agreement. You agree
+that your comments will not violate any right of any third party, including
+copyright, trademark, privacy, personality, or other personal or proprietary
+rights. You further agree that your comments will not contain libelous or
+otherwise unlawful, abusive, or obscene material, or contain any computer
+virus or other malware that could in any way affect the operation of the
+Service or any related website. You may not use a false email address, pretend
+to be someone other than yourself, or otherwise mislead us or third parties as
+to the origin of any comments. You are solely responsible for any comments you
+make and their accuracy.
+ii. Our platform makes no express or implied warranties regarding the
+services provided, including but not limited to the suitability, error-free
+or omission-free nature, continuity, accuracy, reliability, or fitness for a
+particular purpose of the services on this platform. At the same time, our
+platform makes no commitment or warranty as to the validity, accuracy,
+correctness, reliability, quality, stability, completeness, and timeliness
+of the technologies and information involved in the services. Our platform
+has the right, but not the obligation, to improve or correct any omissions
+or errors in any part of the services on this platform. To the maximum
+extent permitted by applicable law, we shall not be liable for any damages
+(including direct, compensatory, incidental, indirect, special, material or
+punitive damages) arising out of or in connection with our Services or our
+platform rules. Subject to the foregoing, we shall not be liable to you or
+any third party for:
+(1) Your use of, or inability to use, our Services for any reason;
+(2) Any content provided by our Services, and its accuracy and completeness;
+(3) Changes in the data collection, storage, and transmission through our
+Services;
+(4) Errors, system failures, network or system outages, file corruption or
+interruptions in Services;
+(5) Our Services are interrupted due to equipment, network, technology, or
+other industrial disputes, wars, natural disasters, terrorism, explosions, and
+other force majeure events;
+(6) You suffer various penalties and losses due to improper or illegal use of
+our Services;
+(7) Monitor, collect and provide your personal information (including but not
+limited to all kinds of information generated or created by users during the
+use of our Services) in accordance with legal regulations or requirements of
+government departments.
+iii. Unless expressly required by laws and regulations, or if we have
+reasonable grounds to believe that your behavior on our platform is
+suspected of being illegal, we have no obligation to conduct a prior review
+of the information data, commodity and service information, transaction
+behavior, and other matters related to transactions of all users.
+iv. You understand that we may need to conduct overhaul or maintenance of
+our platforms (such as websites, software, etc.) or relevant equipment that
+provide the services, either periodically or irregularly. If the services
+are interrupted within a reasonable period due to such circumstances, we
+shall issue prior notice to the extent possible. If the network services
+need to be suspended due to system overhaul, maintenance or upgrade, or
+other reasons (such as business adjustment), under no circumstances shall we
+be liable for the failure or delay of services caused by normal equipment
+maintenance of the information network, information network connection
+failure, computer, communication or other system failures, power failure,
+strike, labor dispute, major infectious disease, riot, uprising,
+disturbance, insufficient production or production materials, fire, flood,
+storm, explosion, war, government action, order of judicial or
+administrative authorities, or inaction of a third party.
+v. Our platform may occasionally contain information with typographical
+errors, inaccuracies or omissions relating to product descriptions, pricing,
+promotions, offers, product shipping charges, shipping times and
+availability. If any information on our platform is inaccurate, we reserve
+the right to correct any errors, inaccuracies or omissions, and to change or
+update information or cancel orders at any time without prior notice
+(including after you have submitted your order). We undertake no obligation
+to update, amend or clarify information in this Service or any related
+information except as required by law. The absence of a designated update or
+refresh date on our platform shall be deemed to indicate that all
+information on our platform has been modified or updated. Except as
+otherwise mandated by laws and regulations, we shall only be liable for
+compensation for direct damage results caused to you due to our fault in
+accordance with the law.
+vi. Under no circumstances shall we be liable for any cost of procuring
+substitute goods, software or services, loss of profits, loss of information
+or data, or any other special, indirect, consequential or incidental damages
+arising out of or related to the sale, licensing, use or inability to use
+our products, software or services in any manner, regardless of the cause of
+loss or the theory of liability (contract, tort or otherwise), even if we
+have been advised of the possibility of such damages.
+vii. In no event shall our total liability exceed the actual amount paid for
+our products, software or services that gave rise to the liability. The
+foregoing limitation shall apply even if the above remedy fails for its
+essential purpose. Some jurisdictions do not allow the disclaimer, exclusion
+or limitation of certain warranties, liabilities and damages; accordingly
+the above disclaimers, exclusions and limitations may not apply to you. In
+such jurisdictions, our liability shall be limited to the fullest extent
+permitted by applicable law.
+viii. Any content you post or any control you perform on hardware through
+our services does not represent or reflect any of our opinions or policies,
+and we shall not be liable therefore. Notwithstanding anything to the
+contrary contained in this Agreement, our total liability to you, for any
+reason or in any manner, shall at all times be limited to the fees paid by
+you to us for using our services (if any).
+ix. If any provision of this Agreement is held to be illegal, invalid or
+unenforceable, such provision shall be enforced to the fullest extent
+permitted by applicable law, and the unenforceable part shall be deemed
+severed from this Agreement without affecting the validity and
+enforceability of any other provisions.
+8. Ownership
+We own and retain all rights, including copyrights and other intellectual
+property rights, related to the Service. The Service is licensed to you by us,
+and not sold to you in its entirety. We reserve all rights not expressly
+granted to you.
+9. Privacy
+You can learn how we collect and process your information when you download or
+use our Software, products, or Services by reading our "
+OBSBOT Privacy Policy
+.
+” By
+using our platform, you are deemed to have accepted and agreed to our
+processing of your information in accordance with the Privacy Policy and any
+updates to the Policy. You can check our Privacy Policy regularly to see if
+there are any updates.
+10. Third-Party Live Streaming Services
+i. You acknowledge and understand that when you use our platform for
+third-party live streaming push services, you can only push streams to
+third-party live streaming platforms partnered with us and via live
+streaming methods permitted by our platform, and you shall strictly abide by
+the corresponding service agreements, privacy policies, and various platform
+rules (specific names are subject to the third-party live streaming
+platform) of the third-party platform where you conduct live streaming. You
+acknowledge and understand that the live streaming services are actually
+provided by the third-party platform, and we do not provide any form of
+guarantee for the services provided to you by the third-party live streaming
+platform, and any actions taken by the third-party platform regarding your
+live streaming behavior have nothing to do with us. Any losses caused to us
+due to your use of our third-party live streaming push service, including
+but not limited to being restricted, suspended, or terminated in cooperation
+by a third-party platform, shall be entirely compensated by you.
+ii. When using the Third-party live streaming push service provided by our
+platform, you shall comply with the requirements of the relevant laws and
+regulations of the country/region where you are located regarding live
+streaming content, including but not limited to those relating to blood,
+violence, pornography, minors, drugs and other relevant laws and
+regulations. Otherwise, we shall have the right to deny you the use of our
+service.
+11. Third-Party Software /Websites/Tools
+i. Third-Party Software /Websites
+Our platform can be used in conjunction with other products and
+software/links. The use of such third-party software/links is subject to the
+terms provided by the licensor of that software, including but not limited to
+third-party’s
+Terms of use
+and
+Privacy Policies.
+By
+accessing or using third-party software/websites, you agree to comply with the
+applicable third-party terms. We make no representations or warranties
+regarding the operation or availability of such third-party software/websites.
+We are not responsible for any unavailability or cancellation of such
+third-party software/websites.
+We are not liable for any harm or damages related to the purchase or use of
+goods, services, resources, content, or any other transactions made in
+connection with any third-party websites. Please review carefully the
+third-party's policies and practices and make sure you understand them before
+you engage in any transaction. Complaints, claims, concerns, or questions
+regarding third-party products should be directed to the third-party.
+ii. Optional Tools
+We may provide you with access to third-party tools over which we neither
+monitor nor have any control nor input.
+You acknowledge and agree that we provide access to such tools ”as is” and “as
+available” without any warranties, representations or conditions of any kind
+and without any endorsement. We shall have no liability whatsoever arising
+from or relating to your use of optional third-party tools.
+Any use by you of optional tools offered through our platform is entirely at
+your own risk and discretion and you should ensure that you are familiar with
+and approve of the terms on which tools are provided by the relevant
+third-party provider(s).We may also, in the future, offer new services and/or
+features through our platform (including, the release of new tools and
+resources). Such new features and/or services shall also be subject to this
+agreement.
+iii. Local Processing
+You acknowledge and understand that, in addition to the personal information
+processing activities notified to you under the
+“
+OBSBOT Privacy Policy
+”
+, when you use our relevant products, based on the different products you
+use, the relevant functions of the products themselves are processed locally
+on the device end. Under such scenarios, we will not collect and process your
+relevant image and video information.
+12.Terms of Use for Minors
+i. If you are a minor under the age of 18(or the legal age of majority), you
+should carefully read this Agreement under the guidance of your guardian, and
+you may only use this service after your guardian agrees to this Agreement. If
+you have not obtained the consent of your guardian, the guardian can notify us
+to handle the relevant account through the methods specified in this
+Agreement, and we will restrict the functions of the relevant account
+(including but not limited to live streaming push, etc.) according to the
+guardian's instructions.
+ii. We attach great importance to the protection of minors' personal
+information and privacy. We specifically remind guardians to highly focus on
+the use of our platform by minors. If you are not a guardian, you must obtain
+the consent of the rights holder to display information such as the portraits
+and voices of minors. If we receive notifications from rights holders or based
+on other considerations to protect the legitimate rights and interests of
+minors, we have the right to process relevant situations and notify you as
+appropriate.
+13. Breach of Contract
+i. You understand and agree that we have the right to punish violations of
+relevant laws and regulations or the provisions of this Agreement based on
+reasonable judgment, take appropriate legal actions against any users and
+organizations that violate laws and regulations, and save relevant information
+to relevant parties in accordance with laws and regulations. Department
+reports, etc., users and institutions shall bear all legal responsibilities
+arising therefrom.
+ii. You understand and agree that you and the organization shall be solely
+responsible for any claim, demand or loss claimed by a third party due to your
+violation of this Agreement or the relevant terms of services; if we suffer
+losses as a result, you shall and institutions should also be compensated
+together.
+iii. If we discover or receive reports from others that you and your
+organization have violated this Agreement, we have the right to delete, block
+or disconnect the relevant content at any time without notice, and take
+measures to punish the violating user and organization depending on the
+circumstances of the behavior. Imposing punishments including but not limited
+to warnings, restricting or prohibiting the use of some or all functions, and
+announcing the processing results.
+14. Change to The Agreement
+According to changes in national laws and regulations and the needs of changes
+in our Services, we have the right to modify this Agreement and supplementary
+Agreements. You will be notified by one or more methods such as email, SMS,
+and regular letter delivery. Once the changes are announced in any form, they
+will take effect and replace the previous relevant content. You should pay
+attention to changes in our announcements, reminders, and agreement-related
+content from time to time. If you do not agree to the changes that have taken
+effect, you should stop using our services from the effective date of the
+changes, and the changes will not be effective for you; if you continue to use
+our services after the changes take effect, it is deemed that you agree to the
+changes that have taken effect.
+15. Termination
+i. This Agreement and the license granted hereunder shall remain in effect
+until terminated as provided in this Agreement.
+ii. In the event of any violation of the terms herein, this Agreement and your
+rights to use the our platform shall automatically terminate without notice
+from us, and you must immediately cease use of our platform, delete and/or
+destroy all copies of our platform in your possession.
+iii. Sections 6-15 will survive any termination of this Agreement.
+16. Applicable of Law, Jurisdiction and Other
+i. The establishment, entry into force, performance, interpretation and
+dispute resolution of this Agreement shall be governed by the laws of the
+mainland of the People's Republic of China (excluding conflict of laws).
+ii. If there is any dispute or dispute between you and us, it should first be
+resolved through friendly negotiation. If the negotiation fails, you agree to
+submit the dispute or dispute to the People’s Court with jurisdiction in
+Nanshan District, Shenzhen for litigation resolution.
+iii. The titles of all clauses in this Agreement are for convenience of
+reading only, and have no actual meaning in themselves, and cannot be used as
+the basis for interpretation of the meaning of this Agreement.
+iv. No matter what part of the terms of this Agreement is invalid or
+unenforceable for any reason, the rest of the terms are still valid and
+binding on both parties.
+17. Contact Us
+If you have any questions or concerns about the implementation set forth in
+this Agreement, or if you wish to make complaints or reports, please contact
+us via the following email address: service@obsbot.com. We will reply to your
+questions as soon as possible.
+Products
+OBSBOT Talent 2
+OBSBOT Tail 2 ADV
+OBSBOT Tail Air 2
+OBSBOT Tail 2
+OBSBOT Tail Air
+OBSBOT Tiny 3 Series
+OBSBOT Tiny 2
+OBSBOT Tiny 2 Lite
+OBSBOT Tiny SE
+OBSBOT Meet 2
+OBSBOT Meet Flip
+OBSBOT Meet SE Series
+Customer Care
+Support
+Contact Us
+Warranty & Refund
+Shipping Policy
+Payment Method
+Download
+Student Discount
+About Us
+Our Company
+Latest News
+Careers
+Terms of Use
+Privacy Policy
+Intellectual Property Rights
+Media Kit
+Incident Response
+Blog
+Where To Buy
+Official Online Store
+Online Retailers
+Find a Store
+DEVELOP
+OSC
+SDK
+VISCA
+Pelco D & Pelco P
+Partners
+Influencer Program
+Affiliate Program
+Tail Series Referral Campaign
+Ambassador Program
+Copyright © 2026 OBSBOT All Rights Reserved.
+United States (English/USD)
+Facebook Messenger
+WhatsApp
+Facebook Messenger
+tag -->

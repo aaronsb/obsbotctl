@@ -1,0 +1,31 @@
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+set-cookie: acw_tc=2ff6149e17954521682174352eb32cbf24d5705e6fc5f462f28880db46;path=/;HttpOnly;Max-Age=3600
+set-cookie: cdn_sec_tc=2ff6149e17954521682174352eb32cbf24d5705e6fc5f462f28880db46;path=/;HttpOnly;Max-Age=3600
+alt-svc: h3=":443"; ma=86400, h2=":443"; ma=86400
+cache-control: no-cache
+date: Mon, 23 Nov 2026 16:42:48 GMT
+etag: "18d64-l4AT6PFBvefrBLRH3gT/QGlAr8s"
+set-cookie: COOKIE_REGION_CODE=US; Path=/; Expires=Tue, 23 Nov 2027 16:42:48 GMT
+set-cookie: COOKIE_CURRENCY_CODE=USD; Path=/; Expires=Tue, 23 Nov 2027 16:42:48 GMT
+set-cookie: COOKIE_LOCALE_CODE=en; Path=/; Expires=Tue, 23 Nov 2027 16:42:48 GMT
+vary: Accept-Encoding
+vary: Accept-Encoding
+via: ens-cache34.l2hk12[191,0,DP], ens-cache32.l2jp3[240,0,DP], ens-cache10.us25[372,0,DP], ens-cache10.us25[376,0]
+x-site-cache-status: DYNAMIC
+accept-ch: Viewport-Width, Downlink
+accept-ranges: none
+x-frame-options: ALLOW-FROM https://*.obsbot.com
+content-security-policy: frame-ancestors 'self' https://*.obsbot.com
+x-content-type-options: nosniff
+x-download-options: noopen
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+access-control-allow-headers: *
+access-control-allow-method: GET, POST, OPTIONS
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+server: Tengine
+timing-allow-origin: *
+eagleid: 2ff6149e17954521682174352e
+

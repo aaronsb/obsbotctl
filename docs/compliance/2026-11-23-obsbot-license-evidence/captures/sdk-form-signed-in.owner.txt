@@ -1,0 +1,14 @@
+Text of the OBSBOT SDK application dialog at https://www.obsbot.com/sdk after signing in,
+copied by the report's owner on 2026-11-23 (owner-supplied; not captured by a tool).
+
+OBSBOT SDK application
+Please fill out the information below, after we receive your application, you will receive an email with our SDK tool kit. And if needed, our tech support team will help you with your developing.
+1. Do you own an OBSBOT product?
+Yes
+No
+Which product you owned
+
+2. Why you need the SDK?
+Please briefly describe the reasons why you need the SDK, how, when, where or why you need it? For which kind of scenarios?
+
+Submit

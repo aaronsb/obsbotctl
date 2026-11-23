@@ -1,0 +1,31 @@
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+set-cookie: acw_tc=2ff6179717954515123832643e1ce02d794c12dc56777919523711d369;path=/;HttpOnly;Max-Age=3600
+set-cookie: cdn_sec_tc=2ff6179717954515123832643e1ce02d794c12dc56777919523711d369;path=/;HttpOnly;Max-Age=3600
+alt-svc: h3=":443"; ma=86400, h2=":443"; ma=86400
+cache-control: no-cache
+date: Mon, 23 Nov 2026 16:31:52 GMT
+etag: "1702b-XhiFTZ4DdlbUV0GyGsQJxbRU5wQ"
+set-cookie: COOKIE_REGION_CODE=US; Path=/; Expires=Tue, 23 Nov 2027 16:31:52 GMT
+set-cookie: COOKIE_CURRENCY_CODE=USD; Path=/; Expires=Tue, 23 Nov 2027 16:31:52 GMT
+set-cookie: COOKIE_LOCALE_CODE=en; Path=/; Expires=Tue, 23 Nov 2027 16:31:52 GMT
+vary: Accept-Encoding
+vary: Accept-Encoding
+via: ens-cache27.l2hk12[505,0,DP], ens-cache5.l2jp2[554,0,DP], ens-cache32.l2us4[660,0,DP], ens-cache3.us22[660,0,DP], ens-cache3.us22[661,0]
+x-site-cache-status: DYNAMIC
+accept-ch: Viewport-Width, Downlink
+accept-ranges: none
+x-frame-options: ALLOW-FROM https://*.obsbot.com
+content-security-policy: frame-ancestors 'self' https://*.obsbot.com
+x-content-type-options: nosniff
+x-download-options: noopen
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+access-control-allow-headers: *
+access-control-allow-method: GET, POST, OPTIONS
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+server: Tengine
+timing-allow-origin: *
+eagleid: 2ff6179717954515123832643e
+
