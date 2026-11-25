@@ -18,15 +18,14 @@ libobsbot implements only the camera control, in the open, under the MIT licence
 |---|---|---|
 | `obsbot` | The library, built as `libobsbot`: transport, protocol and product catalog | scaffold |
 | `obsbotctl` | A command-line tool that uses the library directly | scaffold |
-| `obsbotd` | An optional D-Bus daemon, for setups that want one service to own the cameras. Nothing else depends on it, since not every distribution wants a system daemon | scaffold |
 
-Applications use the library in one of three ways:
+Applications link the library directly. A system service that owns the cameras, such as a D-Bus daemon, is not part of this project; one could be built as a separate project on top of the library.
 
 ```mermaid
 flowchart TD
     cpp["C / C++ / Qt apps<br>(e.g. obsbot-camera-control)"] -->|"C API, libobsbot.so (planned)"| lib
     rust["Rust apps"] -->|Rust API| lib
-    dbus["Any D-Bus client"] -->|D-Bus| daemon["obsbotd (optional)"] --> lib
+    svc["A future service, e.g. a D-Bus daemon<br>(separate project)"] -->|Rust API| lib
     lib["obsbot crate (libobsbot)<br>transport · protocol · product catalog"] -->|"UVC extension units, V4L2"| kernel["Linux kernel (uvcvideo)"]
 ```
 

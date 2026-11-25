@@ -55,7 +55,6 @@ capabilities:
   catalog: Product profiles keyed by USB ID and firmware version, with evidence grades
   factory: Pinned vendor inputs kept outside the repo, hydration scripts, extraction and code generation
   verification: Recorded traces, the comparison harness and hardware tests
-  daemon: The optional obsbotd D-Bus service
   cli: The obsbotctl command-line tool
   process: Conventions, documentation and the development process that belong to no product capability
   adr: Decision records, their contract and the adr tool

@@ -10,6 +10,10 @@ basis:
     via: chat session, 2026-11-25
   - operator: aaronsb
     level: directed
+    said: "let's keep it simple - libobsbot becomes something a future obsbotd would use"
+    via: chat session, 2026-11-25
+  - operator: aaronsb
+    level: directed
     said: "dbus isn't really a primary target any more … it's nice to have that as an accessory probably. but not every linux distro is going to use that"
     via: chat session, 2026-11-25
   - operator: aaronsb
@@ -41,7 +45,7 @@ basis:
   - evidence: "In Meet 2 firmware v4.4.7.1, the GPL kernel module remo_multi_usb.ko holds the camera's USB IDs (3564:fefb) and its extension-unit GUID, and the closed application /root/app/bin/camera names 52 Remo_Uvc_Event handlers. Recorded with reproducing commands in notes/investigation/003-device-side-extension-unit.md (local, not published)."
   - evidence: "OBSBOT's download pages list firmware for about 29 products, more than the 17 the SDK header names. The CDN refuses unsigned requests with HTTP 403; the page obtains a signed link by POSTing the file URL to remo-api.obsbot.com/fms/v1/files/cdn/authorization."
 observable:
-  - 'run: cargo tree -p obsbotctl -e normal | grep -c obsbotd   # prints 0: the CLI does not depend on the daemon'
+  - 'run: cargo metadata --no-deps --format-version 1 | python3 -c "import sys,json;print(sorted(p[\"name\"] for p in json.load(sys.stdin)[\"packages\"]))"   # prints [''obsbot'', ''obsbotctl'']'
   - 'see: no file in the repository has the SHA256 of a pinned vendor SDK file or firmware image'
   - 'see: each camera listed as supported names the evidence grade behind each of its controls'
 agent:
@@ -51,6 +55,9 @@ considered:
   - operator: aaronsb
     said: "sdk isn't a straightforward download - you have to request it via email or be given the file. there's no charge or gate other than having contacted obsbot"
     via: chat session, 2026-11-25, answering whether the SDK stays a hand-fetched file the script only verifies
+  - operator: aaronsb
+    said: "let's keep it simple - libobsbot becomes something a future obsbotd would use"
+    via: chat session, 2026-11-25, answering whether obsbotd stays in this repository as an optional crate
 status: proposed
 date: 2026-11-25
 deciders:
@@ -62,7 +69,7 @@ related: []
 
 ## Summary
 
-- **Decided:** libobsbot is an open library that applications link in place of OBSBOT's closed `libdev`. Its camera support is generated from facts extracted from pinned copies of OBSBOT's own files (SDK packages and camera firmware), which are kept outside the repository and fetched by scripts. Recordings of the vendor library's behaviour check it. The D-Bus daemon is optional.
+- **Decided:** libobsbot is an open library that applications link in place of OBSBOT's closed `libdev`. Its camera support is generated from facts extracted from pinned copies of OBSBOT's own files (SDK packages and camera firmware), which are kept outside the repository and fetched by scripts. Recordings of the vendor library's behaviour check it. A system service such as a D-Bus daemon is a separate project built on the library.
 - **Trades away:** an early first release (the extraction and generation tooling comes before most camera features), a runtime fallback to the vendor library, and certainty for cameras nobody on the project owns. The tooling also depends on OBSBOT keeping its downloads public.
 - **One-way?** No. It is reversible now, and becomes expensive once applications ship against the C API.
 - **Probes:** *Confident:* no vendor file is ever committed or packaged. *Not confident:* that the older firmware images, which may not run Linux, give up their command names the way the Meet 2's does.
@@ -80,7 +87,7 @@ The project owns one camera. OBSBOT sells about 29, and their firmware changes t
 
 ### D1. The library is the product
 
-The `obsbot` crate, built as `libobsbot`, is the public surface. Rust applications use its Rust API. C, C++ and Qt applications use a C API generated with `cbindgen` from a `cdylib` build. The `obsbotctl` CLI links the library directly. The `obsbotd` D-Bus daemon is an optional accessory, and no other crate depends on it.
+The `obsbot` crate, built as `libobsbot`, is the public surface. Rust applications use its Rust API. C, C++ and Qt applications use a C API generated with `cbindgen` from a `cdylib` build. The `obsbotctl` CLI links the library directly. This repository holds only the library and the CLI. A system service that owns the cameras, such as a future `obsbotd` D-Bus daemon, would be a separate project that uses the library like any other application.
 
 ### D2. Vendor files are inputs, never contents
 
@@ -143,13 +150,13 @@ Recording new scenarios, or comparing a libobsbot build with the vendor library 
 
 ### Neutral
 
-- The D-Bus bus name must move off `com.obsbot` to a namespace the project controls before `obsbotd` ships.
+- The catalog is plain data, not Rust source, so other consumers can be generated from it as well: a separate daemon, or, hypothetically, kernel-side handling of OBSBOT's extension units. That stays an option, not a commitment.
 - Contributors who own other cameras become the main source of grade-2 evidence, so recording from a camera has to be one command.
 - The compliance evidence and this tooling read the same files. A compliance report that relies on the comparison harness has to state that it ran vendor code.
 
 ## Alternatives Considered
 
-- **A system D-Bus daemon as the primary interface.** This was the project's first design. It was rejected because not every distribution or user wants a system daemon, and desktop users already have access to their camera's device node without one. The daemon stays as an optional accessory (D1).
+- **A system D-Bus daemon as the primary interface.** This was the project's first design. It was rejected because not every distribution or user wants a system daemon, and desktop users already have access to their camera's device node without one. A daemon remains possible as a separate project on top of the library (D1).
 - **Wrap `libdev` behind an open API.** This would have been the fastest route to working features. It was rejected because applications would still load the closed library and inherit its size, its licence problems and its platform limits, and nobody outside OBSBOT could fix it.
 - **Hand-written code per product, without a catalog or factory.** This was rejected because the project owns one of about 29 products and has no other way to learn the rest's command sets. Hand-written code would also drift silently from each firmware release.
 - **Commit the vendor files for reproducibility.** This was rejected because it redistributes OBSBOT's copyrighted binaries. Pinning by SHA256 gives the same reproducibility without redistribution (D2).

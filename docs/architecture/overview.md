@@ -1,6 +1,6 @@
 # Architecture
 
-`libobsbot` is a four-layer Rust library, the `obsbot` crate. Applications link it directly, through its Rust API or its C API, in place of OBSBOT's closed `libdev`. The workspace also holds a command-line tool, `obsbotctl`, and an optional D-Bus daemon, `obsbotd`; both are built on the library.
+`libobsbot` is a four-layer Rust library, the `obsbot` crate. Applications link it directly, through its Rust API or its C API, in place of OBSBOT's closed `libdev`. The workspace also holds a command-line tool, `obsbotctl`, built on the library.
 
 ## Layer 1: Transport
 
@@ -65,37 +65,17 @@ The `obsbot` crate compiles as a `cdylib`, `libobsbot.so`, with a C header gener
 
 [CXX-Qt](https://kdab.github.io/cxx-qt/) exposes Rust structs as `QObject` subclasses that QML can bind to. A Qt application can use it to make the camera part of its object graph instead of calling a C API. *Status: optional, not started.*
 
-### D-Bus daemon (optional)
+### Services built on the library
 
-`obsbotd` is an optional accessory for setups that want one service to own the cameras, such as several applications sharing a camera or a desktop applet that needs no camera permissions of its own. Not every distribution or user wants a system daemon, so nothing in the library or the CLI depends on it.
-
-The daemon's interface is scaffolded under `dbus/`, `systemd/` and `polkit/`:
-
-```
-/com/obsbot/Control1/Manager
-  interface com.obsbot.Control1.Manager
-    method  ListDevices() -> (ao)
-    signal  DeviceAdded(o)
-    signal  DeviceRemoved(o)
-
-/com/obsbot/Control1/Device/N
-  interface org.freedesktop.DBus.Properties
-  interface com.obsbot.Control1.Device  (identity + capabilities)
-  interface com.obsbot.Control1.Camera  (PTZ, focus, HDR, AI, events)
-```
-
-The bus name `com.obsbot.Control1` uses OBSBOT's domain, which this project does not own. It will move to a namespace the project controls before the daemon ships.
+A system service that owns the cameras, such as a D-Bus daemon that several applications share, is not part of this project. It would be a separate project that uses the library like any other application.
 
 ## Crate layout
 
 ```
 crates/
 ├── obsbot/             library — transport, protocol, catalog
-├── obsbotctl/          command-line tool, links the library directly
-└── obsbotd/            optional D-Bus system daemon
+└── obsbotctl/          command-line tool, links the library directly
 ```
-
-The CLI and the daemon each depend on the library and not on each other. The CLI works whether or not the daemon is installed.
 
 ## What's intentionally not here
 
