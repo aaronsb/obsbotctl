@@ -7,7 +7,7 @@
 //!
 //! # Scaffold phase
 //!
-//! Nothing is implemented yet. See `docs/architecture.md` for the intended
+//! Nothing is implemented yet. See `docs/architecture/overview.md` for the intended
 //! layering and `docs/protocol/` for the protocol notes that
 //! seed the protocol layer.
 

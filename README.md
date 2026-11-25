@@ -30,7 +30,7 @@ flowchart TD
     lib["obsbot crate (libobsbot)<br>transport · protocol · product catalog"] -->|"UVC extension units, V4L2"| kernel["Linux kernel (uvcvideo)"]
 ```
 
-[`docs/architecture.md`](docs/architecture.md) describes the layers.
+[`docs/architecture/overview.md`](docs/architecture/overview.md) describes the layers, and [`docs/architecture/`](docs/architecture/) holds the decision records.
 
 ## How the replacement is built and checked
 
