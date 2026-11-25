@@ -88,7 +88,7 @@ No OBSBOT SDK file or firmware image is committed to the repository or included 
 
 Hydration scripts fetch each pinned input into a local store outside the repository (`$OBSBOT_SDK_DIR` and `$OBSBOT_FIRMWARE_DIR`, by default under `~/.local/share/libobsbot/`). They refuse any file whose hash does not match its pin. The scripts download firmware only through OBSBOT's public download flow, and never forge or bypass its link signatures.
 
-The SDK is not a download. OBSBOT sends it by email, without charge, to anyone who asks at https://www.obsbot.com/sdk. A developer who needs it and has no copy requests one there, places the files in the store, and the script verifies them against their pins. The project never passes SDK copies between people.
+The SDK is not a download. OBSBOT supplies the SDK library by email, at no cost, to anyone who asks at https://www.obsbot.com/sdk, and the library is all this project uses. A developer who needs it and has no copy requests one there, places the files in the store, and the script verifies them against their pins. The project never passes SDK copies between people.
 
 ### D3. Extraction reads the inputs without decompiling them
 
