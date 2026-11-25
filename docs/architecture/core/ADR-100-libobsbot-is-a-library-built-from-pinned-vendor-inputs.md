@@ -50,6 +50,14 @@ basis:
     via: chat session, 2026-11-25
   - operator: aaronsb
     level: directed
+    said: "we need to be able to recreate the corpus from scratch even if it takes some time"
+    via: chat session, 2026-11-25
+  - operator: aaronsb
+    level: directed
+    said: "I think it's fair to pull device identifiers from all the firmware files, then we can specifically claim which devices we're trying out and build a truthful reference that way"
+    via: chat session, 2026-11-25
+  - operator: aaronsb
+    level: directed
     said: "sdk isn't a straightforward download - you have to request it via email or be given the file. there's no charge or gate other than having contacted obsbot … anyone who does not have to have a copy should visit https://www.obsbot.com/sdk to inquire to get a copy of it"
     via: chat session, 2026-11-25
   - evidence: "The debug information in OBSBOT's Linux SDK library (libdev.so.1.0.2 and libdev.so.1.0.0) lists 76 source files; 16 of them, under dev/, control cameras, and the rest are bundled compression, firmware-update, file-transfer and networking code. Extracted with readelf --debug-dump=info."
@@ -73,6 +81,9 @@ considered:
   - operator: aaronsb
     said: "ok i like your split better"
     via: chat session, 2026-11-25, choosing layered crates with per-product Cargo features over one crate per camera
+  - operator: aaronsb
+    said: "we need to be able to recreate the corpus from scratch even if it takes some time"
+    via: chat session, 2026-11-25, adding the rebuildable-corpus requirement to D3
 status: proposed
 date: 2026-11-25
 deciders:
@@ -117,6 +128,10 @@ The SDK is not a download. OBSBOT supplies the SDK library by email, at no cost,
 ### D3. Extraction reads the inputs without decompiling them
 
 Extractors read the pinned inputs with symbol tables, strings, debug information, byte searches and documented container formats, and record the camera traffic they observe. They do not decompile or disassemble vendor code. Their output is committed as data: USB IDs, extension-unit GUIDs, command names, and command numbers and payload layouts where a source states them.
+
+The committed data, which this record calls the corpus, can be rebuilt from scratch. A factory command regenerates every item from the pinned inputs, the reference camera and any contributed recordings, however long that takes. No item is written by hand without a script that reproduces it. Each item records the inputs it came from, by SHA256, so a rebuild that changes an item shows which input moved.
+
+When a recording claims to come from a product the project does not own, it is made by giving the vendor library that product's identity, taken from that product's own pinned firmware: its USB IDs and its device-information fields. The recording names the firmware its identity came from, and carries the vendor-oracle grade (D5).
 
 ### D4. Camera support is generated from a catalog
 
