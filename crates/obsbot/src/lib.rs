@@ -1,8 +1,9 @@
 //! obsbot — open control library for OBSBOT cameras.
 //!
-//! This crate is the protocol + transport + catalog layer. It is UI-agnostic
-//! and daemon-agnostic: a reference D-Bus server (`obsbotd`) and a reference
-//! CLI (`obsbotctl`) are built on top of it in the same workspace.
+//! This crate is the protocol, transport and catalog layer, and the product:
+//! applications link it directly in place of OBSBOT's closed `libdev`. The
+//! `obsbotctl` CLI and the optional `obsbotd` D-Bus daemon in this workspace
+//! are built on it.
 //!
 //! # Scaffold phase
 //!

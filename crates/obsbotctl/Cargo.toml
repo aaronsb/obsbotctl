@@ -6,7 +6,7 @@ license.workspace = true
 authors.workspace = true
 repository.workspace = true
 rust-version.workspace = true
-description = "Command-line client for obsbotd (OBSBOT camera control)."
+description = "Command-line tool for OBSBOT cameras, built on libobsbot."
 
 [[bin]]
 name = "obsbotctl"
