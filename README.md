@@ -46,7 +46,7 @@ The investigation does not decompile the vendor library. It uses the library's s
 
 This repository contains no OBSBOT code, and libobsbot neither links nor loads `libdev`. You need the vendor SDK only to record new expected outputs, or to compare a libobsbot build against the vendor library directly.
 
-To do either, get the SDK from OBSBOT through the application form at [obsbot.com/sdk](https://www.obsbot.com/sdk) and keep it outside this repository. The planned tooling looks for it in `$OBSBOT_SDK_DIR`, by default `~/.local/share/libobsbot/sdk/<package>/`, and refuses any file whose SHA256 does not match a pinned version:
+The SDK is not a download, and this project does not hand out copies. To get one, ask OBSBOT at [obsbot.com/sdk](https://www.obsbot.com/sdk); they send it by email, without charge. Keep it outside this repository. The planned tooling looks for it in `$OBSBOT_SDK_DIR`, by default `~/.local/share/libobsbot/sdk/<package>/`, and refuses any file whose SHA256 does not match a pinned version:
 
 | SDK package | Library file | SHA256 |
 |---|---|---|

@@ -32,6 +32,10 @@ basis:
     level: guided
     said: "a per-product code assembly is probably the right shape here. I can't afford to buy every camera they have … I only have a meet 2"
     via: chat session, 2026-11-25
+  - operator: aaronsb
+    level: directed
+    said: "sdk isn't a straightforward download - you have to request it via email or be given the file. there's no charge or gate other than having contacted obsbot … anyone who does not have to have a copy should visit https://www.obsbot.com/sdk to inquire to get a copy of it"
+    via: chat session, 2026-11-25
   - evidence: "The debug information in OBSBOT's Linux SDK library (libdev.so.1.0.2 and libdev.so.1.0.0) lists 76 source files; 16 of them, under dev/, control cameras, and the rest are bundled compression, firmware-update, file-transfer and networking code. Extracted with readelf --debug-dump=info."
   - evidence: "SDK package libdev_v2.1.0_8 ships libdev.so.1.0.0, while the older libdev_v2.1.0_7 ships libdev.so.1.0.2, so the library's own version numbers cannot order releases. SHA256 values are in docs/compliance/2026-11-23-obsbot-license-evidence/SHA256SUMS."
   - evidence: "In Meet 2 firmware v4.4.7.1, the GPL kernel module remo_multi_usb.ko holds the camera's USB IDs (3564:fefb) and its extension-unit GUID, and the closed application /root/app/bin/camera names 52 Remo_Uvc_Event handlers. Recorded with reproducing commands in notes/investigation/003-device-side-extension-unit.md (local, not published)."
@@ -43,6 +47,10 @@ observable:
 agent:
   name: claude
   model: claude-opus-5-5
+considered:
+  - operator: aaronsb
+    said: "sdk isn't a straightforward download - you have to request it via email or be given the file. there's no charge or gate other than having contacted obsbot"
+    via: chat session, 2026-11-25, answering whether the SDK stays a hand-fetched file the script only verifies
 status: proposed
 date: 2026-11-25
 deciders:
@@ -78,7 +86,9 @@ The `obsbot` crate, built as `libobsbot`, is the public surface. Rust applicatio
 
 No OBSBOT SDK file or firmware image is committed to the repository or included in any package built from it. A manifest in the repository pins each supported input: the product or SDK package, its version, the file name, its SHA256 and where it is obtained.
 
-Hydration scripts fetch each pinned input into a local store outside the repository (`$OBSBOT_SDK_DIR` and `$OBSBOT_FIRMWARE_DIR`, by default under `~/.local/share/libobsbot/`). They refuse any file whose hash does not match its pin. The scripts obtain files only through OBSBOT's public download flow, and never forge or bypass its link signatures. An input that OBSBOT hands out only through a form, such as the SDK, is fetched by hand and verified by the script.
+Hydration scripts fetch each pinned input into a local store outside the repository (`$OBSBOT_SDK_DIR` and `$OBSBOT_FIRMWARE_DIR`, by default under `~/.local/share/libobsbot/`). They refuse any file whose hash does not match its pin. The scripts download firmware only through OBSBOT's public download flow, and never forge or bypass its link signatures.
+
+The SDK is not a download. OBSBOT sends it by email, without charge, to anyone who asks at https://www.obsbot.com/sdk. A developer who needs it and has no copy requests one there, places the files in the store, and the script verifies them against their pins. The project never passes SDK copies between people.
 
 ### D3. Extraction reads the inputs without decompiling them
 
