@@ -41,6 +41,14 @@ basis:
     said: "a per-product code assembly is probably the right shape here. I can't afford to buy every camera they have … I only have a meet 2"
     via: chat session, 2026-11-25
   - operator: aaronsb
+    level: guided
+    said: "what do you  think of having a crate per camera and then a common set of crates to make it so someone doesn't need to take every feature from every camera just to do things"
+    via: chat session, 2026-11-25
+  - operator: aaronsb
+    level: directed
+    said: "ok i like your split better"
+    via: chat session, 2026-11-25
+  - operator: aaronsb
     level: directed
     said: "sdk isn't a straightforward download - you have to request it via email or be given the file. there's no charge or gate other than having contacted obsbot … anyone who does not have to have a copy should visit https://www.obsbot.com/sdk to inquire to get a copy of it"
     via: chat session, 2026-11-25
@@ -62,6 +70,9 @@ considered:
   - operator: aaronsb
     said: "let's keep it simple - libobsbot becomes something a future obsbotd would use"
     via: chat session, 2026-11-25, answering whether obsbotd stays in this repository as an optional crate
+  - operator: aaronsb
+    said: "ok i like your split better"
+    via: chat session, 2026-11-25, choosing layered crates with per-product Cargo features over one crate per camera
 status: proposed
 date: 2026-11-25
 deciders:
@@ -115,6 +126,19 @@ The sources name the same command differently. A reviewed mapping table joins th
 
 Each protocol dialect is a code module. Product-specific code exists only for quirks the catalog cannot express.
 
+The workspace splits into crates by layer and by dependency weight, not by product:
+
+| Crate | Holds |
+|---|---|
+| `obsbot-proto` | Message types, enums and packet framing generated from the extracted schemas, with no I/O, so other projects can reuse them |
+| `obsbot-transport` | Access to UVC extension units on Linux; heavier transports, such as Bluetooth, get crates of their own |
+| `obsbot-catalog` | The generated per-product tables, with one Cargo feature per product |
+| `obsbot` | The high-level camera API, which re-exports the layers below and passes the product features through |
+| `obsbot-capi` | The C library (`libobsbot.so`) and its header |
+| `obsbotctl` | The command-line tool |
+
+A consumer selects the products it needs with Cargo features, for example `features = ["meet2"]`, and code for unselected products is not compiled. Each product feature enables the protocol dialect it needs. The default feature set includes every product. Each crate is created when its first code lands.
+
 ### D5. Support claims carry an evidence grade
 
 Each control on each product carries one of these grades, strongest first:
@@ -164,6 +188,7 @@ Recording new scenarios, or comparing a libobsbot build with the vendor library 
 
 - **A system D-Bus daemon as the primary interface.** This was the project's first design. It was rejected because not every distribution or user wants a system daemon, and desktop users already have access to their camera's device node without one. A daemon remains possible as a separate project on top of the library (D1).
 - **Wrap `libdev` behind an open API.** This would have been the fastest route to working features. It was rejected because applications would still load the closed library and inherit its size, its licence problems and its platform limits, and nobody outside OBSBOT could fix it.
+- **One crate per camera on top of a set of common crates.** This would let a consumer take only the cameras it needs. It was rejected because cameras share most of their protocol, so each product crate would hold little more than catalog data, and about 29 crates would each need releasing whenever the shared protocol changed. Cargo features on `obsbot-catalog` give the same selection without the extra crates (D4).
 - **Hand-written code per product, without a catalog or factory.** This was rejected because the project owns one of about 29 products and has no other way to learn the rest's command sets. Hand-written code would also drift silently from each firmware release.
 - **Commit the vendor files for reproducibility.** This was rejected because it redistributes OBSBOT's copyrighted binaries. Pinning by SHA256 gives the same reproducibility without redistribution (D2).
 - **Use the vendor library as a runtime fallback.** This was rejected because it keeps applications coupled to the closed library, which is the problem the project exists to remove.

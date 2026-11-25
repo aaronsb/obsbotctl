@@ -71,10 +71,24 @@ A system service that owns the cameras, such as a D-Bus daemon that several appl
 
 ## Crate layout
 
+Today:
+
 ```
 crates/
 ├── obsbot/             library — transport, protocol, catalog
 └── obsbotctl/          command-line tool, links the library directly
+```
+
+Planned, split by layer, with cameras selected by Cargo features (ADR-100, D4). Each crate is created when its first code lands:
+
+```
+crates/
+├── obsbot-proto/       message types, enums and framing generated from extracted schemas; no I/O
+├── obsbot-transport/   UVC extension-unit access on Linux
+├── obsbot-catalog/     generated per-product tables; one Cargo feature per product
+├── obsbot/             high-level camera API; re-exports the layers and passes product features through
+├── obsbot-capi/        C library (libobsbot.so) and header
+└── obsbotctl/          command-line tool
 ```
 
 ## What's intentionally not here
