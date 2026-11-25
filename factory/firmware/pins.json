@@ -1,0 +1,14 @@
+{
+ "Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "240591d4ab2dd39bf785e5fe289160af590138d83e0b011dac2fe4ca11b3fedd",
+  "size": 64656096,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin"
+ },
+ "Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "70d0cd9b89cfd569cd693c32b9408baf6bddba1a3ea8205c92cbf2d3cfc2b9f2",
+  "size": 148272024,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-2/Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin"
+ }
+}
