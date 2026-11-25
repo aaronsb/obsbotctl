@@ -14,6 +14,10 @@ basis:
     via: chat session, 2026-11-25
   - operator: aaronsb
     level: directed
+    said: "we should make sure that for now the repo 'obsbot-camera-control' remains functional and independent."
+    via: chat session, 2026-11-25
+  - operator: aaronsb
+    level: directed
     said: "dbus isn't really a primary target any more … it's nice to have that as an accessory probably. but not every linux distro is going to use that"
     via: chat session, 2026-11-25
   - operator: aaronsb
@@ -88,6 +92,8 @@ The project owns one camera. OBSBOT sells about 29, and their firmware changes t
 ### D1. The library is the product
 
 The `obsbot` crate, built as `libobsbot`, is the public surface. Rust applications use its Rust API. C, C++ and Qt applications use a C API generated with `cbindgen` from a `cdylib` build. The `obsbotctl` CLI links the library directly. This repository holds only the library and the CLI. A system service that owns the cameras, such as a future `obsbotd` D-Bus daemon, would be a separate project that uses the library like any other application.
+
+obsbot-camera-control, the Qt application developed alongside libobsbot, stays independent of it for now. It keeps building against the vendor SDK, and no libobsbot change requires a change there. It switches to libobsbot only when libobsbot can replace the vendor SDK for it, as a decision of its own.
 
 ### D2. Vendor files are inputs, never contents
 

@@ -80,7 +80,7 @@ Out of scope for now:
 
 ## Related projects
 
-- [obsbot-camera-control](https://github.com/aaronsb/obsbot-camera-control): a Qt application for OBSBOT cameras. It uses the vendor SDK today and is developed alongside libobsbot, which it will move to.
+- [obsbot-camera-control](https://github.com/aaronsb/obsbot-camera-control): a Qt application for OBSBOT cameras. It uses the vendor SDK, works on its own, and does not depend on libobsbot. It may move to libobsbot once libobsbot can replace the vendor SDK for it.
 - [bosectl](https://github.com/aaronsb/bosectl): the same Linux-native approach applied to Bose headphones.
 
 ## License
