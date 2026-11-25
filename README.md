@@ -1,4 +1,4 @@
-# obsbotctl
+# libobsbot
 
 Open control library and D-Bus system daemon for OBSBOT cameras on Linux.
 
@@ -39,7 +39,7 @@ Concrete outcomes this project is working toward:
 └────────────────────────────┬────────────────────────────────┘
                              │
 ┌────────────────────────────▼────────────────────────────────┐
-│                 obsbotctl-core — Rust library               │
+│              obsbot — Rust library (libobsbot)              │
 │  transport  │  protocol   │  device catalog & quirks        │
 └────────────────────────────┬────────────────────────────────┘
                              │
@@ -52,7 +52,7 @@ Three binaries in one workspace:
 
 - **`obsbotd`** — the system daemon
 - **`obsbotctl`** — a CLI client (like `bluetoothctl` or `networkctl`)
-- **`obsbotctl-core`** — the Rust library everything builds on
+- **`obsbot`** — the Rust library everything builds on, built as `libobsbot`
 
 ## Integration options
 
@@ -88,7 +88,7 @@ See [`docs/devices.md`](docs/devices.md) for the intended device catalog.
 ## Related projects
 
 - [obsbot-camera-control](https://github.com/aaronsb/obsbot-camera-control) —
-  Qt GUI that will eventually consume `obsbotctl` over D-Bus.
+  Qt GUI that will eventually consume `libobsbot` in place of the vendor SDK.
 - [bosectl](https://github.com/aaronsb/bosectl) — sibling project applying
   the same Linux-native system daemon pattern to Bose headphones.
 

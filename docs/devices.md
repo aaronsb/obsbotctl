@@ -1,6 +1,6 @@
 # OBSBOT device catalog
 
-The intended coverage list for `obsbotctl`. The goal is to scaffold for the
+The intended coverage list for `libobsbot`. The goal is to scaffold for the
 full OBSBOT camera family, not only the ones any single contributor owns.
 
 ## Coverage levels

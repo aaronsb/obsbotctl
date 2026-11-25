@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/obsbotctl-core",
+    "crates/obsbot",
     "crates/obsbotd",
     "crates/obsbotctl",
 ]
@@ -11,7 +11,7 @@ version = "0.0.1"
 edition = "2021"
 license = "MIT"
 authors = ["Aaron Bockelie"]
-repository = "https://github.com/aaronsb/obsbotctl"
+repository = "https://github.com/aaronsb/libobsbot"
 rust-version = "1.75"
 
 # Workspace-wide dependency versions. Individual crates pick what they need.

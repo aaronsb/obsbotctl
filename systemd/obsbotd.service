@@ -3,7 +3,7 @@
 
 [Unit]
 Description=OBSBOT camera control daemon
-Documentation=https://github.com/aaronsb/obsbotctl
+Documentation=https://github.com/aaronsb/libobsbot
 After=dbus.service
 
 [Service]

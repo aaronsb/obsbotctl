@@ -13,4 +13,4 @@ name = "obsbotctl"
 path = "src/main.rs"
 
 [dependencies]
-obsbotctl-core = { path = "../obsbotctl-core" }
+obsbot = { path = "../obsbot" }

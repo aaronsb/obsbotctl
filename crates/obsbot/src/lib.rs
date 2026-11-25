@@ -1,4 +1,4 @@
-//! obsbotctl-core — open control library for OBSBOT cameras.
+//! obsbot — open control library for OBSBOT cameras.
 //!
 //! This crate is the protocol + transport + catalog layer. It is UI-agnostic
 //! and daemon-agnostic: a reference D-Bus server (`obsbotd`) and a reference
@@ -7,7 +7,7 @@
 //! # Scaffold phase
 //!
 //! Nothing is implemented yet. See `docs/architecture.md` for the intended
-//! layering and `docs/investigation/` for the reverse engineering notes that
+//! layering and `docs/protocol/` for the protocol notes that
 //! seed the protocol layer.
 
 #![deny(rust_2018_idioms)]
@@ -20,7 +20,7 @@ pub const VERSION: &str = env!("CARGO_PKG_VERSION");
 /// Result alias used throughout the crate.
 pub type Result<T> = std::result::Result<T, Error>;
 
-/// Errors raised by obsbotctl-core.
+/// Errors raised by this crate.
 #[derive(Debug, Error)]
 pub enum Error {
     /// The requested device was not found on the system.

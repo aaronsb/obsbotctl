@@ -1,6 +1,6 @@
 # Architecture
 
-`obsbotctl` is a four-layer Rust library plus a D-Bus daemon and CLI.
+`libobsbot` is a four-layer Rust library (the `obsbot` crate) plus a D-Bus daemon and CLI.
 Applications don't link to anything camera-specific — the daemon owns the
 hardware, and consumers talk to it over D-Bus.
 
@@ -53,7 +53,7 @@ can add new models by submitting profile files rather than patching code.
 
 ## Layer 4: Public surface
 
-The library exposes a Rust API (`obsbotctl_core::...`) consumed by the
+The library exposes a Rust API (`obsbot::...`) consumed by the
 daemon and CLI in this workspace. External consumers have three options:
 
 ### Option A: D-Bus (primary)
@@ -86,7 +86,7 @@ System bus: com.obsbot.Control1
 ### Option B: C FFI via cbindgen
 
 For consumers that must be in-process (performance, sandboxing, daemon not
-installed), `obsbotctl-core` can compile as a `cdylib` with a
+installed), the `obsbot` crate can compile as a `cdylib` with a
 `cbindgen`-generated C header. Any C/C++/Qt application can then link it
 directly.
 
@@ -104,7 +104,7 @@ escape hatches for specific consumers.
 
 ```
 crates/
-├── obsbotctl-core/     library — transport, protocol, catalog
+├── obsbot/             library — transport, protocol, catalog
 ├── obsbotd/            D-Bus system daemon
 └── obsbotctl/          CLI client (talks to obsbotd over D-Bus)
 ```
@@ -116,7 +116,7 @@ each other at the code level — communication is over D-Bus at runtime.
 
 - **Firmware upgrade.** Out of scope — use vendor tools.
 - **Video streaming.** The kernel UVC driver exposes cameras as `/dev/videoN`.
-  Use GStreamer, V4L2, or OpenCV to read pixels. `obsbotctl` is a control
+  Use GStreamer, V4L2, or OpenCV to read pixels. `libobsbot` is a control
   plane, not a data plane.
 - **Virtual background upload.** Not part of the v1 scope.
 - **Tail Air networked mode.** Deferred until the USB path is stable.

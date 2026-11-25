@@ -17,5 +17,5 @@
 #![deny(rust_2018_idioms)]
 
 fn main() {
-    println!("obsbotctl scaffold (version {})", obsbotctl_core::VERSION);
+    println!("obsbotctl scaffold (version {})", obsbot::VERSION);
 }

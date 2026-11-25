@@ -81,24 +81,24 @@ dependencies = [
 ]
 
 [[package]]
-name = "obsbotctl"
-version = "0.0.1"
-dependencies = [
- "obsbotctl-core",
-]
-
-[[package]]
-name = "obsbotctl-core"
+name = "obsbot"
 version = "0.0.1"
 dependencies = [
  "thiserror",
 ]
 
 [[package]]
+name = "obsbotctl"
+version = "0.0.1"
+dependencies = [
+ "obsbot",
+]
+
+[[package]]
 name = "obsbotd"
 version = "0.0.1"
 dependencies = [
- "obsbotctl-core",
+ "obsbot",
  "tokio",
  "tracing",
  "tracing-subscriber",
