@@ -5,6 +5,12 @@
   "size": 64656096,
   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin"
  },
+ "Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "b4e48b49f43d93fa23b9e2ee8606b5a4f682b7fcb677bb2aa771f05e7657e388",
+  "size": 64656104,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin"
+ },
  "Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin": {
   "pinned": "2026-11-25",
   "sha256": "70d0cd9b89cfd569cd693c32b9408baf6bddba1a3ea8205c92cbf2d3cfc2b9f2",
