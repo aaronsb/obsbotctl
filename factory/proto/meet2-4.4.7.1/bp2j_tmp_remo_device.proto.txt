@@ -1,0 +1,516 @@
+name: "bp2j_tmp_remo_device.proto"
+enum_type {
+  name: "REMO_USB_MODE_e"
+  value {
+    name: "REMO_USB_MODE_NET"
+    number: 0
+  }
+  value {
+    name: "REMO_USB_MODE_UVC"
+    number: 1
+  }
+  value {
+    name: "REMO_USB_MODE_MTP"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_JACK_DEVICE_e"
+  value {
+    name: "REMO_JACK_LINE_IN"
+    number: 0
+  }
+  value {
+    name: "REMO_JACK_MIC_IN"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_DEVICE_ROTATE"
+  value {
+    name: "REMO_DEVICE_ROTATE_0"
+    number: 0
+  }
+  value {
+    name: "REMO_DEVICE_ROTATE_90"
+    number: 1
+  }
+  value {
+    name: "REMO_DEVICE_ROTATE_180"
+    number: 2
+  }
+  value {
+    name: "REMO_DEVICE_ROTATE_270"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_BASE_ATTITUDE"
+  value {
+    name: "REMO_BASE_LANDSCAPE"
+    number: 0
+  }
+  value {
+    name: "REMO_BASE_PORTRAIT_90"
+    number: 1
+  }
+  value {
+    name: "REMO_BASE_PORTRAIT_270"
+    number: 2
+  }
+  value {
+    name: "REMO_BASE_OVERLOOK"
+    number: 3
+  }
+  value {
+    name: "REMO_BASE_HOOKS"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_UVC_MODE_e"
+  value {
+    name: "REMO_UVC_MODE_UNKNOW"
+    number: 0
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P30_H264"
+    number: 1
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P25_H264"
+    number: 2
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P24_H264"
+    number: 3
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P20_H264"
+    number: 4
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P15_H264"
+    number: 5
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P30_H264"
+    number: 6
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P25_H264"
+    number: 7
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P24_H264"
+    number: 8
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P20_H264"
+    number: 9
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P15_H264"
+    number: 10
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P60_H264"
+    number: 11
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P30_H264"
+    number: 12
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P25_H264"
+    number: 13
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P24_H264"
+    number: 14
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P20_H264"
+    number: 15
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P15_H264"
+    number: 16
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P60_H264"
+    number: 17
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P30_H264"
+    number: 18
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P25_H264"
+    number: 19
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P24_H264"
+    number: 20
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P20_H264"
+    number: 21
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P15_H264"
+    number: 22
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P60_H264"
+    number: 23
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P30_H264"
+    number: 24
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P25_H264"
+    number: 25
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P24_H264"
+    number: 26
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P20_H264"
+    number: 27
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P15_H264"
+    number: 28
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P60_H264"
+    number: 29
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P30_H264"
+    number: 30
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P25_H264"
+    number: 31
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P24_H264"
+    number: 32
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P20_H264"
+    number: 33
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P15_H264"
+    number: 34
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P30_MJPEG"
+    number: 35
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P25_MJPEG"
+    number: 36
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P24_MJPEG"
+    number: 37
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P20_MJPEG"
+    number: 38
+  }
+  value {
+    name: "REMO_UVC_MODE_4000x3000P15_MJPEG"
+    number: 39
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P30_MJPEG"
+    number: 40
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P25_MJPEG"
+    number: 41
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P24_MJPEG"
+    number: 42
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P20_MJPEG"
+    number: 43
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P15_MJPEG"
+    number: 44
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P60_MJPEG"
+    number: 45
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P30_MJPEG"
+    number: 46
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P25_MJPEG"
+    number: 47
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P24_MJPEG"
+    number: 48
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P20_MJPEG"
+    number: 49
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P15_MJPEG"
+    number: 50
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P60_MJPEG"
+    number: 51
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P30_MJPEG"
+    number: 52
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P25_MJPEG"
+    number: 53
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P24_MJPEG"
+    number: 54
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P20_MJPEG"
+    number: 55
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P15_MJPEG"
+    number: 56
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P60_MJPEG"
+    number: 57
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P30_MJPEG"
+    number: 58
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P25_MJPEG"
+    number: 59
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P24_MJPEG"
+    number: 60
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P20_MJPEG"
+    number: 61
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P15_MJPEG"
+    number: 62
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P60_MJPEG"
+    number: 63
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P30_MJPEG"
+    number: 64
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P25_MJPEG"
+    number: 65
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P24_MJPEG"
+    number: 66
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P20_MJPEG"
+    number: 67
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P15_MJPEG"
+    number: 68
+  }
+  value {
+    name: "REMO_UVC_MODE_3840x2160P15_YUYV"
+    number: 69
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P60_YUYV"
+    number: 70
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P30_YUYV"
+    number: 71
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P25_YUYV"
+    number: 72
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P24_YUYV"
+    number: 73
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P20_YUYV"
+    number: 74
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1440P15_YUYV"
+    number: 75
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P60_YUYV"
+    number: 76
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P30_YUYV"
+    number: 77
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P25_YUYV"
+    number: 78
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P24_YUYV"
+    number: 79
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P20_YUYV"
+    number: 80
+  }
+  value {
+    name: "REMO_UVC_MODE_1920x1080P15_YUYV"
+    number: 81
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P60_YUYV"
+    number: 82
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P30_YUYV"
+    number: 83
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P25_YUYV"
+    number: 84
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P24_YUYV"
+    number: 85
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P20_YUYV"
+    number: 86
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x960P15_YUYV"
+    number: 87
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P60_YUYV"
+    number: 88
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P30_YUYV"
+    number: 89
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P25_YUYV"
+    number: 90
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P24_YUYV"
+    number: 91
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P20_YUYV"
+    number: 92
+  }
+  value {
+    name: "REMO_UVC_MODE_1280x720P15_YUYV"
+    number: 93
+  }
+  value {
+    name: "REMO_UVC_MODE_640x480P60_YUYV"
+    number: 94
+  }
+  value {
+    name: "REMO_UVC_MODE_640x480P30_YUYV"
+    number: 95
+  }
+  value {
+    name: "REMO_UVC_MODE_640x480P25_YUYV"
+    number: 96
+  }
+  value {
+    name: "REMO_UVC_MODE_640x480P24_YUYV"
+    number: 97
+  }
+  value {
+    name: "REMO_UVC_MODE_640x480P20_YUYV"
+    number: 98
+  }
+  value {
+    name: "REMO_UVC_MODE_640x480P15_YUYV"
+    number: 99
+  }
+  value {
+    name: "REMO_UVC_MODE_640x360P60_YUYV"
+    number: 100
+  }
+  value {
+    name: "REMO_UVC_MODE_640x360P30_YUYV"
+    number: 101
+  }
+  value {
+    name: "REMO_UVC_MODE_640x360P25_YUYV"
+    number: 102
+  }
+  value {
+    name: "REMO_UVC_MODE_640x360P24_YUYV"
+    number: 103
+  }
+  value {
+    name: "REMO_UVC_MODE_640x360P20_YUYV"
+    number: 104
+  }
+  value {
+    name: "REMO_UVC_MODE_640x360P15_YUYV"
+    number: 105
+  }
+}
+enum_type {
+  name: "REMO_HDMI_EVENT_e"
+  value {
+    name: "REMO_HDMI_EVENT_PLUGIN"
+    number: 0
+  }
+  value {
+    name: "REMO_HDMI_EVENT_PLUGOUT"
+    number: 1
+  }
+  value {
+    name: "REMO_HDMI_EVENT_CHECK"
+    number: 2
+  }
+  value {
+    name: "REMO_HDMI_EVENT_RESET"
+    number: 3
+  }
+}
+syntax: "proto3"

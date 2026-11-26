@@ -1,0 +1,968 @@
+name: "bp2j_tmp_remo_pdt_cfg.proto"
+dependency: "bp2j_tmp_remo_cfg.proto"
+dependency: "bp2j_tmp_remo_media.proto"
+dependency: "bp2j_tmp_remo_stream.proto"
+dependency: "bp2j_tmp_remo_device.proto"
+dependency: "bp2j_tmp_remo_ust.proto"
+message_type {
+  name: "Remo_Pdt_Cfg_System_t"
+  field {
+    name: "iqFilePath"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_Device_t"
+  field {
+    name: "xxx"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_VcapCommon_t"
+  field {
+    name: "hdrType"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_VcapChn_t"
+  field {
+    name: "snrPadId"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vifGrpId"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vifDevId"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vifPortId"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispDevId"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispChnId"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispPortId"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_VcapMode_t"
+  field {
+    name: "bValid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "snrResIdx"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "pdafType"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_VcapPipe_t"
+  field {
+    name: "bValid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hdrType"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispRotate"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vifIspBindType"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "isp3dNrLevel"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "pdafEnable"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_Vcap_t"
+  field {
+    name: "common"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_VcapCommon_t"
+  }
+  field {
+    name: "chn"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_VcapChn_t"
+  }
+  field {
+    name: "mode"
+    number: 3
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_VcapMode_t"
+  }
+  field {
+    name: "modeHdr"
+    number: 4
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_VcapMode_t"
+  }
+  field {
+    name: "pipe"
+    number: 5
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_VcapPipe_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_VprocPipe_t"
+  field {
+    name: "bValid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "ispSclBindType"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rotateScl"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "rotSclBindType"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bindLdc"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "ldcSclBindType"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bInputCrop"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "incrop"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Rect_t"
+  }
+  field {
+    name: "bOutputCrop"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "outcrop"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Rect_t"
+  }
+  field {
+    name: "ldcWorkMode"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ldcSliceNum"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "doubleSCL"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fvSmallScl"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_VprocCommon_t"
+  field {
+    name: "vifIspBindType"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_VprocChn_t"
+  field {
+    name: "sclDevId"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sclChnId"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sclPortId"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sclPortMask"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bSclChnShared"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "rotateSclDevId"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rotateSclChnId"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rotateSclPortId"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rotateSclPortMask"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ldcDevId"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ldcChnId"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ldcPortId"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispDevId"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispChnId"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispPortId"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispportTotDepth"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ispportUsrDepth"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "smallDevId"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "smallChnId"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "smallPortId"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "smallPortMask"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_Vproc_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_VprocChn_t"
+  }
+  field {
+    name: "pipe"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_VprocPipe_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_StreamMode_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Stream_Mode_t"
+  }
+  field {
+    name: "resmode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_RES_e"
+  }
+  field {
+    name: "gop"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bps"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_StreamChn_t"
+  field {
+    name: "h264RcMode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VENC_RC_MODE_e"
+  }
+  field {
+    name: "h265RcMode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VENC_RC_MODE_e"
+  }
+  field {
+    name: "mjpgRcMode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VENC_RC_MODE_e"
+  }
+  field {
+    name: "h264Profile"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "h265Profile"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vencRingFrmMode"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "yuvUserBufDepth"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "yuvSysBufDepth"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "h264VencChn"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "mjpegVencChn"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "h265VencChn"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_Stream_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_StreamChn_t"
+  }
+  field {
+    name: "mjpeg"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_StreamMode_t"
+  }
+  field {
+    name: "h264"
+    number: 3
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_StreamMode_t"
+  }
+  field {
+    name: "yuv"
+    number: 4
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_StreamMode_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_AcapChn_t"
+  field {
+    name: "user_depth"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "total_depth"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "front_gain"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "rear_gain"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "enable_gain"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bresample"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "resample_rate"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_AcapDevice_t"
+  field {
+    name: "dev_type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_AcapDev_Type_e"
+  }
+  field {
+    name: "chn_cnt"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vaild"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "gain_min"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "gain_max"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "chn_cfg"
+    number: 6
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_AcapChn_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_Acap_t"
+  field {
+    name: "dev_cfg"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_AcapDevice_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_MediaWK_t"
+  field {
+    name: "usermode"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hdrType"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rotate"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DEVICE_ROTATE"
+  }
+  field {
+    name: "resmode"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_RES_e"
+  }
+  field {
+    name: "bValid"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "size"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Rect_t"
+  }
+  field {
+    name: "vcap"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_Pdt_VcapPipeMode_e"
+  }
+  field {
+    name: "pgm"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_Pdt_VprocPipeMode_e"
+  }
+  field {
+    name: "fullview"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_Pdt_VprocPipeMode_e"
+  }
+  field {
+    name: "vcapChnId"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "pgmStrmChnId"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fullviewChnId"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fullviewSmallChnId"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fullviewsmall"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_Pdt_VprocPipeMode_e"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_MediaWorkMode_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_MediaWK_t"
+  }
+  field {
+    name: "vcapmode"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vcapmode_hdr"
+    number: 3
+    label: LABEL_REPEATED
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_Media_t"
+  field {
+    name: "vcap"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_Vcap_t"
+  }
+  field {
+    name: "vproc"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_Vproc_t"
+  }
+  field {
+    name: "stream"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_Stream_t"
+  }
+  field {
+    name: "acap"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_Acap_t"
+  }
+  field {
+    name: "mediamode"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_MediaWorkMode_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_t"
+  field {
+    name: "system"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_System_t"
+  }
+  field {
+    name: "device"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_Device_t"
+  }
+  field {
+    name: "media"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_Media_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Cfg_Data_t"
+  field {
+    name: "cfg"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_t"
+  }
+  field {
+    name: "pdtCfg"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Cfg_t"
+  }
+}
+enum_type {
+  name: "Remo_Pdt_VcapPipeMode_e"
+  value {
+    name: "REMO_VCAP_PIPE_UNKNOW_MODE"
+    number: 0
+  }
+  value {
+    name: "REMO_VCAP_PIPE_PDAF_MODE"
+    number: 1
+  }
+  value {
+    name: "REMO_VCAP_PIPE_HDR_PDAF_MODE"
+    number: 2
+  }
+  value {
+    name: "REMO_VCAP_PIPE_PDAF_PORTRAIT_MODE"
+    number: 3
+  }
+}
+enum_type {
+  name: "Remo_Pdt_VprocPipeMode_e"
+  value {
+    name: "REMO_VPROC_PIPEMODE_UNKONW"
+    number: 0
+  }
+  value {
+    name: "REMO_VPROC_PIPEMODE_ZOOM"
+    number: 1
+  }
+  value {
+    name: "REMO_VPROC_PIPEMODE_FULLVIEW"
+    number: 2
+  }
+  value {
+    name: "REMO_VPROC_PIPEMODE_FULLVIEW_ROTATE"
+    number: 3
+  }
+  value {
+    name: "REMO_VPROC_PIPEMODE_ZOOM_SMALLSIZE"
+    number: 4
+  }
+  value {
+    name: "REMO_VPROC_PIPEMODE_FULLVIEW_SMALLSIZE"
+    number: 5
+  }
+  value {
+    name: "REMO_VPROC_PIPEMODE_FULLVIEW_ROTATE_SMALLSIZE"
+    number: 6
+  }
+}
+enum_type {
+  name: "Remo_AcapDev_Type_e"
+  value {
+    name: "ACap_DEV_AMIC_01"
+    number: 0
+  }
+  value {
+    name: "ACap_DEV_DMIC"
+    number: 1
+  }
+  value {
+    name: "ACap_DEV_I2S"
+    number: 2
+  }
+  value {
+    name: "ACap_DEV_LINE_IN"
+    number: 3
+  }
+  value {
+    name: "ACap_DEV_AMIC_23"
+    number: 4
+  }
+  value {
+    name: "ACap_DEV_AMIC_ALL"
+    number: 5
+  }
+  value {
+    name: "ACap_DEV_DMIC_2"
+    number: 6
+  }
+  value {
+    name: "ACap_DEV_UNKNOW"
+    number: 7
+  }
+}
+enum_type {
+  name: "Remo_Pdt_MediaWorkMode_e"
+  value {
+    name: "REMO_MEDIA_MODE_UNKNOW"
+    number: 0
+  }
+  value {
+    name: "REMO_MEDIA_MODE_4KP30"
+    number: 1
+  }
+  value {
+    name: "REMO_MEDIA_MODE_4KP30_HDR"
+    number: 2
+  }
+  value {
+    name: "REMO_MEDIA_MODE_4KP30_PORTRAIT"
+    number: 3
+  }
+  value {
+    name: "REMO_MEDIA_MODE_4KP30_HDR_PORTRAIT"
+    number: 4
+  }
+  value {
+    name: "REMO_MEDIA_MODE_1080P60"
+    number: 5
+  }
+  value {
+    name: "REMO_MEDIA_MODE_1080P60_HDR"
+    number: 6
+  }
+  value {
+    name: "REMO_MEDIA_MODE_1080P60_PORTRAIT"
+    number: 7
+  }
+  value {
+    name: "REMO_MEDIA_MODE_1080P60_HDR_PORTRAIT"
+    number: 8
+  }
+}
+syntax: "proto3"

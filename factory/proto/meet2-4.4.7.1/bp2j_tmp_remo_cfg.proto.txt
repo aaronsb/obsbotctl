@@ -1,0 +1,891 @@
+name: "bp2j_tmp_remo_cfg.proto"
+dependency: "bp2j_tmp_remo_media.proto"
+dependency: "bp2j_tmp_remo_stream.proto"
+message_type {
+  name: "Remo_Cfg_System_t"
+  field {
+    name: "sysSocId"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Cfg_Uac_t"
+  field {
+    name: "samplerate"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "soundmode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_AUDIO_SOUNDMODE_e"
+  }
+  field {
+    name: "peroid"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "buffer_period"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "source"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_ACap_Chn_e"
+  }
+}
+message_type {
+  name: "Remo_Cfg_Device_t"
+  field {
+    name: "uac"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Uac_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_VcapChn_t"
+  field {
+    name: "bEnable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Cfg_VcapMode_t"
+  field {
+    name: "bValid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "in"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Media_ChnAttr_t"
+  }
+  field {
+    name: "out"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Media_ChnAttr_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_Vcap_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_VcapChn_t"
+  }
+  field {
+    name: "mode"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_VcapMode_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_VprocChn_t"
+  field {
+    name: "bEnable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "srcModeId"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MODULE_ID_e"
+  }
+  field {
+    name: "srcChnId"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Cfg_Vproc_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_VprocChn_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_StreamChn_t"
+  field {
+    name: "bEnable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "srcModeId"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MODULE_ID_e"
+  }
+  field {
+    name: "srcChnId"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Cfg_Stream_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_StreamChn_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_RtspChn_t"
+  field {
+    name: "bEnable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "streamChnId"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STREAM_CHN_ID_e"
+  }
+  field {
+    name: "defSteamMode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Stream_Mode_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_Rtsp_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_RtspChn_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_AiFrame_t"
+  field {
+    name: "bEnable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "streamChnId"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STREAM_CHN_ID_e"
+  }
+  field {
+    name: "defSteamMode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Stream_Mode_t"
+  }
+  field {
+    name: "portSteamMode"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Stream_Mode_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_Ai_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_AiFrame_t"
+  }
+}
+message_type {
+  name: "HuoShanVqeLib_Cfg_t"
+  field {
+    name: "isAnrOpen"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isAgcOpen"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "WebRtcVqeLib_Cfg_t"
+  field {
+    name: "isAnrOpen"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isAgcOpen"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isEqOpen"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "MStarHpfParam"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "usermode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hpf_freq"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".MStarHpfType"
+  }
+}
+message_type {
+  name: "MStarAnrParam"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "usermode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "nrlevel"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "nrsmooth"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "speed"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".MStarAnrSpeedType"
+  }
+}
+message_type {
+  name: "MStarAgcParam"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "usermode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "initGain"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "maxGain"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "minGain"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "dropGainMax"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "attackTime"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "releaseTime"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "compression_ratio_input"
+    number: 9
+    label: LABEL_REPEATED
+    type: TYPE_INT32
+  }
+  field {
+    name: "compression_ratio_output"
+    number: 10
+    label: LABEL_REPEATED
+    type: TYPE_INT32
+  }
+  field {
+    name: "targetDb"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "noiseGate"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "noiseGateAttenuation"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "MStarEqParam"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "gaintable"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "MStarVqeLib_Cfg_t"
+  field {
+    name: "agcCfg"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".MStarAgcParam"
+  }
+  field {
+    name: "anrCfg"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".MStarAnrParam"
+  }
+  field {
+    name: "hpfCfg"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".MStarHpfParam"
+  }
+  field {
+    name: "eqCfg"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".MStarEqParam"
+  }
+  field {
+    name: "procframes"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "procSampleRate"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Cfg_ACapChn_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_ACAP_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_Cfg_ACap_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_ACapChn_t"
+  }
+  field {
+    name: "attr"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Audio_ChnAttr_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_AencChn_t"
+  field {
+    name: "src"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STREAM_CHN_ID_e"
+  }
+  field {
+    name: "type"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_AENC_Code_Type_e"
+  }
+  field {
+    name: "aac_attr"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_AAC_Attr_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_Aenc_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_AencChn_t"
+  }
+}
+message_type {
+  name: "Remo_Cfg_VQE_t"
+  field {
+    name: "ns_level_min"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ns_level_max"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_gain_db_min"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_gain_db_max"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_tag_db_min"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_tag_db_max"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Cfg_Media_t"
+  field {
+    name: "vcap"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Vcap_t"
+  }
+  field {
+    name: "vproc"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Vproc_t"
+  }
+  field {
+    name: "stream"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Stream_t"
+  }
+  field {
+    name: "rtsp"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Rtsp_t"
+  }
+  field {
+    name: "ai"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Ai_t"
+  }
+  field {
+    name: "acap"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_ACap_t"
+  }
+  field {
+    name: "aenc"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Aenc_t"
+  }
+  field {
+    name: "vqe"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_VQE_t"
+  }
+}
+message_type {
+  name: "AutoFrameCtrlArgs"
+  field {
+    name: "ctx_padding_factor"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y_ref"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "skip_ctx_roi_filter"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ctx_roi_filter_factor"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_alpha_towide_action"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_alpha_towide_stable"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_alpha_totele_action"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_alpha_totele_stable"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_x_action"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_x_stable"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_y_action"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_y_stable"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "use_corner"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "gx"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "gy"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ga"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "sb_a"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "dynamic_ctrl_mode"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "dstep"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "height_padding"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "use_gain_adapter"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "gain_adapter_capacity"
+    number: 22
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "gain_adapter_error_factor"
+    number: 23
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "error_vec_norm_max"
+    number: 24
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "max_crop_ratio"
+    number: 25
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "th_r_action"
+    number: 26
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "alpha_priority"
+    number: 27
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ctx_min_padding_factor"
+    number: 28
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Cfg_AutoFraming_t"
+  field {
+    name: "ctrlArgs"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".AutoFrameCtrlArgs"
+  }
+}
+message_type {
+  name: "Remo_Cfg_t"
+  field {
+    name: "system"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_System_t"
+  }
+  field {
+    name: "device"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Device_t"
+  }
+  field {
+    name: "media"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_Media_t"
+  }
+  field {
+    name: "autoframe"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Cfg_AutoFraming_t"
+  }
+}
+enum_type {
+  name: "ACap_MStarVqe_Mode_e"
+  value {
+    name: "ACAP_VQE_NORMAL_MODE"
+    number: 0
+  }
+  value {
+    name: "ACAP_VQE_NOISY_MODE"
+    number: 1
+  }
+  value {
+    name: "ACAP_VQE_MUSIC_MODE"
+    number: 2
+  }
+}
+enum_type {
+  name: "MStarHpfType"
+  value {
+    name: "MStar_HPF_FREQ_80"
+    number: 0
+  }
+  value {
+    name: "MStar_HPF_FREQ_120"
+    number: 1
+  }
+  value {
+    name: "MStar_HPF_FREQ_150"
+    number: 2
+  }
+}
+enum_type {
+  name: "MStarAnrSpeedType"
+  value {
+    name: "MStar_ANR_SPEED_LOW"
+    number: 0
+  }
+  value {
+    name: "MStar_ANR_SPEED_MID"
+    number: 1
+  }
+  value {
+    name: "MStar_ANR_SPEED_HIGH"
+    number: 2
+  }
+}
+syntax: "proto3"

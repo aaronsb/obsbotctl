@@ -1,0 +1,5730 @@
+name: "bp2j_tmp_remo_protocol.proto"
+message_type {
+  name: "Remo_Camera_WorkMode_t"
+  field {
+    name: "main_workmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sub_workmode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_WorkMode_List_t"
+  field {
+    name: "modes"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_WorkMode_t"
+  }
+}
+message_type {
+  name: "Remo_Camera_CaptureCtrl_t"
+  field {
+    name: "operation"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "param"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_RecordCtrl_t"
+  field {
+    name: "operation"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "param"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_Bootup_WorkMode_Action_t"
+  field {
+    name: "b_valid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "main_workmode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sub_workmode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "action"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_NewFileCreate_PushInfo_t"
+  field {
+    name: "storage_type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STORAGE_MEDIUM_e"
+  }
+  field {
+    name: "storage_idx"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "file_type"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STORAGE_DCF_OBJ_TYPE_e"
+  }
+  field {
+    name: "b_dcf_lite_file"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "b_photo"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "file_path"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Camera_OpDelay_t"
+  field {
+    name: "delay"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_WDRMode_List_t"
+  field {
+    name: "modes"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_WDRMODE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_WDRMode_t"
+  field {
+    name: "wdrmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_WDRMODE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_DROMode_t"
+  field {
+    name: "dromode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DROMODE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Capture_Runtime_Status_t"
+  field {
+    name: "b_capturing"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "b_storing"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "snap_finished_cnt"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_CapRes_List_t"
+  field {
+    name: "res"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_CAPTURE_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_CapRes_t"
+  field {
+    name: "capture_res"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAPTURE_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_BurstCapCfg_t"
+  field {
+    name: "period"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "count_in_period"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "total_count"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_ImageQualityLevel_t"
+  field {
+    name: "image_quality_level"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAPTURE_IMAGE_QUALITY_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_CapStorageType_List_t"
+  field {
+    name: "storage_types"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_CAPTURE_STORAGE_TYPE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_CapStorageType_t"
+  field {
+    name: "capture_storage_type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAPTURE_STORAGE_TYPE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Record_Runtime_PushStatus_t"
+  field {
+    name: "b_recording"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "b_storing"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "duration"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_MainVideoRes_List_t"
+  field {
+    name: "res"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_MainVideoRes_t"
+  field {
+    name: "main_video_res"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_SlowMotion_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "param"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_PreRecord_t"
+  field {
+    name: "prerecord_timelen"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_MainVideoSplitSpace_t"
+  field {
+    name: "main_video_split_space"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_SPLIT_SPACE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_MainVideoSplitTime_t"
+  field {
+    name: "main_video_split_time"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_MainVideoEncoderFormat_List_t"
+  field {
+    name: "formats"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_ENCODER_FORMAT_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_MainVideoEncoderFormat_t"
+  field {
+    name: "main_video_encoder_format"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_ENCODER_FORMAT_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_MainVideoBitRateLevel_t"
+  field {
+    name: "main_video_bitrate_level"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_BITRATE_LEVEL_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_VideoMuxerType_List_t"
+  field {
+    name: "muxer_types"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_MUXER_TYPE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_VideoMuxerType_t"
+  field {
+    name: "video_muxer_type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_MUXER_TYPE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_KcpLiveViewRes_t"
+  field {
+    name: "kcp_liveview_res"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_KcpLiveViewRes_List_t"
+  field {
+    name: "res"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_NdiRtspLiveViewRes_t"
+  field {
+    name: "ndi_rtsp_liveview_res"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_NdiRtspLiveViewRes_List_t"
+  field {
+    name: "res"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_NdiRtspBitRateLevel_t"
+  field {
+    name: "ndi_rtsp_bitrate_level"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_BITRATE_LEVEL_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_NdiRtspEncoderFormat_t"
+  field {
+    name: "ndi_rtsp_encoder_format"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_ENCODER_FORMAT_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_NdiRtspEncoderFormat_List_t"
+  field {
+    name: "formats"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_ENCODER_FORMAT_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_NDICtrl_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_ReqSetActivate_t"
+  field {
+    name: "b_activate"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "module"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "md5"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BYTES
+  }
+  field {
+    name: "certificate_len"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "certificate"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Camera_ReqGetActivate_t"
+  field {
+    name: "module"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_RspGetActivate_t"
+  field {
+    name: "b_activate"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Camera_NdiStatus_t"
+  field {
+    name: "is_enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "is_activated"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "is_bootup"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "resolution"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+  field {
+    name: "bitrate_level"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_BITRATE_LEVEL_e"
+  }
+  field {
+    name: "encode_format"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_ENCODER_FORMAT_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_NdiRtsp_Runtime_Status_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_Bootup_NDICtrl_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_Bootup_RtmpCtrl_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_MirrorFlip_t"
+  field {
+    name: "mirror_flip"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MIRROR_FLIP_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Rotation_t"
+  field {
+    name: "rotation"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_ROTATION_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Zoom_Info_t"
+  field {
+    name: "focallen_min"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "focallen35mm_min"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "focallen_max"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "focallen35mm_max"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "digital_zoom_max"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_setting_min"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_setting_max"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_setting_step"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_speed"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_setting_current"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zooming"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "zoom_to_tele"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "zoom_onepress_step"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_Zoom_Absolute_t"
+  field {
+    name: "speed"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_target"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_Zoom_Relative_t"
+  field {
+    name: "speed"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_onepress_step"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_onepress"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "zoom_to_tele"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Camera_Zoom_RoiCtrl_t"
+  field {
+    name: "type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "vid"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "xmin"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymin"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xmax"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymax"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Camera_Hdmi_Osd_Language_Setting_t"
+  field {
+    name: "language"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_HDMI_OSD_LANGUAGE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Hdmi_Info_t"
+  field {
+    name: "plug_in"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "state_osd_on"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "output_content"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_HDMI_OUTPUT_CONTENT_TYPE_e"
+  }
+  field {
+    name: "osd_language"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_HDMI_OSD_LANGUAGE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Hdmi_Output_Setting_t"
+  field {
+    name: "output_content"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_HDMI_OUTPUT_CONTENT_TYPE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Remote_Custom_Key_Func_t"
+  field {
+    name: "key_func"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Remote_App_Event_Notify_t"
+  field {
+    name: "event"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_REMOTE_APP_EVENT_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_Media_GroupUst_Info_t"
+  field {
+    name: "tag_name"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "unicode_name"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "usersetting_bin"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BYTES
+  }
+}
+message_type {
+  name: "Remo_Camera_Media_GroupUst_Query_t"
+  field {
+    name: "tag_name"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Camera_Media_GroupUst_Setting_t"
+  field {
+    name: "tag_name"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "unicode_name"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "predefine"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Camera_Media_GroupUst_List_t"
+  field {
+    name: "media_ust_group_list"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Media_GroupUst_Setting_t"
+  }
+}
+message_type {
+  name: "Remo_Camera_NDI_Client_Connect_Notify_t"
+  field {
+    name: "ipv4"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BYTES
+  }
+  field {
+    name: "client_ver"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_RTSP_Client_Connect_Notify_t"
+  field {
+    name: "ipv4"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BYTES
+  }
+}
+message_type {
+  name: "Remo_Camera_Media_PushStatus_t"
+  field {
+    name: "workmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_WorkMode_t"
+  }
+  field {
+    name: "delay_setting"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_OpDelay_t"
+  }
+  field {
+    name: "delay_runtime"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_OpDelay_t"
+  }
+  field {
+    name: "wdr"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_WDRMode_t"
+  }
+  field {
+    name: "mirror_flip"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_MirrorFlip_t"
+  }
+  field {
+    name: "rotation"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Rotation_t"
+  }
+  field {
+    name: "bootup_workmode_action"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Bootup_WorkMode_Action_t"
+  }
+  field {
+    name: "media_status"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_MEDIA_STATUS_e"
+  }
+  field {
+    name: "zoom_infos"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Zoom_Info_t"
+  }
+  field {
+    name: "hdmi"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Hdmi_Info_t"
+  }
+  field {
+    name: "capture"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Capture_Runtime_Status_t"
+  }
+  field {
+    name: "cap_res"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_CapRes_t"
+  }
+  field {
+    name: "burstcap_cfg"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_BurstCapCfg_t"
+  }
+  field {
+    name: "image_quality"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_ImageQualityLevel_t"
+  }
+  field {
+    name: "cap_storage_type"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_CapStorageType_t"
+  }
+  field {
+    name: "record"
+    number: 32
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Record_Runtime_PushStatus_t"
+  }
+  field {
+    name: "main_video_res"
+    number: 33
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_MainVideoRes_t"
+  }
+  field {
+    name: "slowmotion"
+    number: 34
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_SlowMotion_t"
+  }
+  field {
+    name: "prerecord"
+    number: 35
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_PreRecord_t"
+  }
+  field {
+    name: "main_video_split_space"
+    number: 36
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_MainVideoSplitSpace_t"
+  }
+  field {
+    name: "main_video_split_time"
+    number: 37
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_MainVideoSplitTime_t"
+  }
+  field {
+    name: "main_video_encoder_format"
+    number: 38
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_MainVideoEncoderFormat_t"
+  }
+  field {
+    name: "main_video_bitrate_level"
+    number: 39
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_MainVideoBitRateLevel_t"
+  }
+  field {
+    name: "video_muxer_type"
+    number: 40
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_VideoMuxerType_t"
+  }
+  field {
+    name: "kcp_liveview_res"
+    number: 64
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_KcpLiveViewRes_t"
+  }
+  field {
+    name: "ndi_status"
+    number: 65
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_NdiRtsp_Runtime_Status_t"
+  }
+  field {
+    name: "ndi_rtsp_liveview_res"
+    number: 66
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_NdiRtspLiveViewRes_t"
+  }
+  field {
+    name: "ndi_rtsp_bitrate_level"
+    number: 67
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_NdiRtspBitRateLevel_t"
+  }
+  field {
+    name: "ndi_rtsp_encoder_format"
+    number: 68
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_NdiRtspEncoderFormat_t"
+  }
+  field {
+    name: "bootup_ndi_enable"
+    number: 69
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Bootup_NDICtrl_t"
+  }
+  field {
+    name: "ndi"
+    number: 70
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_NdiStatus_t"
+  }
+  field {
+    name: "bootup_rtmp_enable"
+    number: 80
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Bootup_RtmpCtrl_t"
+  }
+  field {
+    name: "ust_group_list"
+    number: 81
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Media_GroupUst_List_t"
+  }
+}
+message_type {
+  name: "Remo_IQ_WhiteBalance_t"
+  field {
+    name: "lightmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_LIGHT_SOURCE_TYPE_e"
+  }
+  field {
+    name: "param"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "isManualGain"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "UserManualBGain"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "UserManualRGain"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_WhiteBalance_List_t"
+  field {
+    name: "lightmodes"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_LIGHT_SOURCE_TYPE_e"
+  }
+  field {
+    name: "manual_min"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "manual_max"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_Mode_List_t"
+  field {
+    name: "modes"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_Iso_Threshold_Setting_t"
+  field {
+    name: "iso_min_threhold"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "iso_max_threhold"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_Lock_Setting_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_FaceAe_Setting_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_AutoUnderFrameRate_Setting_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_MeterMode_Setting_t"
+  field {
+    name: "ae_meter_mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_METER_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_Mode_Setting_t"
+  field {
+    name: "ae_mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_EvBias_Setting_t"
+  field {
+    name: "ae_evbias"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_EVBIAS_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_Aperture_Setting_t"
+  field {
+    name: "ae_aperture"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_APERTURE_APEX_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_Shutter_Setting_t"
+  field {
+    name: "ae_shutter"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_SHUTTER_TIME_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AE_Iso_Setting_t"
+  field {
+    name: "ae_iso"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_ExposureParam_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_MODE_e"
+  }
+  field {
+    name: "ae_meter_mode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_METER_MODE_e"
+  }
+  field {
+    name: "iso_min_threhold"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "iso_max_threhold"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "aperture_min_threhold"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_APERTURE_APEX_e"
+  }
+  field {
+    name: "aperture_max_threhold"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_APERTURE_APEX_e"
+  }
+  field {
+    name: "shutter_min_threhold"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_SHUTTER_TIME_e"
+  }
+  field {
+    name: "shutter_max_threhold"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_SHUTTER_TIME_e"
+  }
+  field {
+    name: "runtime_shutter"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_SHUTTER_TIME_e"
+  }
+  field {
+    name: "runtime_aperture"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_APERTURE_APEX_e"
+  }
+  field {
+    name: "runtime_iso"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "runtime_ev"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_EVBIAS_e"
+  }
+  field {
+    name: "usersetting_shutter"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_SHUTTER_TIME_e"
+  }
+  field {
+    name: "usersetting_aperture"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_APERTURE_APEX_e"
+  }
+  field {
+    name: "usersetting_iso"
+    number: 22
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "usersetting_ev"
+    number: 23
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_EVBIAS_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_Antiflick_Setting_t"
+  field {
+    name: "antiflick"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_ANTIFLICK_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_Brightness_Setting_t"
+  field {
+    name: "brightness"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_Contrast_Setting_t"
+  field {
+    name: "contrast"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_Hue_Setting_t"
+  field {
+    name: "hue"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_Saturation_Setting_t"
+  field {
+    name: "saturation"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_Sharpness_Setting_t"
+  field {
+    name: "sharpness"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_Style_Setting_t"
+  field {
+    name: "style"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_STYLE_TYPE_e"
+  }
+  field {
+    name: "brightness"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "contrast"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hue"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "saturation"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sharpness"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_Style_Set_Setting_t"
+  field {
+    name: "style"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_STYLE_TYPE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AF_MODE_Setting_t"
+  field {
+    name: "afmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AF_Track_Mode_Setting_t"
+  field {
+    name: "afc_track_mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_TRACK_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_AF_MaualFocus_Setting_t"
+  field {
+    name: "motor_pos"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_AF_AutfoFocus_Setting_t"
+  field {
+    name: "center_x"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "center_y"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "action"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_SINGLE_FOCUS_ACTION_e"
+  }
+  field {
+    name: "bracket_inf"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bracket_macro"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_AF_Param_t"
+  field {
+    name: "afmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_MODE_e"
+  }
+  field {
+    name: "motor_pos"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "center_x"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "center_y"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "action"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_SINGLE_FOCUS_ACTION_e"
+  }
+  field {
+    name: "bracket_inf"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bracket_macro"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "status"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_STATUS_e"
+  }
+  field {
+    name: "afc_track_mode"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_TRACK_MODE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_AF_Finish_Notify_t"
+  field {
+    name: "point_af"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "center_x"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "center_y"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "result"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_STATUS_e"
+  }
+  field {
+    name: "peak_pos"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_IQ_ISP_Debug_Request_t"
+  field {
+    name: "debug_module_type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_ISP_DEBUG_MODULE_TYPE_e"
+  }
+}
+message_type {
+  name: "Remo_IQ_ISP_Debug_Params_t"
+  field {
+    name: "detail_log_enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_IQ_ISP_Debug_Params_Setting_t"
+  field {
+    name: "debug_module_type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_ISP_DEBUG_MODULE_TYPE_e"
+  }
+  field {
+    name: "detail_log_enable"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Camera_Media_GroupModeAttr_t"
+  field {
+    name: "is_enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "group_id"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "mirror"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MIRROR_FLIP_e"
+  }
+  field {
+    name: "wdr_mode"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_WDRMODE_e"
+  }
+  field {
+    name: "ae_mode"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_MODE_e"
+  }
+  field {
+    name: "face_ae_enable"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "shuter"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_SHUTTER_TIME_e"
+  }
+  field {
+    name: "iso"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ev_bias"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_EVBIAS_e"
+  }
+  field {
+    name: "awb"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_IQ_WhiteBalance_t"
+  }
+  field {
+    name: "antiflick"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_ANTIFLICK_MODE_e"
+  }
+  field {
+    name: "style"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_STYLE_TYPE_e"
+  }
+  field {
+    name: "ai_speed_mode"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ai_view_id"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Camera_IQ_PushStatus_t"
+  field {
+    name: "whitebalance"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_IQ_WhiteBalance_t"
+  }
+  field {
+    name: "exposure_params"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_IQ_ExposureParam_t"
+  }
+  field {
+    name: "ae_lock"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "face_ae_enable"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "auto_under_framerate"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "antiflick_mode"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_ANTIFLICK_MODE_e"
+  }
+  field {
+    name: "af_params"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_IQ_AF_Param_t"
+  }
+  field {
+    name: "brightness"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "contrast"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hue"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "saturation"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sharpness"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "style"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_STYLE_TYPE_e"
+  }
+  field {
+    name: "custom_brightness"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "custom_contrast"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "custom_hue"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "custom_saturation"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "custom_sharpness"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "custom_whitebalance"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_Storage_SDCard_Status_t"
+  field {
+    name: "status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STORAGE_STATUS_e"
+  }
+  field {
+    name: "fs_type"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STORAGE_FS_TYPE_e"
+  }
+  field {
+    name: "speed"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STORAGE_SPEED_e"
+  }
+  field {
+    name: "total_size"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+  field {
+    name: "used_size"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+  field {
+    name: "available_size"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+  field {
+    name: "cluster_size"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+  field {
+    name: "sd_info_cid"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "sd_info_sn"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "available_record_time"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "available_photo_count"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_FileRepair_Notify_t"
+  field {
+    name: "path"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Camera_Storage_PushStatus_t"
+  field {
+    name: "sdcard_status"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Storage_SDCard_Status_t"
+  }
+}
+message_type {
+  name: "Remo_Camera_Storage_Format_Setting_t"
+  field {
+    name: "fs"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STORAGE_FS_TYPE_e"
+  }
+  field {
+    name: "cluster_size"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+}
+message_type {
+  name: "Remo_Camera_DevConnection_Status_t"
+  field {
+    name: "isAiOnline"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isGimbalOnline"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isBatteryOnline"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isLensOnline"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isTofOnline"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isBlueToothOnline"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isUsbWifiAttached"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isPOEAttached"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isSwivelBaseAttached"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isUWBAttached"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "is35mmAudioAttached"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isHdmiAttached"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isPX30Attached"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isSdInsert"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isSensorError"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isRemoteAttached"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "isMediaError"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Upgrade_Pkt_Version_t"
+  field {
+    name: "pkt_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fallback_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "product_type"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "firmware_type"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "platform_type"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "device_type"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Camera_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Lens_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Gimbal_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Roll_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pitch_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Yaw_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_AI_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Battery_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Tof_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_BlueTooth_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Sysmng_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Remote_Version_t"
+  field {
+    name: "software_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_DevVersion_Status_t"
+  field {
+    name: "pkt_ver"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Upgrade_Pkt_Version_t"
+  }
+  field {
+    name: "camera_ver"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Version_t"
+  }
+  field {
+    name: "lens_ver"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Lens_Version_t"
+  }
+  field {
+    name: "gimbal_ver"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Gimbal_Version_t"
+  }
+  field {
+    name: "roll_ver"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Roll_Version_t"
+  }
+  field {
+    name: "pitch_ver"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pitch_Version_t"
+  }
+  field {
+    name: "yaw_ver"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Yaw_Version_t"
+  }
+  field {
+    name: "ai_ver"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_AI_Version_t"
+  }
+  field {
+    name: "battery_ver"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Battery_Version_t"
+  }
+  field {
+    name: "tof_ver"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Tof_Version_t"
+  }
+  field {
+    name: "bluetooth_ver"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_BlueTooth_Version_t"
+  }
+  field {
+    name: "sysmng_ver"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Sysmng_Version_t"
+  }
+  field {
+    name: "remote_ver"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Remote_Version_t"
+  }
+}
+message_type {
+  name: "Remo_Camera_SysTime_t"
+  field {
+    name: "second"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "usecond"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "timezone"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Camera_Auto_Suspend_Time_Setting_t"
+  field {
+    name: "auto_suspend_time"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Camera_RTC_Suspend_Setting_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "only_once"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "second"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "minute"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hour"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "week_repeat"
+    number: 6
+    label: LABEL_REPEATED
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Camera_RTC_Resume_Setting_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "only_once"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "second"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "minute"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hour"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "week_repeat"
+    number: 6
+    label: LABEL_REPEATED
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_System_IPV4_Address_t"
+  field {
+    name: "ipv4"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BYTES
+  }
+}
+message_type {
+  name: "Remo_System_MAC_Address_t"
+  field {
+    name: "mac"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BYTES
+  }
+}
+message_type {
+  name: "Remo_System_Wifi_Station_Status_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_WIFI_STATION_STATE_e"
+  }
+  field {
+    name: "ipv4_address"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_IPV4_Address_t"
+  }
+  field {
+    name: "mac_address"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_MAC_Address_t"
+  }
+  field {
+    name: "conn_ssid"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "conn_signal"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_System_Wifi_Ap_Status_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_WIFI_AP_STATE_e"
+  }
+  field {
+    name: "ipv4_address"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_IPV4_Address_t"
+  }
+  field {
+    name: "mac_address"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_MAC_Address_t"
+  }
+  field {
+    name: "band"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_WIFI_AP_BAND_e"
+  }
+  field {
+    name: "band_width"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_WIFI_AP_BAND_WIDTH_e"
+  }
+  field {
+    name: "channel"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_System_Main_Wifi_Status_t"
+  field {
+    name: "workmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_WIFI_WORKMODE_e"
+  }
+  field {
+    name: "station_status"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Wifi_Station_Status_t"
+  }
+  field {
+    name: "ap_status"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Wifi_Ap_Status_t"
+  }
+}
+message_type {
+  name: "Remo_System_Private_Wifi_Status_t"
+  field {
+    name: "station_status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Wifi_Station_Status_t"
+  }
+}
+message_type {
+  name: "Remo_System_Ethernet_Status_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_ETHERNET_STATE_e"
+  }
+  field {
+    name: "ipv4_address"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_IPV4_Address_t"
+  }
+  field {
+    name: "mac_address"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_MAC_Address_t"
+  }
+}
+message_type {
+  name: "Remo_System_POE_Status_t"
+  field {
+    name: "ethernet_status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Ethernet_Status_t"
+  }
+}
+message_type {
+  name: "Remo_System_BT_Status_t"
+  field {
+    name: "mac"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_MAC_Address_t"
+  }
+  field {
+    name: "state"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_System_Fan_Status_t"
+  field {
+    name: "on_off"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "speed"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "voltage"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_System_Usb_Setting_t"
+  field {
+    name: "usb_mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_USB_WORKMODE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_System_PushStatus_t"
+  field {
+    name: "time"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_SysTime_t"
+  }
+  field {
+    name: "power_status"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_POWER_STATUS_e"
+  }
+  field {
+    name: "cpu_temperture"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "private_wifi"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Private_Wifi_Status_t"
+  }
+  field {
+    name: "main_wifi"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Main_Wifi_Status_t"
+  }
+  field {
+    name: "poe"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_POE_Status_t"
+  }
+  field {
+    name: "bluetooth"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_BT_Status_t"
+  }
+  field {
+    name: "fan"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Fan_Status_t"
+  }
+  field {
+    name: "usb"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_System_Usb_Setting_t"
+  }
+  field {
+    name: "buzzer_on_off"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "led_brightness"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_e"
+  }
+  field {
+    name: "auto_suspend_setting"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Auto_Suspend_Time_Setting_t"
+  }
+  field {
+    name: "rtc_suspend_setting"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_RTC_Suspend_Setting_t"
+  }
+  field {
+    name: "rtc_resume_setting"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_RTC_Resume_Setting_t"
+  }
+  field {
+    name: "a_board_pcb_check_flag"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "sensor_pcb_check_flag"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "device_model"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "device_sn"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Lens_PushStatus_t"
+  field {
+    name: "focus_type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".CameraLensMotorType_e"
+  }
+  field {
+    name: "focus_pos"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "focus_running"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "zoom_type"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".CameraLensMotorType_e"
+  }
+  field {
+    name: "zoom_pos"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "zoom_running"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "temperature"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "calibrated"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "pcb_check_flag"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Gimbal_PushStatus_t"
+  field {
+    name: "pcb_check_flag"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "XEulerAngle"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "YEulerAngle"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ZEulerAngle"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "XJointAngle"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "YJointAngle"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ZJointAngle"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "XAnguVelo"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "YAnguVelo"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ZAnguVelo"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "RollRefAngle"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "LockStatus"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "InvertStatus"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "XaxisStatus"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "CaliStatus"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "SysState"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "RollHorBias"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ROLLVecBias"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "UserAccelCaliPecentage"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "YawRangeState"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "WarningFlag"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ErrorFlag"
+    number: 22
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Battery_PushStatus_t"
+  field {
+    name: "status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "charging"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "pcb_check_flag"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "diff_voltage"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "voltage"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "capacity"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "temperature"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Tof_PushStatus_t"
+  field {
+    name: "distance"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "confidence"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "calibrated"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_DevMng_Monitor_Status"
+  field {
+    name: "cpu_temperture"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DEVMNG_MONITOR_STATUS_e"
+  }
+  field {
+    name: "lens_temperture"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DEVMNG_MONITOR_STATUS_e"
+  }
+  field {
+    name: "battery_temperture"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DEVMNG_MONITOR_STATUS_e"
+  }
+  field {
+    name: "battery_capacity"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DEVMNG_MONITOR_STATUS_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_DevMng_PushStatus_t"
+  field {
+    name: "connections"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_DevConnection_Status_t"
+  }
+  field {
+    name: "versions"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_DevVersion_Status_t"
+  }
+  field {
+    name: "system"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_System_PushStatus_t"
+  }
+  field {
+    name: "lens_status"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Lens_PushStatus_t"
+  }
+  field {
+    name: "gimbal_status"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Gimbal_PushStatus_t"
+  }
+  field {
+    name: "battery_status"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Battery_PushStatus_t"
+  }
+  field {
+    name: "tof_status"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Tof_PushStatus_t"
+  }
+  field {
+    name: "monitor_status"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_DevMng_Monitor_Status"
+  }
+}
+message_type {
+  name: "Remo_Camera_Capability_PushStatus_t"
+  field {
+    name: "is_support_broadcasting"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Camera_Sync_Status_t"
+  field {
+    name: "media_status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Media_PushStatus_t"
+  }
+  field {
+    name: "dev_status"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_DevMng_PushStatus_t"
+  }
+  field {
+    name: "iq_status"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_IQ_PushStatus_t"
+  }
+  field {
+    name: "storage_status"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Storage_PushStatus_t"
+  }
+  field {
+    name: "capability"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_Capability_PushStatus_t"
+  }
+}
+message_type {
+  name: "Remo_Camera_LiveStream_VideoSetting_t"
+  field {
+    name: "res"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+  field {
+    name: "bitrate"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_LiveStream_AudioSetting_t"
+  field {
+    name: "audio_source"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_LIVE_STREAM_AUDIO_SOURCE_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_LiveStream_RuntimeAttr_t"
+  field {
+    name: "status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_LIVESTREAM_STATUS_e"
+  }
+  field {
+    name: "duration"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_LiveStream_URL_t"
+  field {
+    name: "url"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "token"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Camera_LiveStream_PushInfo_t"
+  field {
+    name: "runtime_status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_LiveStream_RuntimeAttr_t"
+  }
+  field {
+    name: "url"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_LiveStream_URL_t"
+  }
+  field {
+    name: "video_settings"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_LiveStream_VideoSetting_t"
+  }
+  field {
+    name: "audio_settings"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_LiveStream_AudioSetting_t"
+  }
+  field {
+    name: "title"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "platform"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_LIVE_STREAM_PLATFORM_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_LiveStream_SetAttributes_t"
+  field {
+    name: "url"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "token"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "video_res"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+  field {
+    name: "video_bitrate"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "audio_source"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_LIVE_STREAM_AUDIO_SOURCE_e"
+  }
+  field {
+    name: "title"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+  field {
+    name: "action"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "platform"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_LIVE_STREAM_PLATFORM_e"
+  }
+}
+message_type {
+  name: "Remo_Camera_LiveStreamCtrl_t"
+  field {
+    name: "action"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Camera_PowerCtrl_t"
+  field {
+    name: "action"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_POWERCTRL_ACTION_e"
+  }
+}
+message_type {
+  name: "Remo_Protocol_AiTargetView_t"
+  field {
+    name: "type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "vid"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bind_vid"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "xmin"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymin"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xmax"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymax"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "bbox_xmin"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "bbox_ymin"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "bbox_xmax"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "bbox_ymax"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Protocol_TargetViewBox_t"
+  field {
+    name: "vid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "xmin"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymin"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xmax"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymax"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xminTarget"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "yminTarget"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xmaxTarget"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymaxTarget"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "b_targetView"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "viewCount"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "view"
+    number: 12
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Protocol_AiTargetView_t"
+  }
+  field {
+    name: "b_zooming"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_IQ_Range_t"
+  field {
+    name: "min"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "max"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "def_val"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "step"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Camera_IQ_Range_List_t"
+  field {
+    name: "iqRange"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_IQ_Range_t"
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_MEDIA_STATUS_e"
+  value {
+    name: "REMO_CAMERA_MEDIA_STATUS_READY"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_MEDIA_STATUS_BUSY"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_MEDIA_STATUS_IDLE"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_SNAP_OPERATION_e"
+  value {
+    name: "REMO_SNAP_OP_STOP"
+    number: 0
+  }
+  value {
+    name: "REMO_SNAP_OP_START_SINGLE"
+    number: 1
+  }
+  value {
+    name: "REMO_SNAP_OP_START_BURST"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_STORAGE_MEDIUM_e"
+  value {
+    name: "REMO_STORAGE_MEDIUM_SDCARD"
+    number: 0
+  }
+  value {
+    name: "REMO_STORAGE_MEDIUM_EMMC"
+    number: 1
+  }
+  value {
+    name: "REMO_STORAGE_MEDIUM_UPAN"
+    number: 2
+  }
+  value {
+    name: "REMO_STORAGE_MEDIUM_SSD"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_STORAGE_DCF_OBJ_TYPE_e"
+  value {
+    name: "REMO_STORAGE_DCF_OBJ_TYPE_UNKOWN"
+    number: 0
+  }
+  value {
+    name: "REMO_STORAGE_DCF_OBJ_TYPE_NORMAL_VIDEO"
+    number: 1
+  }
+  value {
+    name: "REMO_STORAGE_DCF_OBJ_TYPE_NORMAL_CAPTURE"
+    number: 2
+  }
+  value {
+    name: "REMO_STORAGE_DCF_OBJ_TYPE_BURST_CAPTURE"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_WDRMODE_e"
+  value {
+    name: "REMO_WDR_MODE_NONE"
+    number: 0
+  }
+  value {
+    name: "REMO_WDR_MODE_DOL_2TO1"
+    number: 1
+  }
+  value {
+    name: "REMO_WDR_MODE_DOL_3TO1"
+    number: 2
+  }
+  value {
+    name: "REMO_WDR_MODE_DOL_PIXELGAIN_BY_SENSOR"
+    number: 3
+  }
+  value {
+    name: "REMO_WDR_MODE_DOL_PIXELGAIN_BY_ISP"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_DROMODE_e"
+  value {
+    name: "REMO_DRO_MODE_DISABLE"
+    number: 0
+  }
+  value {
+    name: "REMO_DRO_MODE_ENABLE"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_CAPTURE_TYPE_e"
+  value {
+    name: "REMO_CAPTURE_TYPE_SINGLE"
+    number: 0
+  }
+  value {
+    name: "REMO_CAPTURE_TYPE_BURST"
+    number: 1
+  }
+  value {
+    name: "REMO_CAPTURE_TYPE_AEB"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_CAPTURE_RES_e"
+  value {
+    name: "REMO_CAPTURE_RES_RATIO_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_CAPTURE_RES_RATIO_4_3"
+    number: 1
+  }
+  value {
+    name: "REMO_CAPTURE_RES_RATIO_16_9"
+    number: 2
+  }
+  value {
+    name: "REMO_CAPTURE_RES_RATIO_1_1"
+    number: 3
+  }
+  value {
+    name: "REMO_CAPTURE_RES_RATIO_FITSCREEN"
+    number: 4
+  }
+  value {
+    name: "REMO_CAPTURE_RES_RATIO_4_3_SUPER"
+    number: 5
+  }
+}
+enum_type {
+  name: "REMO_CAPTURE_IMAGE_QUALITY_e"
+  value {
+    name: "REMO_CAPTURE_IMAGE_QUALITY_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_CAPTURE_IMAGE_QUALITY_LOW"
+    number: 1
+  }
+  value {
+    name: "REMO_CAPTURE_IMAGE_QUALITY_MEDIUM"
+    number: 2
+  }
+  value {
+    name: "REMO_CAPTURE_IMAGE_QUALITY_HIGH"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_CAPTURE_STORAGE_TYPE_e"
+  value {
+    name: "REMO_CAPTURE_STORAGE_TYPE_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_CAPTURE_STORAGE_TYPE_ONLY_JPEG"
+    number: 1
+  }
+  value {
+    name: "REMO_CAPTURE_STORAGE_TYPE_ONLY_RAW"
+    number: 2
+  }
+  value {
+    name: "REMO_CAPTURE_STORAGE_TYPE_JPEG_RAW"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_VIDEO_RES_e"
+  value {
+    name: "REMO_VIDEO_RES_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P30"
+    number: 1
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P25"
+    number: 2
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P24"
+    number: 3
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P60"
+    number: 4
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P50"
+    number: 5
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P48"
+    number: 6
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P120"
+    number: 7
+  }
+  value {
+    name: "REMO_VIDEO_RES_3840X2160P100"
+    number: 8
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P30"
+    number: 17
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P25"
+    number: 18
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P24"
+    number: 19
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P60"
+    number: 20
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P50"
+    number: 21
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P48"
+    number: 22
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P120"
+    number: 23
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P100"
+    number: 24
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P240"
+    number: 25
+  }
+  value {
+    name: "REMO_VIDEO_RES_2704X1520P200"
+    number: 26
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P30"
+    number: 33
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P25"
+    number: 34
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P24"
+    number: 35
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P60"
+    number: 36
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P50"
+    number: 37
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P48"
+    number: 38
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P120"
+    number: 39
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P100"
+    number: 40
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P240"
+    number: 41
+  }
+  value {
+    name: "REMO_VIDEO_RES_1920X1080P200"
+    number: 42
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P30"
+    number: 49
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P25"
+    number: 50
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P24"
+    number: 51
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P60"
+    number: 52
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P50"
+    number: 53
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P48"
+    number: 54
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P120"
+    number: 55
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P100"
+    number: 56
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P240"
+    number: 57
+  }
+  value {
+    name: "REMO_VIDEO_RES_1280X720P200"
+    number: 58
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P30"
+    number: 65
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P25"
+    number: 66
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P24"
+    number: 67
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P60"
+    number: 68
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P50"
+    number: 69
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P48"
+    number: 70
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P120"
+    number: 71
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P100"
+    number: 72
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P240"
+    number: 73
+  }
+  value {
+    name: "REMO_VIDEO_RES_960X540P200"
+    number: 74
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P30"
+    number: 81
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P25"
+    number: 82
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P24"
+    number: 83
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P60"
+    number: 84
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P50"
+    number: 85
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P48"
+    number: 86
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P120"
+    number: 87
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P100"
+    number: 88
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P240"
+    number: 89
+  }
+  value {
+    name: "REMO_VIDEO_RES_640X360P200"
+    number: 90
+  }
+  value {
+    name: "REMO_VIDEO_RES_4000X3000P30"
+    number: 97
+  }
+  value {
+    name: "REMO_VIDEO_RES_4000X3000P15"
+    number: 98
+  }
+  value {
+    name: "REMO_VIDEO_RES_1536X864P30"
+    number: 193
+  }
+}
+enum_type {
+  name: "REMO_VIDEO_SPLIT_SPACE_e"
+  value {
+    name: "REMO_VIDEO_SPLIT_SPACE_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_VIDEO_SPLIT_SPACE_OFF"
+    number: 1
+  }
+  value {
+    name: "REMO_VIDEO_SPLIT_SPACE_4GB"
+    number: 2
+  }
+  value {
+    name: "REMO_VIDEO_SPLIT_SPACE_8GB"
+    number: 3
+  }
+  value {
+    name: "REMO_VIDEO_SPLIT_SPACE_16GB"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_VIDEO_ENCODER_FORMAT_e"
+  value {
+    name: "VIDEO_ENCODER_FORMAT_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "VIDEO_ENCODER_FORMAT_H264"
+    number: 1
+  }
+  value {
+    name: "VIDEO_ENCODER_FORMAT_H265"
+    number: 2
+  }
+  value {
+    name: "VIDEO_ENCODER_FORMAT_MJPEG"
+    number: 3
+  }
+  value {
+    name: "VIDEO_ENCODER_FORMAT_AV1"
+    number: 4
+  }
+  value {
+    name: "VIDEO_ENCODER_FORMAT_NDI_NULL"
+    number: 5
+  }
+}
+enum_type {
+  name: "REMO_VIDEO_BITRATE_LEVEL_e"
+  value {
+    name: "REMO_VIDEO_BITRATE_LEVEL_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_VIDEO_BITRATE_LEVEL_LOW"
+    number: 1
+  }
+  value {
+    name: "REMO_VIDEO_BITRATE_LEVEL_MEDIUM"
+    number: 2
+  }
+  value {
+    name: "REMO_VIDEO_BITRATE_LEVEL_HIGH"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_VIDEO_MUXER_TYPE_e"
+  value {
+    name: "REMO_VIDEO_MUXER_TYPE_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_VIDEO_MUXER_TYPE_MP4"
+    number: 1
+  }
+  value {
+    name: "REMO_VIDEO_MUXER_TYPE_MOV"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_ACTIVATE_MODULE_e"
+  value {
+    name: "REMO_CAMERA_ACTIVATE_MODULE_DEF"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_ACTIVATE_MODULE_NDI"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_MIRROR_FLIP_e"
+  value {
+    name: "REMO_MIRROR_DISABLE_FLIP_DISABLE"
+    number: 0
+  }
+  value {
+    name: "REMO_MIRROR_ENABLE_FLIP_DISABLE"
+    number: 1
+  }
+  value {
+    name: "REMO_MIRROR_DISABLE_FLIP_ENABLE"
+    number: 2
+  }
+  value {
+    name: "REMO_MIRROR_ENABLE_FLIP_ENABLE"
+    number: 3
+  }
+  value {
+    name: "REMO_MIRROR_ENABLE_FLIP_IGNORE"
+    number: 4
+  }
+  value {
+    name: "REMO_MIRROR_DISABLE_FLIP_IGNORE"
+    number: 5
+  }
+  value {
+    name: "REMO_MIRROR_IGNORE_FLIP_ENABLE"
+    number: 6
+  }
+  value {
+    name: "REMO_MIRROR_IGNORE_FLIP_DISABLE"
+    number: 7
+  }
+}
+enum_type {
+  name: "REMO_ROTATION_e"
+  value {
+    name: "REMO_ROTATION_0"
+    number: 0
+  }
+  value {
+    name: "REMO_ROTATION_90"
+    number: 1
+  }
+  value {
+    name: "REMO_ROTATION_180"
+    number: 2
+  }
+  value {
+    name: "REMO_ROTATION_270"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_HDMI_OUTPUT_CONTENT_TYPE_e"
+  value {
+    name: "REMO_CAMERA_HDMI_OUTPUT_CONTENT_TYPE_PROGRAM_OUTPUT"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OUTPUT_CONTENT_TYPE_FULL_FRAME"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_e"
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_AUTO"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_ENGLISH"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_CHINESE_SIMPLE"
+    number: 2
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_CHINESE_TRADITIONAL"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_SPANISH"
+    number: 4
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_GERMAN"
+    number: 5
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_JANPANESE"
+    number: 6
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_KOREAN"
+    number: 7
+  }
+  value {
+    name: "REMO_CAMERA_HDMI_OSD_LANGUAGE_FRENCH"
+    number: 8
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_e"
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_NONE"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_LIVING"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_DISABLE_AUDIO_CAMERA"
+    number: 2
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_DISABLE_AUDIO_APP"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_HDMI_OUTPUT_CAMERA"
+    number: 4
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_HDMI_OUTPUT_MINITOR"
+    number: 5
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_OUTPUT_FULL_FRAME"
+    number: 6
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_CUSTOM_KEY_FUNC_CONTROL_LED"
+    number: 7
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_REMOTE_APP_EVENT_e"
+  value {
+    name: "REMO_CAMERA_REMOTE_APP_EVENT_NONE"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_REMOTE_APP_EVENT_MUTE"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_IQ_LIGHT_SOURCE_TYPE_e"
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_DAYLIGHT"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_FLUORESCENT"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_TUNGSTEN"
+    number: 3
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_FLASH"
+    number: 4
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_FINE_WEATHER"
+    number: 9
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_CLOUDY_WEATHER"
+    number: 10
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_SHADE"
+    number: 11
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_DAYLIGHT_FLUORESCENT"
+    number: 12
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_DAY_WHITE_FLUORESCENT"
+    number: 13
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_COOL_WHITE_FLUORESCENT"
+    number: 14
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_WHITE_FLUORESCENT"
+    number: 15
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_WARM_WHITE_FLUORESCENT"
+    number: 16
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_STANDARD_LIGHT_A"
+    number: 17
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_STANDARD_LIGHT_B"
+    number: 18
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_STANDARD_LIGHT_C"
+    number: 19
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_D55"
+    number: 20
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_D65"
+    number: 21
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_D75"
+    number: 22
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_D50"
+    number: 23
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_ISO_STUDIO_TUNGSTEN"
+    number: 24
+  }
+  value {
+    name: "REMO_IQ_LIGHT_SOURCE_TYPE_MANUAL_SETTING"
+    number: 255
+  }
+}
+enum_type {
+  name: "REMO_IQ_AE_MODE_e"
+  value {
+    name: "REMO_IQ_AE_MODE_UNKOWN"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AE_MODE_MANUAL"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AE_MODE_ALL_AUTO"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_AE_MODE_APERTURE_PRIORITY"
+    number: 3
+  }
+  value {
+    name: "REMO_IQ_AE_MODE_SHUTTER_PRIORITY"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_IQ_AE_EVBIAS_e"
+  value {
+    name: "REMO_IQ_AE_EVBIAS_AUTO_CAL"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_0"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_0_3"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_0_7"
+    number: 3
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_1_0"
+    number: 4
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_1_3"
+    number: 5
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_1_7"
+    number: 6
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_2_0"
+    number: 7
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_2_3"
+    number: 8
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_2_7"
+    number: 9
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_3_0"
+    number: 10
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_0_3"
+    number: 17
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_0_7"
+    number: 18
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_1_0"
+    number: 19
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_1_3"
+    number: 20
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_1_7"
+    number: 21
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_2_0"
+    number: 22
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_2_3"
+    number: 23
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_2_7"
+    number: 24
+  }
+  value {
+    name: "REMO_IQ_AE_EVBIAS_NEG_3_0"
+    number: 25
+  }
+}
+enum_type {
+  name: "REMO_IQ_AE_SHUTTER_TIME_e"
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_AUTO_CAL"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_8000"
+    number: 9
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_6400"
+    number: 10
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_5000"
+    number: 11
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_4000"
+    number: 12
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_3200"
+    number: 13
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_2500"
+    number: 14
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_2000"
+    number: 15
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_1600"
+    number: 16
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_1250"
+    number: 17
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_1000"
+    number: 18
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_800"
+    number: 19
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_640"
+    number: 20
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_500"
+    number: 21
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_400"
+    number: 22
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_320"
+    number: 23
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_240"
+    number: 24
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_200"
+    number: 25
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_160"
+    number: 26
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_120"
+    number: 27
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_100"
+    number: 28
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_80"
+    number: 29
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_60"
+    number: 30
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_50"
+    number: 31
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_40"
+    number: 32
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_30"
+    number: 33
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_25"
+    number: 34
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_20"
+    number: 35
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_15"
+    number: 36
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_12D5"
+    number: 37
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_10"
+    number: 38
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_8"
+    number: 39
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_6D25"
+    number: 40
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_5"
+    number: 41
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_4"
+    number: 42
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_3"
+    number: 43
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_2D5"
+    number: 44
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_2"
+    number: 45
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_1D67"
+    number: 46
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_1D25"
+    number: 47
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1_1"
+    number: 48
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1D3"
+    number: 49
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1D6"
+    number: 50
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_2"
+    number: 51
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_2D5"
+    number: 52
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_3"
+    number: 53
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_3D2"
+    number: 54
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_4"
+    number: 55
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_5"
+    number: 56
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_6"
+    number: 57
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_7"
+    number: 58
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_8"
+    number: 59
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_9"
+    number: 60
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1C0"
+    number: 61
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1C3"
+    number: 62
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_1C5"
+    number: 63
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_2C0"
+    number: 64
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_2C5"
+    number: 65
+  }
+  value {
+    name: "REMO_IQ_AE_SHUTTER_TIME_3C0"
+    number: 66
+  }
+}
+enum_type {
+  name: "REMO_IQ_AE_APERTURE_APEX_e"
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_AUTO_CAL"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_0_FNO_1_0"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_0_3_FNO_1_1"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_0_7_FNO_1_3"
+    number: 3
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_1_0_FNO_1_4"
+    number: 8
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_1_3_FNO_1_6"
+    number: 9
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_1_7_FNO_1_8"
+    number: 10
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_2_0_FNO_2_0"
+    number: 16
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_2_3_FNO_2_2"
+    number: 17
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_2_7_FNO_2_5"
+    number: 18
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_3_0_FNO_2_8"
+    number: 24
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_3_3_FNO_3_1"
+    number: 25
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_3_7_FNO_3_6"
+    number: 26
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_4_0_FNO_4_0"
+    number: 32
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_4_3_FNO_4_4"
+    number: 33
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_4_7_FNO_5_1"
+    number: 34
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_5_0_FNO_5_6"
+    number: 40
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_5_3_FNO_6_3"
+    number: 41
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_5_7_FNO_7_2"
+    number: 42
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_6_0_FNO_8_0"
+    number: 48
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_6_3_FNO_8_9"
+    number: 49
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_6_7_FNO_10_2"
+    number: 50
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_7_0_FNO_11_3"
+    number: 56
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_7_3_FNO_12_5"
+    number: 57
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_7_7_FNO_14_4"
+    number: 58
+  }
+  value {
+    name: "REMO_IQ_AE_APERTURE_APEX_8_0_FNO_16_0"
+    number: 64
+  }
+}
+enum_type {
+  name: "REMO_IQ_AE_METER_MODE_e"
+  value {
+    name: "REMO_IQ_AE_METER_MODE_AUTO_SELECT"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AE_METER_MODE_AVERAGE"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AE_METER_MODE_CENTER_WEIGHTED_AVERAGE"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_AE_METER_MODE_POINT"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_IQ_ANTIFLICK_MODE_e"
+  value {
+    name: "REMO_IQ_ANTIFLICK_MODE_OFF"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_ANTIFLICK_MODE_50HZ"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_ANTIFLICK_MODE_60HZ"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_ANTIFLICK_MODE_AUTO"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_IQ_STYLE_TYPE_e"
+  value {
+    name: "REMO_IQ_STYLE_TYPE_STANDARD"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_STYLE_TYPE_TEXT"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_STYLE_TYPE_LANDSCAPE"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_STYLE_TYPE_PORTRAIT"
+    number: 3
+  }
+  value {
+    name: "REMO_IQ_STYLE_TYPE_NIGHTSCAPE"
+    number: 4
+  }
+  value {
+    name: "REMO_IQ_STYLE_TYPE_FILM"
+    number: 5
+  }
+  value {
+    name: "REMO_IQ_STYLE_TYPE_CUSTOMER"
+    number: 254
+  }
+}
+enum_type {
+  name: "REMO_IQ_AF_MODE_e"
+  value {
+    name: "REMO_IQ_AF_MODE_UNKOWN"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AF_MODE_AFC"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AF_MODE_AFS"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_AF_MODE_MF"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_IQ_AF_TRACK_MODE_e"
+  value {
+    name: "REMO_IQ_AF_TRACK_MODE_CENTER_WEIGHT"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AF_TRACK_MODE_FACE"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AF_TRACK_MODE_AI_OBJECT"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_IQ_AF_SINGLE_FOCUS_ACTION_e"
+  value {
+    name: "REMO_IQ_AF_SINGLE_FOCUS_ACTION_HYBRID"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AF_SINGLE_FOCUS_ACTION_FULL_SCAN"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AF_SINGLE_FOCUS_ACTION_CONSTRAST"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_IQ_AF_STATUS_e"
+  value {
+    name: "REMO_IQ_AF_STATUS_IDLE_LAST_SUCCESS"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_AF_STATUS_IDLE_LAST_FAILED"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_AF_STATUS_IDLE_FOCUSING"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_AF_STATUS_IDLE_CANCEL"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_IQ_COLOR_SPACE_TRANS_e"
+  value {
+    name: "REMO_IQ_COLOR_SPACE_TRANS_BT601_FULL"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_COLOR_SPACE_TRANS_BT601_TV"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_COLOR_SPACE_TRANS_BT709_FULL"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_COLOR_SPACE_TRANS_BT709_TV"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_IQ_ISP_DEBUG_MODULE_TYPE_e"
+  value {
+    name: "REMO_IQ_ISP_DEBUG_MODULE_TYPE_AF"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_ISP_DEBUG_MODULE_TYPE_AE"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_ISP_DEBUG_MODULE_TYPE_AWB"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_STORAGE_STATUS_e"
+  value {
+    name: "REMO_STORAGE_STATUS_UNPLUGGED"
+    number: 0
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_FORMATING"
+    number: 1
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_READY"
+    number: 2
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_FULL"
+    number: 3
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_FS_UNSUPPORT"
+    number: 4
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_FS_ERR"
+    number: 5
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_CONNECTING"
+    number: 6
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_WRITE_PROTECT"
+    number: 7
+  }
+  value {
+    name: "REMO_STORAGE_STATUS_BUTT"
+    number: 8
+  }
+}
+enum_type {
+  name: "REMO_STORAGE_FS_TYPE_e"
+  value {
+    name: "REMO_STORAGE_FS_TP_UNKOWN"
+    number: 0
+  }
+  value {
+    name: "REMO_STORAGE_FS_TP_FAT32"
+    number: 1
+  }
+  value {
+    name: "REMO_STORAGE_FS_TP_EXFAT"
+    number: 2
+  }
+  value {
+    name: "REMO_STORAGE_FS_TP_BUTT"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_STORAGE_SPEED_e"
+  value {
+    name: "REMO_STORAGE_SPEED_1_4M"
+    number: 0
+  }
+  value {
+    name: "REMO_STORAGE_SPEED_4_10M"
+    number: 1
+  }
+  value {
+    name: "REMO_STORAGE_SPEED_10_30M"
+    number: 2
+  }
+  value {
+    name: "REMO_STORAGE_SPEED_30_50M"
+    number: 3
+  }
+  value {
+    name: "REMO_STORAGE_SPEED_50_100M"
+    number: 4
+  }
+  value {
+    name: "REMO_STORAGE_SPEED_EXCEED_100M"
+    number: 5
+  }
+  value {
+    name: "REMO_STORAGE_SPEED_BUTT"
+    number: 6
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_POWER_STATUS_e"
+  value {
+    name: "REMO_CAMERA_POWER_STATUS_READY"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_POWER_STATUS_CLOSING"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_POWER_STATUS_SUSPENDING"
+    number: 2
+  }
+  value {
+    name: "REMO_CAMERA_POWER_STATUS_BOOTING"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_POWER_STATUS_RESUMING"
+    number: 4
+  }
+  value {
+    name: "REMO_CAMERA_POWER_STATUS_MEDIA_EXITING"
+    number: 5
+  }
+  value {
+    name: "REMO_CAMERA_POWER_STATUS_MEDIA_IDLE"
+    number: 6
+  }
+}
+enum_type {
+  name: "REMO_SYSTEM_WIFI_WORKMODE_e"
+  value {
+    name: "REMO_SYSTEM_WIFI_MODE_DISABLE"
+    number: 0
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_MODE_STA_ONLY"
+    number: 1
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_MODE_AP_ONLY"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_SYSTEM_WIFI_STATION_STATE_e"
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_DISABLE"
+    number: 0
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_NO_DEVICE"
+    number: 1
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_STARTING"
+    number: 2
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_DISCONNECT"
+    number: 3
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_CONNECTED"
+    number: 4
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_GOT_IP"
+    number: 5
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_AUTH_FAILED"
+    number: 6
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_STATION_STATE_ERROR"
+    number: 255
+  }
+}
+enum_type {
+  name: "REMO_SYSTEM_WIFI_AP_STATE_e"
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_STATE_DISABLE"
+    number: 0
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_STATE_NO_DEVICE"
+    number: 1
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_STATE_STARTING"
+    number: 2
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_STATE_RUNNING"
+    number: 3
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_STATE_ERROR"
+    number: 255
+  }
+}
+enum_type {
+  name: "REMO_SYSTEM_WIFI_AP_BAND_e"
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_BAND_AUTO"
+    number: 0
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_BAND_2G_ONLY"
+    number: 1
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_BAND_5G_ONLY"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_SYSTEM_WIFI_AP_BAND_WIDTH_e"
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_BAND_WIDTH_20HZ"
+    number: 0
+  }
+  value {
+    name: "REMO_SYSTEM_WIFI_AP_BAND_WIDTH_40HZ"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_SYSTEM_ETHERNET_STATE_e"
+  value {
+    name: "REMO_SYSTEM_ETHERNET_STATE_DISABLE"
+    number: 0
+  }
+  value {
+    name: "REMO_SYSTEM_ETHERNET_STATE_NO_DEVICE"
+    number: 1
+  }
+  value {
+    name: "REMO_SYSTEM_ETHERNET_STATE_UP"
+    number: 2
+  }
+  value {
+    name: "REMO_SYSTEM_ETHERNET_STATE_RUNNING"
+    number: 3
+  }
+  value {
+    name: "REMO_SYSTEM_ETHERNET_STATE_GOT_IP"
+    number: 4
+  }
+  value {
+    name: "REMO_SYSTEM_ETHERNET_STATE_ERROR"
+    number: 255
+  }
+}
+enum_type {
+  name: "REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_e"
+  value {
+    name: "REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_OFF"
+    number: 0
+  }
+  value {
+    name: "REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_0"
+    number: 1
+  }
+  value {
+    name: "REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_1"
+    number: 2
+  }
+  value {
+    name: "REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_2"
+    number: 3
+  }
+  value {
+    name: "REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_3"
+    number: 4
+  }
+  value {
+    name: "REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_4"
+    number: 5
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_USB_WORKMODE_e"
+  value {
+    name: "REMO_CAMERA_USB_WORKMODE_DEVICE_IDLE"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_USB_WORKMODE_DEVICE_UVC_UAC"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_USB_WORKMODE_DEVICE_UVC_RNDIS"
+    number: 2
+  }
+  value {
+    name: "REMO_CAMERA_USB_WORKMODE_DEVICE_RNDIS_ONLY"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_USB_WORKMODE_DEVICE_MTP"
+    number: 4
+  }
+  value {
+    name: "REMO_CAMERA_USB_WORKMODE_DEVICE_MASS_STORAGE"
+    number: 5
+  }
+  value {
+    name: "REMO_CAMERA_USB_WORKMODE_HOST"
+    number: 6
+  }
+}
+enum_type {
+  name: "CameraLensMotorType_e"
+  value {
+    name: "LENS_TYPE_NONE"
+    number: 0
+  }
+  value {
+    name: "LENS_TYPE_VCM"
+    number: 1
+  }
+  value {
+    name: "LENS_TYPE_STEPMOTOR"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_DEVMNG_MONITOR_STATUS_e"
+  value {
+    name: "REMO_DEVMNG_MONITOR_STATUS_NORMAL"
+    number: 0
+  }
+  value {
+    name: "REMO_DEVMNG_MONITOR_STATUS_WARNING"
+    number: 1
+  }
+  value {
+    name: "REMO_DEVMNG_MONITOR_STATUS_ERROR"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_LIVESTREAM_STATUS_e"
+  value {
+    name: "REMO_LIVE_STREAM_STATUS_NOT_START"
+    number: 0
+  }
+  value {
+    name: "REMO_LIVE_STREAM_STATUS_BROADCASTING"
+    number: 1
+  }
+  value {
+    name: "REMO_LIVE_STREAM_STATUS_PREPARING"
+    number: 2
+  }
+  value {
+    name: "REMO_LIVE_STREAM_STATUS_FAILED"
+    number: 3
+  }
+  value {
+    name: "REMO_LIVE_STREAM_STATUS_RETRYING"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_LIVE_STREAM_AUDIO_SOURCE_e"
+  value {
+    name: "REMO_LIVE_STREAM_AUDIO_SOURCE_BUILTIN_MIC"
+    number: 0
+  }
+  value {
+    name: "REMO_LIVE_STREAM_AUDIO_SOURCE_PLUGIN_MIC"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_LIVE_STREAM_PLATFORM_e"
+  value {
+    name: "REMO_LIVE_STREAM_PLATFORM_DEF"
+    number: 0
+  }
+  value {
+    name: "REMO_LIVE_STREAM_PLATFORM_RTMP"
+    number: 1
+  }
+  value {
+    name: "REMO_LIVE_STREAM_PLATFORM_YOUTUBE"
+    number: 2
+  }
+  value {
+    name: "REMO_LIVE_STREAM_PLATFORM_FACEBOOK"
+    number: 3
+  }
+  value {
+    name: "REMO_LIVE_STREAM_PLATFORM_TWITCH"
+    number: 4
+  }
+  value {
+    name: "REMO_LIVE_STREAM_PLATFORM_KUAISHOU"
+    number: 5
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_POWERCTRL_ACTION_e"
+  value {
+    name: "REMO_CAMERA_POWERCTRL_ACTION_RESUME"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_POWERCTRL_ACTION_SUSPEND"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_POWERCTRL_ACTION_REBOOT"
+    number: 2
+  }
+  value {
+    name: "REMO_CAMERA_POWERCTRL_ACTION_POWEROFF"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_POWERCTRL_ACTION_MEDIA_EXIT"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_COMMON_EVENT_e"
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_MEDIA_SWITCH_START"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_MEDIA_SWITCH_END_SUCCESS"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_OP_DELAY_START"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_OP_DELAY_END"
+    number: 4
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_RECORD_END"
+    number: 5
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_PRERECORD_START"
+    number: 6
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_PRERECORD_BUFFER_FULL"
+    number: 7
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_RECORD_FILE_SPLIT"
+    number: 8
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_NDI_CLIENT_CONNECT"
+    number: 9
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_RTSP_CLIENT_CONNECT"
+    number: 10
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_AUTO_FLIP"
+    number: 11
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_ZOOM_AUTO_END"
+    number: 12
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_AF_END"
+    number: 13
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_SD_FORMAT_END_SUCCESS"
+    number: 14
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_ENTER_STR"
+    number: 16
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_REBOOT"
+    number: 17
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_LOWPOWER_AUTO_POWEROFF"
+    number: 18
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_SD_FILE_REPAIR_SUCCESS"
+    number: 19
+  }
+  value {
+    name: "REMO_CAMERA_COMMON_EVENT_AI_TARGET_LOSE"
+    number: 20
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_WARNING_EVENT_e"
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_SD_LOW_SPEED"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_SD_FRAGMENT_SEVERELY"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_SD_FILE_REPAIR_FAILED"
+    number: 2
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_CPU_TEMPERTURE"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_LENS_TEMPERTURE"
+    number: 4
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_BATTERY_TEMPERTURE"
+    number: 5
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_BATTERY_CAPACITY"
+    number: 6
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_MEDIA_SWITCH_END_FAILED"
+    number: 7
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_SD_FORMAT_END_FAILED"
+    number: 8
+  }
+  value {
+    name: "REMO_CAMERA_WARNING_EVENT_LIVEVIEW_FAILED"
+    number: 9
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_ERROR_EVENT_e"
+  value {
+    name: "REMO_CAMERA_ERROR_EVENT_FACTORY_RESET_FAILED"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_ERROR_EVENT_CPU_TEMPERTURE"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_ERROR_EVENT_LENS_TEMPERTURE"
+    number: 2
+  }
+  value {
+    name: "REMO_CAMERA_ERROR_EVENT_BATTERY_TEMPERTURE"
+    number: 3
+  }
+  value {
+    name: "REMO_CAMERA_ERROR_EVENT_BATTERY_CAPACITY"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_PROTOCOL_AI_WORKMODE_e"
+  value {
+    name: "REMO_PROTOCOL_AI_NORMAL_MODE"
+    number: 0
+  }
+  value {
+    name: "REMO_PROTOCOL_AI_GROUP_FRAMING_MODE"
+    number: 1
+  }
+  value {
+    name: "REMO_PROTOCOL_AI_TRACKING_MODE"
+    number: 2
+  }
+  value {
+    name: "REMO_PROTOCOL_AI_HAND_TARCKING_MODE"
+    number: 3
+  }
+  value {
+    name: "REMO_PROTOCOL_AI_DESKTOP_MODE"
+    number: 4
+  }
+  value {
+    name: "REMO_PROTOCOL_AI_WHITEBOARD_MODE"
+    number: 5
+  }
+}
+enum_type {
+  name: "REMO_CAMERA_SUSPEND_MODE_e"
+  value {
+    name: "REMO_CAMERA_SUSPEND_BLACKSCREEN"
+    number: 0
+  }
+  value {
+    name: "REMO_CAMERA_SUSPEND_PICTURE"
+    number: 1
+  }
+  value {
+    name: "REMO_CAMERA_SUSPEND_LOOPVIDEO"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_IQ_RANGE_INDEX_e"
+  value {
+    name: "REMO_IQ_EXPOSURE_SHUTTER_RANGE"
+    number: 0
+  }
+  value {
+    name: "REMO_IQ_FOCUS_ABS_RANGE"
+    number: 1
+  }
+  value {
+    name: "REMO_IQ_ZOOM_ABS_RANGE"
+    number: 2
+  }
+  value {
+    name: "REMO_IQ_PAN_ABS_RANGE"
+    number: 3
+  }
+  value {
+    name: "REMO_IQ_PAN_REL_RANGE"
+    number: 4
+  }
+  value {
+    name: "REMO_IQ_TILT_ABS_RANGE"
+    number: 5
+  }
+  value {
+    name: "REMO_IQ_TILT_REL_RANGE"
+    number: 6
+  }
+  value {
+    name: "REMO_IQ_BACKLIGHT_RANGE"
+    number: 7
+  }
+  value {
+    name: "REMO_IQ_BRIGHTNESS_RANGE"
+    number: 8
+  }
+  value {
+    name: "REMO_IQ_CONTRAST_RANGE"
+    number: 9
+  }
+  value {
+    name: "REMO_IQ_GAIN_RANGE"
+    number: 10
+  }
+  value {
+    name: "REMO_IQ_POWER_LINE_FREQ_RANGE"
+    number: 11
+  }
+  value {
+    name: "REMO_IQ_HUE_RANGE"
+    number: 12
+  }
+  value {
+    name: "REMO_IQ_SATURATION_RANGE"
+    number: 13
+  }
+  value {
+    name: "REMO_IQ_SHARPNESS_RANGE"
+    number: 14
+  }
+  value {
+    name: "REMO_IQ_WHITE_BALANCE_TEMP_RANGE"
+    number: 15
+  }
+  value {
+    name: "REMO_IQ_RANGE_INDEX_MAX"
+    number: 16
+  }
+}
+syntax: "proto3"

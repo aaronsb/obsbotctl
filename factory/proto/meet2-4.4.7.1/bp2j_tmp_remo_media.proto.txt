@@ -1,0 +1,1052 @@
+name: "bp2j_tmp_remo_media.proto"
+message_type {
+  name: "Remo_Media_ChnAttr_t"
+  field {
+    name: "x"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "y"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "width"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "height"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fps"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fpsNum"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fpsDen"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "dataType"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DATA_TYPE_e"
+  }
+  field {
+    name: "rotate"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_ROTATE_e"
+  }
+  field {
+    name: "bCompress"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Audio_ChnAttr_t"
+  field {
+    name: "bvalid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "samplerate"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "frame_num"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "volume"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vqelib"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".ACAP_VQE_LIB_e"
+  }
+  field {
+    name: "soundmode"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_AUDIO_SOUNDMODE_e"
+  }
+}
+message_type {
+  name: "Remo_AAC_Attr_t"
+  field {
+    name: "aot"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".AAC_AOT_e"
+  }
+  field {
+    name: "bitrate_mode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".AAC_BITRATE_MODE_e"
+  }
+  field {
+    name: "sbr_mode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "afterburner"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bitrate"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "trans"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".AAC_TRANSMUX_e"
+  }
+  field {
+    name: "samplerate"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "channels"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Zoom_Param_t"
+  field {
+    name: "bAtOnce"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bCornerTrack"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bStop"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bContinual"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "aiViewId"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "speed"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "ratio"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "xmin"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymin"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xmax"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymax"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ai_mainmode"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ai_submode"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_mainmode"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_submode"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "cmd_src"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "bEptz"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bCanvasEptz"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Rect_t"
+  field {
+    name: "x"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "y"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "width"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "height"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Ldc_Param_t"
+  field {
+    name: "width"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "height"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "matrix"
+    number: 3
+    label: LABEL_REPEATED
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Ldc_Point_t"
+  field {
+    name: "x"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Ldc_Crop_t"
+  field {
+    name: "x"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ratio"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+enum_type {
+  name: "REMO_BOOT_STAGE_e"
+  value {
+    name: "REMO_BOOT_STAGE_IDLE"
+    number: 0
+  }
+  value {
+    name: "REMO_BOOT_STAGE_INIT"
+    number: 1
+  }
+  value {
+    name: "REMO_BOOT_STAGE_DONE"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_MEDIA_STATE_e"
+  value {
+    name: "REMO_MEDIA_STATE_IDLE"
+    number: 0
+  }
+  value {
+    name: "REMO_MEDIA_STATE_CREATE"
+    number: 1
+  }
+  value {
+    name: "REMO_MEDIA_STATE_START"
+    number: 2
+  }
+  value {
+    name: "REMO_MEDIA_STATE_SWITCHING"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_MEDIA_PLAYER_ATTR_e"
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_ENABLE_VIDEO"
+    number: 0
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_ENABLE_AUDIO"
+    number: 1
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_ENABLE_VIDEO_PTS"
+    number: 2
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_ENABLE_AUDIO_PTS"
+    number: 3
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_ENABLE_ZOOM_BOX"
+    number: 4
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_ENABLE_AI_TARGET"
+    number: 5
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_ENABLE_PLAY_PAUSE"
+    number: 6
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_VAL_VIDEO_TYPE"
+    number: 50
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_VAL_AUDIO_TYPE"
+    number: 51
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_VAL_VIDEO_ENC_FMT"
+    number: 52
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_VAL_AUDIO_ENC_FMT"
+    number: 53
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_VAL_PLAY_SEEKTO"
+    number: 54
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_VAL_WATCHDOG"
+    number: 55
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_STRING_SERVER_IP"
+    number: 100
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_STRING_PLAY_FILE_NAME"
+    number: 101
+  }
+  value {
+    name: "REMO_MEDIA_PLAYER_ATTR_BYTE_ZOOM_BOX"
+    number: 150
+  }
+}
+enum_type {
+  name: "REMO_VCAP_MODE_e"
+  value {
+    name: "REMO_VCAP_MODE_UNKNOWN"
+    number: 0
+  }
+  value {
+    name: "REMO_VCAP_MODE_4KP30"
+    number: 1
+  }
+  value {
+    name: "REMO_VCAP_MODE_4KP60"
+    number: 2
+  }
+  value {
+    name: "REMO_VCAP_MODE_1080P30"
+    number: 3
+  }
+  value {
+    name: "REMO_VCAP_MODE_1080P60"
+    number: 4
+  }
+  value {
+    name: "REMO_VCAP_MODE_1080P100"
+    number: 5
+  }
+  value {
+    name: "REMO_VCAP_MODE_1080P120"
+    number: 6
+  }
+  value {
+    name: "REMO_VCAP_MODE_720P120"
+    number: 7
+  }
+  value {
+    name: "REMO_VCAP_MODE_720P150"
+    number: 8
+  }
+  value {
+    name: "REMO_VCAP_MODE_720P180"
+    number: 9
+  }
+  value {
+    name: "REMO_VCAP_MODE_4KP3014bit"
+    number: 10
+  }
+  value {
+    name: "REMO_VCAP_MODE_4KP3016bit"
+    number: 11
+  }
+  value {
+    name: "REMO_VCAP_MODE_1080P3016bit"
+    number: 12
+  }
+  value {
+    name: "REMO_VCAP_MODE_1080P6016bit"
+    number: 13
+  }
+}
+enum_type {
+  name: "REMO_VCAP_CHN_e"
+  value {
+    name: "REMO_VCAP_CHN_SNR0"
+    number: 0
+  }
+  value {
+    name: "REMO_VCAP_CHN_SNR1"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_ROTATE_e"
+  value {
+    name: "REMO_ROTATE_0"
+    number: 0
+  }
+  value {
+    name: "REMO_ROTATE_90"
+    number: 1
+  }
+  value {
+    name: "REMO_ROTATE_180"
+    number: 2
+  }
+  value {
+    name: "REMO_ROTATE_270"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_DATA_TYPE_e"
+  value {
+    name: "REMO_DATA_TYPE_RAW"
+    number: 0
+  }
+  value {
+    name: "REMO_DATA_TYPE_META"
+    number: 1
+  }
+  value {
+    name: "REMO_DATA_TYPE_H264"
+    number: 2
+  }
+  value {
+    name: "REMO_DATA_TYPE_H265"
+    number: 3
+  }
+  value {
+    name: "REMO_DATA_TYPE_MJPEG"
+    number: 4
+  }
+  value {
+    name: "REMO_DATA_TYPE_JPEG"
+    number: 5
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV422_PLANAR"
+    number: 6
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV422_SEMIPLANAR"
+    number: 7
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV422_YUYV"
+    number: 8
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV422_YVYU"
+    number: 9
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV422_UYVY"
+    number: 10
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV422_VYUY"
+    number: 11
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV420_PLANAR"
+    number: 12
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV420_NV12"
+    number: 13
+  }
+  value {
+    name: "REMO_DATA_TYPE_YUV420_NV21"
+    number: 14
+  }
+  value {
+    name: "REMO_DATA_TYPE_AUDIO_MONO"
+    number: 15
+  }
+  value {
+    name: "REMO_DATA_TYPE_AUDIO_STREEO"
+    number: 16
+  }
+  value {
+    name: "REMO_DATA_TYPE_AUDIO_AAC"
+    number: 17
+  }
+}
+enum_type {
+  name: "REMO_MODULE_ID_e"
+  value {
+    name: "REMO_MODULE_ID_NONE"
+    number: 0
+  }
+  value {
+    name: "REMO_MODULE_ID_VCAP"
+    number: 1
+  }
+  value {
+    name: "REMO_MODULE_ID_VPROC"
+    number: 2
+  }
+  value {
+    name: "REMO_MODULE_ID_VENC"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_VPROC_CHN_e"
+  value {
+    name: "REMO_VPROC_CHN_0"
+    number: 0
+  }
+  value {
+    name: "REMO_VPROC_CHN_1"
+    number: 1
+  }
+  value {
+    name: "REMO_VPROC_CHN_2"
+    number: 2
+  }
+  value {
+    name: "REMO_VPROC_CHN_3"
+    number: 3
+  }
+  value {
+    name: "REMO_VPROC_CHN_4"
+    number: 4
+  }
+  value {
+    name: "REMO_VPROC_CHN_5"
+    number: 5
+  }
+}
+enum_type {
+  name: "REMO_VENC_RC_MODE_e"
+  value {
+    name: "REMO_VENC_RC_MODE_UNKNOWN"
+    number: 0
+  }
+  value {
+    name: "REMO_VENC_RC_MODE_CBR"
+    number: 1
+  }
+  value {
+    name: "REMO_VENC_RC_MODE_VBR"
+    number: 2
+  }
+  value {
+    name: "REMO_VENC_RC_MODE_ABR"
+    number: 3
+  }
+  value {
+    name: "REMO_VENC_RC_MODE_AVBR"
+    number: 4
+  }
+  value {
+    name: "REMO_VENC_RC_MODE_FIXQP"
+    number: 10
+  }
+}
+enum_type {
+  name: "Remo_ACap_Chn_e"
+  value {
+    name: "REMO_ACAP_CHN_0"
+    number: 0
+  }
+  value {
+    name: "REMO_ACAP_CHN_1"
+    number: 1
+  }
+  value {
+    name: "REMO_ACAP_CHN_2"
+    number: 2
+  }
+  value {
+    name: "REMO_ACAP_CHN_X"
+    number: 3
+  }
+}
+enum_type {
+  name: "Audio_DataType_e"
+  value {
+    name: "INT16_INTERLEAVED"
+    number: 0
+  }
+  value {
+    name: "INT16_PLANAR"
+    number: 1
+  }
+  value {
+    name: "FLOAT32_INTERLEAVED"
+    number: 3
+  }
+  value {
+    name: "FLOAT32_PLANAR"
+    number: 4
+  }
+  value {
+    name: "INT32_INTERLEAVED"
+    number: 5
+  }
+  value {
+    name: "INT32_PLANAR"
+    number: 6
+  }
+}
+enum_type {
+  name: "REMO_AUDIO_SOUNDMODE_e"
+  value {
+    name: "REMO_AUDIO_SOUNDMODE_MONO"
+    number: 0
+  }
+  value {
+    name: "REMO_AUDIO_SOUNDMODE_STREEO"
+    number: 1
+  }
+}
+enum_type {
+  name: "AUDIO_BIT_WIDTH_e"
+  value {
+    name: "AUDIO_BIT_WIDTH_8"
+    number: 0
+  }
+  value {
+    name: "AUDIO_BIT_WIDTH_16"
+    number: 1
+  }
+  value {
+    name: "AUDIO_BIT_WIDTH_24"
+    number: 2
+  }
+}
+enum_type {
+  name: "ACAP_VQE_LIB_e"
+  value {
+    name: "ACAP_VQE_LIB_HUOSHAN"
+    number: 0
+  }
+  value {
+    name: "ACAP_VQE_LIB_PLATFORM"
+    number: 1
+  }
+  value {
+    name: "ACAP_VQE_LIB_WEBRTC"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_ACAP_MODE_e"
+  value {
+    name: "ACAP_MODE_48K_STREEO"
+    number: 0
+  }
+  value {
+    name: "ACAP_MODE_32K_MONO"
+    number: 1
+  }
+  value {
+    name: "ACAP_MODE_16K_STREEO"
+    number: 2
+  }
+  value {
+    name: "ACAP_MODE_48K_MONO"
+    number: 3
+  }
+  value {
+    name: "ACAP_MODE_32K_STREEO"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_AUDIO_VQE_MODE_e"
+  value {
+    name: "REMO_AUDIO_VQE_MODE_NONE"
+    number: 0
+  }
+  value {
+    name: "REMO_AUDIO_VQE_MODE_TALK"
+    number: 1
+  }
+  value {
+    name: "REMO_AUDIO_VQE_MODE_VLOG"
+    number: 2
+  }
+}
+enum_type {
+  name: "AAC_AOT_e"
+  value {
+    name: "AAC_TYPE_MPEG4_LC"
+    number: 0
+  }
+  value {
+    name: "AAC_TYPE_MPEG4_HE"
+    number: 1
+  }
+  value {
+    name: "AAC_TYPE_MPEG4_HEV2"
+    number: 2
+  }
+  value {
+    name: "AAC_TYPE_MPEG4_LD"
+    number: 3
+  }
+  value {
+    name: "AAC_TYPE_MPEG4_ELD"
+    number: 4
+  }
+  value {
+    name: "AAC_TYPE_MPEG2_LC"
+    number: 5
+  }
+  value {
+    name: "AAC_TYPE_MPEG2_HE"
+    number: 6
+  }
+}
+enum_type {
+  name: "AAC_BITRATE_MODE_e"
+  value {
+    name: "AAC_BITRATE_CBR"
+    number: 0
+  }
+  value {
+    name: "AAC_BITRATE_VBR_VERY_LOW"
+    number: 1
+  }
+  value {
+    name: "AAC_BITRATE_VBR_LOW"
+    number: 2
+  }
+  value {
+    name: "AAC_BITRATE_VBR_MEDIUM"
+    number: 3
+  }
+  value {
+    name: "AAC_BITRATE_VBR_HIGH"
+    number: 4
+  }
+  value {
+    name: "AAC_BITRATE_VBR_VERY_HIGH"
+    number: 5
+  }
+}
+enum_type {
+  name: "AAC_TRANSMUX_e"
+  value {
+    name: "AAC_TRANSMUX_RAW"
+    number: 0
+  }
+  value {
+    name: "AAC_TRANSMUX_ADIF"
+    number: 1
+  }
+  value {
+    name: "AAC_TRANSMUX_ADTS"
+    number: 2
+  }
+  value {
+    name: "AAC_TRANSMUX_LATM"
+    number: 3
+  }
+  value {
+    name: "AAC_TRANSMUX_LATM_OFB"
+    number: 4
+  }
+  value {
+    name: "AAC_TRANSMUX_LOAS"
+    number: 5
+  }
+}
+enum_type {
+  name: "Remo_AENC_Chn_e"
+  value {
+    name: "REMO_AENC_CHN_0"
+    number: 0
+  }
+  value {
+    name: "REMO_AENC_CHN_1"
+    number: 1
+  }
+  value {
+    name: "REMO_AENC_CHN_2"
+    number: 2
+  }
+}
+enum_type {
+  name: "Remo_ADEC_Chn_e"
+  value {
+    name: "REMO_ADEC_CHN_0"
+    number: 0
+  }
+  value {
+    name: "REMO_ADEC_CHN_1"
+    number: 1
+  }
+}
+enum_type {
+  name: "Remo_AENC_Code_Type_e"
+  value {
+    name: "REMO_AENC_TYPE_AAC"
+    number: 0
+  }
+  value {
+    name: "REMO_AENC_TYPE_MAX"
+    number: 1
+  }
+}
+enum_type {
+  name: "ADEC_PAYLOAD_e"
+  value {
+    name: "ADEC_PAYLOAD_AAC"
+    number: 0
+  }
+  value {
+    name: "ADEC_PAYLOAD_MAX"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_ZOOM_SRC_e"
+  value {
+    name: "REMO_ZOOM_SRC_INTERNAL"
+    number: 0
+  }
+  value {
+    name: "REMO_ZOOM_SRC_PC"
+    number: 1
+  }
+  value {
+    name: "REMO_ZOOM_SRC_WAKEUP"
+    number: 2
+  }
+  value {
+    name: "REMO_ZOOM_SRC_AI"
+    number: 3
+  }
+}
+enum_type {
+  name: "REMO_COORDINATE_SOURCE_e"
+  value {
+    name: "REMO_COORDINATE_SRC_WINCHANGE"
+    number: 0
+  }
+  value {
+    name: "REMO_COORDINATE_SRC_AI"
+    number: 1
+  }
+  value {
+    name: "REMO_COORDINATE_SRC_APP"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_HDR_Type_e"
+  value {
+    name: "REMO_HDR_TYPE_DISABLE"
+    number: 0
+  }
+  value {
+    name: "REMO_HDR_TYPE_ISP"
+    number: 1
+  }
+  value {
+    name: "REMO_HDR_TYPE_SENSOR"
+    number: 2
+  }
+}
+enum_type {
+  name: "REMO_MEDIA_RES_e"
+  value {
+    name: "REMO_MEDIA_RES_12MP30"
+    number: 0
+  }
+  value {
+    name: "REMO_MEDIA_RES_4KP30"
+    number: 1
+  }
+  value {
+    name: "REMO_MEDIA_RES_4KP60"
+    number: 2
+  }
+  value {
+    name: "REMO_MEDIA_RES_1440P60"
+    number: 3
+  }
+  value {
+    name: "REMO_MEDIA_RES_1080P30"
+    number: 4
+  }
+  value {
+    name: "REMO_MEDIA_RES_1080P60"
+    number: 5
+  }
+  value {
+    name: "REMO_MEDIA_RES_1080P100"
+    number: 6
+  }
+  value {
+    name: "REMO_MEDIA_RES_720P150"
+    number: 7
+  }
+}
+enum_type {
+  name: "REMO_VIDEO_FOV_e"
+  value {
+    name: "REMO_VIDEO_FOV_FULL"
+    number: 0
+  }
+  value {
+    name: "REMO_VIDEO_FOV_MID"
+    number: 1
+  }
+  value {
+    name: "REMO_VIDEO_FOV_MIN"
+    number: 2
+  }
+}
+syntax: "proto3"

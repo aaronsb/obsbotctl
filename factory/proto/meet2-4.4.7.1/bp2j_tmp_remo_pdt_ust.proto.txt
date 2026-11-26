@@ -1,0 +1,52 @@
+name: "bp2j_tmp_remo_pdt_ust.proto"
+dependency: "bp2j_tmp_remo_ust.proto"
+message_type {
+  name: "Remo_Pdt_GrpMode_Cfg_t"
+  field {
+    name: "whole"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Ust_t"
+  field {
+    name: "usermode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_WORKMODE_e"
+  }
+  field {
+    name: "roiTrackEnable"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "group"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_GrpMode_Cfg_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Ust_Data_t"
+  field {
+    name: "ust"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_t"
+  }
+  field {
+    name: "pdtUst"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Ust_t"
+  }
+}
+syntax: "proto3"

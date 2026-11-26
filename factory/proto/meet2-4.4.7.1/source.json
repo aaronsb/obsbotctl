@@ -1,0 +1,75 @@
+{
+ "image": "Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin",
+ "image_sha256": "240591d4ab2dd39bf785e5fe289160af590138d83e0b011dac2fe4ca11b3fedd",
+ "library": "/usr/lib/libremo_pb2json.so",
+ "library_sha256": "5785949edae2d7e09c5b17483a6a212c3d5f85044d6faf0f69927f9f182aed72",
+ "protoc": "libprotoc 36.1",
+ "files": [
+  {
+   "name": "bp2j_tmp_remo_cfg.proto",
+   "offset": "0x1d6dc0",
+   "length": 4141,
+   "decoded": "bp2j_tmp_remo_cfg.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_common.proto",
+   "offset": "0x1d8478",
+   "length": 919,
+   "decoded": "bp2j_tmp_remo_common.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_device.proto",
+   "offset": "0x1d8810",
+   "length": 4509,
+   "decoded": "bp2j_tmp_remo_device.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_media.proto",
+   "offset": "0x1d99b0",
+   "length": 6059,
+   "decoded": "bp2j_tmp_remo_media.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_pdt_cfg.proto",
+   "offset": "0x1db374",
+   "length": 4935,
+   "decoded": "bp2j_tmp_remo_pdt_cfg.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_pdt_status.proto",
+   "offset": "0x1dcc14",
+   "length": 846,
+   "decoded": "bp2j_tmp_remo_pdt_status.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_pdt_ust.proto",
+   "offset": "0x1dd0b8",
+   "length": 303,
+   "decoded": "bp2j_tmp_remo_pdt_ust.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_protocol.proto",
+   "offset": "0x1dd278",
+   "length": 40110,
+   "decoded": "bp2j_tmp_remo_protocol.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_status.proto",
+   "offset": "0x1e8e70",
+   "length": 8050,
+   "decoded": "bp2j_tmp_remo_status.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_stream.proto",
+   "offset": "0x1eb85c",
+   "length": 670,
+   "decoded": "bp2j_tmp_remo_stream.proto.txt"
+  },
+  {
+   "name": "bp2j_tmp_remo_ust.proto",
+   "offset": "0x1ebb34",
+   "length": 4431,
+   "decoded": "bp2j_tmp_remo_ust.proto.txt"
+  }
+ ]
+}
