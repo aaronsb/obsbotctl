@@ -7,7 +7,9 @@
 //     before the call, GET payloads after it, so each line shows the bytes
 //     that actually crossed the wire.
 //   - every other ioctl request code, by number, so V4L2 control traffic
-//     is visible too.
+//     is visible too. V4L2 control requests (G/S_CTRL, G/S/TRY_EXT_CTRLS)
+//     also carry their control IDs and values: set values as sent, get
+//     values as returned.
 // Output goes to the file named by XU_TRACE_FILE, or stderr.
 //
 // Build: cc -shared -fPIC -O2 -o xu_trace.so xu_trace.c -ldl
@@ -176,7 +178,7 @@ ssize_t readlink(const char *path, char *buf, size_t n) {
 // into the trace with a timestamp, on the same clock as the packet lines,
 // then forwards it to the original output. Lines that carry a library
 // command log ("sendMsgSync") or a probe result ("[collect]", "[varied]",
-// "[probe]") are copied. glibc's stdio writes through an internal call that
+// "[probe]", "[setter]") are copied. glibc's stdio writes through an internal call that
 // an LD_PRELOAD hook on write() cannot see; a pipe sees every byte. The
 // probes make stdout unbuffered, so a line arrives when it is printed.
 static int log_fwd = -1;
@@ -192,7 +194,8 @@ static void *log_reader(void *arg) {
         for (ssize_t k = 0; k < n; k++) {
             if (buf[k] != '\n' && len < sizeof line - 1) { line[len++] = buf[k]; continue; }
             line[len] = 0;
-            if (strstr(line, "sendMsgSync") || strstr(line, "[collect]") || strstr(line, "[varied]") || strstr(line, "[probe]")) {
+            if (strstr(line, "sendMsgSync") || strstr(line, "[collect]") || strstr(line, "[varied]") || strstr(line, "[probe]") ||
+                strstr(line, "[setter]")) {
                 pthread_mutex_lock(&lock);
                 init_out();
                 if (out != stderr) fprintf(out, "%.6f log %s\n", t, line);
@@ -287,6 +290,25 @@ static void maybe_rewrite_identity(unsigned char *d, unsigned size) {
     d[6] = hc & 0xff; d[7] = hc >> 8;
 }
 
+// " ctrl=0x00980900:50" for a v4l2_control, or the same per control of a
+// v4l2_ext_controls (32-bit values; pointer payloads are not followed).
+static void ctrl_text(char *buf, size_t n, void *arg, int ext) {
+    if (!ext) {
+        struct v4l2_control *c = arg;
+        snprintf(buf, n, " ctrl=0x%08x:%d", c->id, c->value);
+        return;
+    }
+    struct v4l2_ext_controls *x = arg;
+    size_t at = 0;
+    for (unsigned i = 0; i < x->count && at < n; i++) {
+        struct v4l2_ext_control *c = &x->controls[i];
+        int w = c->size ? snprintf(buf + at, n - at, " ctrl=0x%08x:size%u", c->id, c->size)
+                        : snprintf(buf + at, n - at, " ctrl=0x%08x:%d", c->id, c->value);
+        if (w < 0) break;
+        at += (size_t)w;
+    }
+}
+
 int ioctl(int fd, unsigned long req, ...) {
     static int (*real)(int, unsigned long, ...);
     if (!real) real = dlsym(RTLD_NEXT, "ioctl");
@@ -322,11 +344,20 @@ int ioctl(int fd, unsigned long req, ...) {
         return r;
     }
 
+    // A set's values are captured before the call, a get's after it.
+    char ctl[512] = "";
+    int is_ctrl = req == VIDIOC_G_CTRL || req == VIDIOC_S_CTRL;
+    int is_ext = req == VIDIOC_G_EXT_CTRLS || req == VIDIOC_S_EXT_CTRLS || req == VIDIOC_TRY_EXT_CTRLS;
+    if (req == VIDIOC_S_CTRL) ctrl_text(ctl, sizeof ctl, arg, 0);
+    if (req == VIDIOC_S_EXT_CTRLS || req == VIDIOC_TRY_EXT_CTRLS) ctrl_text(ctl, sizeof ctl, arg, 1);
     int r = real(fd, req, arg);
     int e = errno;
+    if (r >= 0 && req == VIDIOC_G_CTRL) ctrl_text(ctl, sizeof ctl, arg, 0);
+    if (r >= 0 && req == VIDIOC_G_EXT_CTRLS) ctrl_text(ctl, sizeof ctl, arg, 1);
     pthread_mutex_lock(&lock);
     init_out();
-    fprintf(out, "%.6f ioctl fd=%d req=0x%08lx ret=%d errno=%d\n", now(), fd, req, r, r < 0 ? e : 0);
+    fprintf(out, "%.6f ioctl fd=%d req=0x%08lx ret=%d errno=%d%s\n", now(), fd, req, r, r < 0 ? e : 0,
+            (is_ctrl || is_ext) ? ctl : "");
     pthread_mutex_unlock(&lock);
     errno = e;
     return r;
