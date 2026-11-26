@@ -125,6 +125,20 @@ def usb_ids(b):
                    for m in re.finditer(re.escape(struct.pack("<H", VENDOR)), b) if m.end() + 1 < len(b)})
 
 
+def route_enums(root):
+    """The camera's route/enum.json: device addresses and command-set numbers
+    (DEVICE, CMDSET), as plain JSON that may carry // comments."""
+    for dirpath, _, files in os.walk(root):
+        if "enum.json" in files and dirpath.endswith(os.path.join("app", "route")):
+            text = re.sub(r"//[^\n]*", "", open(os.path.join(dirpath, "enum.json"), errors="replace").read())
+            try:
+                data = json.loads(text)
+            except ValueError:
+                return None
+            return {k: {i["key"]: i["val"] for i in v.get("keysList", [])} for k, v in data.items() if k in ("DEVICE", "CMDSET")}
+    return None
+
+
 def gadget_modules(root):
     out = []
     for dirpath, _, files in os.walk(root):
@@ -170,7 +184,8 @@ def identify(name, pin, tool):
         shutil.rmtree(dest, ignore_errors=True)
         r = subprocess.run([tool, "-k", "-o", dest, blob], capture_output=True, text=True)
         files = sum(len(fs) for _, _, fs in os.walk(dest))
-        rec["filesystems"][p["name"]] = {"exit": r.returncode, "files": files, "gadget_modules": gadget_modules(dest)}
+        rec["filesystems"][p["name"]] = {"exit": r.returncode, "files": files, "gadget_modules": gadget_modules(dest),
+                                          "route_enums": route_enums(dest)}
     rec["unpacked"] = any(fs["files"] for fs in rec["filesystems"].values())
     if not rec["unpacked"]:
         rec["reason"] = "no UBI filesystem could be unpacked"

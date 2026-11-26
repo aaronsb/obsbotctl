@@ -92,7 +92,49 @@
      "usb_ids": [],
      "extension_units": []
     }
-   ]
+   ],
+   "route_enums": {
+    "DEVICE": {
+     "BROADCAST": 0,
+     "ROUTER": 1,
+     "CAMERA": 2,
+     "GIMBAL": 3,
+     "AI": 4,
+     "BATTERY": 5,
+     "LENS": 6,
+     "ROLL": 7,
+     "PITCH": 8,
+     "YAW": 9,
+     "SDK": 10,
+     "APP": 11,
+     "PC": 12,
+     "UPGRADE": 13,
+     "FACTORY": 14,
+     "WLS": 15,
+     "MONITOR": 16,
+     "OBOX": 17,
+     "SYSMG": 18,
+     "PRIMARY_BLE": 19,
+     "BASE": 20
+    },
+    "CMDSET": {
+     "CMDSET_UNIVERSAL": 0,
+     "CMDSET_ROUTER": 1,
+     "CMDSET_CAMERA": 2,
+     "CMDSET_GIMBAL": 3,
+     "CMDSET_AI": 4,
+     "CMDSET_BATTERY": 5,
+     "CMDSET_LENS": 6,
+     "CMDSET_SDK": 7,
+     "CMDSET_UPGRADE": 8,
+     "CMDSET_FACTORY": 9,
+     "CMDSET_WLS": 10,
+     "CMDSET_MONITOR": 11,
+     "CMDSET_OBOX": 12,
+     "CMDSET_SYSMG": 13,
+     "CMDSET_PRIMARY_BLE": 14
+    }
+   }
   },
   "UPDATERFS.ubi": {
    "exit": 0,
@@ -124,7 +166,8 @@
      "usb_ids": [],
      "extension_units": []
     }
-   ]
+   ],
+   "route_enums": null
   }
  },
  "unpacked": true

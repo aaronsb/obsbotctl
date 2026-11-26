@@ -1,0 +1,378 @@
+{
+ "sdk": "libdev_v2.1.0_8",
+ "generated": "2026-11-25",
+ "products": [
+  {
+   "usb_id": "3564:fef0",
+   "recognised_by": null,
+   "product_type": null,
+   "devinfo_product": 2,
+   "devinfo_name": "Obsbot_tiny_2P",
+   "firmware": [
+    {
+     "image": "Obsbot_tiny_2P_OA_E_All_1.0.6.2_release.bin",
+     "sha256": "520d6a5e0b2638b4524a53a55cb27a8338d16cab167d729db4e87ca7e60e0b3f",
+     "module": "657319105/root/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny"
+    },
+    {
+     "image": "Obsbot_tiny_2P_OA_E_All_1.0.6.2_release.bin",
+     "sha256": "520d6a5e0b2638b4524a53a55cb27a8338d16cab167d729db4e87ca7e60e0b3f",
+     "module": "703361157/updater/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fef2",
+   "recognised_by": null,
+   "product_type": null,
+   "devinfo_product": 4,
+   "devinfo_name": "Obsbot_meet",
+   "firmware": [
+    {
+     "image": "Obsbot_meet_OA_E_All_4.2.6.1_release.bin",
+     "sha256": "fca67df530cff3c233b00f1d632b8fd508239ef87ba16cd22ec10e5f90cf6a47",
+     "module": "1862026639/root/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet"
+    },
+    {
+     "image": "Obsbot_meet_OA_E_All_4.2.6.1_release.bin",
+     "sha256": "fca67df530cff3c233b00f1d632b8fd508239ef87ba16cd22ec10e5f90cf6a47",
+     "module": "1526576768/updater/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fef3",
+   "recognised_by": null,
+   "product_type": null,
+   "devinfo_product": 4,
+   "devinfo_name": "Obsbot_meet",
+   "firmware": [
+    {
+     "image": "Obsbot_meet_OA_E_All_4.0.6.1_release.bin",
+     "sha256": "1289e5d7678882a5ab7d67e8415bc8ed7ddf70e6ce06cd0fb43ec1bdf2bacbd3",
+     "module": "751824469/root/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet 4K"
+    },
+    {
+     "image": "Obsbot_meet_OA_E_All_4.0.6.1_release.bin",
+     "sha256": "1289e5d7678882a5ab7d67e8415bc8ed7ddf70e6ce06cd0fb43ec1bdf2bacbd3",
+     "module": "635233311/updater/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet 4K"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fef4",
+   "recognised_by": null,
+   "product_type": null,
+   "devinfo_product": 2,
+   "devinfo_name": "Obsbot_tiny_2P",
+   "firmware": [
+    {
+     "image": "Obsbot_tiny_2P_OA_E_All_1.2.6.2_release.bin",
+     "sha256": "0585093683ddd0cc24f845d2fa154a3a52a70e8bd95a2dd2fa4861c272d3aef2",
+     "module": "1176819840/root/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 4K"
+    },
+    {
+     "image": "Obsbot_tiny_2P_OA_E_All_1.2.6.2_release.bin",
+     "sha256": "0585093683ddd0cc24f845d2fa154a3a52a70e8bd95a2dd2fa4861c272d3aef2",
+     "module": "1116913961/updater/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 4K"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fef6",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 4,
+   "devinfo_product": 5,
+   "devinfo_name": "Obsbot_tailair",
+   "firmware": [
+    {
+     "image": "Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin",
+     "sha256": "024da2626e680288d891dc70eecd40abf6aefe8a3634bc9c6922e17828955757",
+     "module": "261780802/root/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tail Air"
+    },
+    {
+     "image": "Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin",
+     "sha256": "024da2626e680288d891dc70eecd40abf6aefe8a3634bc9c6922e17828955757",
+     "module": "548876826/updater/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tail Air"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fef8",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 2,
+   "devinfo_product": 5,
+   "devinfo_name": "Obsbot_tailair",
+   "firmware": [
+    {
+     "image": "Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin",
+     "sha256": "024da2626e680288d891dc70eecd40abf6aefe8a3634bc9c6922e17828955757",
+     "module": "261780802/root/lib/modules/4.9.227/extra/remo_ffs_mtp.ko",
+     "description": "OBSBOT MTP"
+    },
+    {
+     "image": "Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin",
+     "sha256": "024da2626e680288d891dc70eecd40abf6aefe8a3634bc9c6922e17828955757",
+     "module": "548876826/updater/lib/modules/4.9.227/extra/remo_ffs_mtp.ko",
+     "description": "OBSBOT MTP"
+    },
+    {
+     "image": "Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin",
+     "sha256": "70d0cd9b89cfd569cd693c32b9408baf6bddba1a3ea8205c92cbf2d3cfc2b9f2",
+     "module": "780128390/root/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 2"
+    },
+    {
+     "image": "Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin",
+     "sha256": "70d0cd9b89cfd569cd693c32b9408baf6bddba1a3ea8205c92cbf2d3cfc2b9f2",
+     "module": "1927291275/updater/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 2"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fef9",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 3,
+   "devinfo_product": 8,
+   "devinfo_name": "Obsbot_ty2lite",
+   "firmware": [
+    {
+     "image": "Obsbot_ty2lite_OA_E_PW103_6.2.8.1_release.bin",
+     "sha256": "afa02c0226abd75c11582708a28cffee95b431cdfa4224c683537f5bd290f01a",
+     "module": "989864624/root/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 2 Lite"
+    },
+    {
+     "image": "Obsbot_ty2lite_OA_E_PW103_6.2.8.1_release.bin",
+     "sha256": "afa02c0226abd75c11582708a28cffee95b431cdfa4224c683537f5bd290f01a",
+     "module": "348949702/updater/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 2 Lite"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fefa",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 8,
+   "devinfo_product": 7,
+   "devinfo_name": "Obsbot_hdmibox",
+   "firmware": [
+    {
+     "image": "Obsbot_hdmibox_OA_E_SSC359G_8.0.5.1_release.bin",
+     "sha256": "94734a353f738e880299d59d883f4d911c0aa420e58078328fe8d8bc8d8cc695",
+     "module": "423687857/root/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "description": "OBSBOT HDMI Adapter"
+    },
+    {
+     "image": "Obsbot_hdmibox_OA_E_SSC359G_8.0.5.1_release.bin",
+     "sha256": "94734a353f738e880299d59d883f4d911c0aa420e58078328fe8d8bc8d8cc695",
+     "module": "2121088280/updater/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "description": "OBSBOT HDMI Adapter"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fefb",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 10,
+   "devinfo_product": 10,
+   "devinfo_name": "Obsbot_meet2",
+   "firmware": [
+    {
+     "image": "Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin",
+     "sha256": "240591d4ab2dd39bf785e5fe289160af590138d83e0b011dac2fe4ca11b3fedd",
+     "module": "852945963/root/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet 2"
+    },
+    {
+     "image": "Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin",
+     "sha256": "240591d4ab2dd39bf785e5fe289160af590138d83e0b011dac2fe4ca11b3fedd",
+     "module": "725341313/updater/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet 2"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:fefc",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 11,
+   "devinfo_product": null,
+   "devinfo_name": null,
+   "firmware": []
+  },
+  {
+   "usb_id": "3564:fefd",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 16,
+   "devinfo_product": null,
+   "devinfo_name": null,
+   "firmware": []
+  },
+  {
+   "usb_id": "3564:fefe",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 13,
+   "devinfo_product": 13,
+   "devinfo_name": "Obsbot_meetse",
+   "firmware": [
+    {
+     "image": "Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin",
+     "sha256": "b4e48b49f43d93fa23b9e2ee8606b5a4f682b7fcb677bb2aa771f05e7657e388",
+     "module": "1280793081/root/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet SE"
+    },
+    {
+     "image": "Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin",
+     "sha256": "b4e48b49f43d93fa23b9e2ee8606b5a4f682b7fcb677bb2aa771f05e7657e388",
+     "module": "1808109370/updater/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet SE"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:feff",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 12,
+   "devinfo_product": 12,
+   "devinfo_name": "Obsbot_tinyse",
+   "firmware": [
+    {
+     "image": "Obsbot_tinyse_OA_E_PW107_6.4.4.1_release.bin",
+     "sha256": "eedb23b96396ae3ff684e894acb7f52366e4ce038404ebea8cd1638cb43995c9",
+     "module": "1470608037/root/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny SE"
+    },
+    {
+     "image": "Obsbot_tinyse_OA_E_PW107_6.4.4.1_release.bin",
+     "sha256": "eedb23b96396ae3ff684e894acb7f52366e4ce038404ebea8cd1638cb43995c9",
+     "module": "1687870736/updater/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny SE"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:ff01",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 9,
+   "devinfo_product": null,
+   "devinfo_name": null,
+   "firmware": []
+  },
+  {
+   "usb_id": "3564:ff02",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 18,
+   "devinfo_product": 18,
+   "devinfo_name": "Obsbot_tiny3",
+   "firmware": [
+    {
+     "image": "Obsbot_tiny3_OA_E_PW106_6.6.11.1_release.bin",
+     "sha256": "db2aeb14ff883d01883de9e4dbc393c8ec49222a461580c70ef3bc0b2275c9f7",
+     "module": "1110278450/root/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 3"
+    },
+    {
+     "image": "Obsbot_tiny3_OA_E_PW106_6.6.11.1_release.bin",
+     "sha256": "db2aeb14ff883d01883de9e4dbc393c8ec49222a461580c70ef3bc0b2275c9f7",
+     "module": "351450846/updater/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 3"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:ff04",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 19,
+   "devinfo_product": 19,
+   "devinfo_name": "Obsbot_tiny3lite",
+   "firmware": [
+    {
+     "image": "Obsbot_tiny3lite_OA_E_PW105_6.5.11.1_release.bin",
+     "sha256": "ffde1f1637cfcb6fafb878e151543c5c816726cbc538c9656253fc883cebdb13",
+     "module": "1888019686/root/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 3 Lite"
+    },
+    {
+     "image": "Obsbot_tiny3lite_OA_E_PW105_6.5.11.1_release.bin",
+     "sha256": "ffde1f1637cfcb6fafb878e151543c5c816726cbc538c9656253fc883cebdb13",
+     "module": "206566363/updater/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Tiny 3 Lite"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:ff06",
+   "recognised_by": "libdev_v2.1.0_8",
+   "product_type": 25,
+   "devinfo_product": 25,
+   "devinfo_name": "Obsbot_meetflip",
+   "firmware": [
+    {
+     "image": "Obsbot_meetflip_OA_E_PW206_4.5.5.1_release.bin",
+     "sha256": "c80c17ac8cc9781d9824701b802a9a0f2cbac80c899052aad0d4f409a9a5c308",
+     "module": "835699976/root/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet Flip"
+    },
+    {
+     "image": "Obsbot_meetflip_OA_E_PW206_4.5.5.1_release.bin",
+     "sha256": "c80c17ac8cc9781d9824701b802a9a0f2cbac80c899052aad0d4f409a9a5c308",
+     "module": "1482146338/updater/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet Flip"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:ff08",
+   "recognised_by": null,
+   "product_type": null,
+   "devinfo_product": null,
+   "devinfo_name": null,
+   "firmware": [
+    {
+     "image": "Obsbot_meet3_OA_E_PW208_1.8.19.1_release.bin",
+     "sha256": "c54c0a9734d4d04c53bff913ec89900bdcb47b9961a10ba47d6231913f5e7ce3",
+     "module": "423670306/root/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet 3"
+    },
+    {
+     "image": "Obsbot_meet3_OA_E_PW208_1.8.19.1_release.bin",
+     "sha256": "c54c0a9734d4d04c53bff913ec89900bdcb47b9961a10ba47d6231913f5e7ce3",
+     "module": "474085906/updater/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet 3"
+    }
+   ]
+  },
+  {
+   "usb_id": "3564:ff09",
+   "recognised_by": null,
+   "product_type": null,
+   "devinfo_product": null,
+   "devinfo_name": null,
+   "firmware": [
+    {
+     "image": "Obsbot_meetse2_OA_E_PW209_1.4.13.1_release.bin",
+     "sha256": "741b8c893194c5afc67ffb4d814e0a916a9d15f330887cb51ed5c4e460a317e7",
+     "module": "349725764/root/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet SE 2"
+    },
+    {
+     "image": "Obsbot_meetse2_OA_E_PW209_1.4.13.1_release.bin",
+     "sha256": "741b8c893194c5afc67ffb4d814e0a916a9d15f330887cb51ed5c4e460a317e7",
+     "module": "330106595/updater/lib/modules/5.10.61/extra/remo_multi_usb.ko",
+     "description": "OBSBOT Meet SE 2"
+    }
+   ]
+  }
+ ]
+}
