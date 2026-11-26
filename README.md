@@ -18,19 +18,18 @@ libobsbot implements only the camera control, in the open, under the MIT licence
 |---|---|---|
 | `obsbot` | The library, built as `libobsbot`: transport, protocol and product catalog | scaffold |
 | `obsbotctl` | A command-line tool that uses the library directly | scaffold |
-| `obsbotd` | An optional D-Bus daemon, for setups that want one service to own the cameras. Nothing else depends on it, since not every distribution wants a system daemon | scaffold |
 
-Applications use the library in one of three ways:
+Applications link the library directly. A system service that owns the cameras, such as a D-Bus daemon, is not part of this project; one could be built as a separate project on top of the library.
 
 ```mermaid
 flowchart TD
     cpp["C / C++ / Qt apps<br>(e.g. obsbot-camera-control)"] -->|"C API, libobsbot.so (planned)"| lib
     rust["Rust apps"] -->|Rust API| lib
-    dbus["Any D-Bus client"] -->|D-Bus| daemon["obsbotd (optional)"] --> lib
+    svc["A future service, e.g. a D-Bus daemon<br>(separate project)"] -->|Rust API| lib
     lib["obsbot crate (libobsbot)<br>transport · protocol · product catalog"] -->|"UVC extension units, V4L2"| kernel["Linux kernel (uvcvideo)"]
 ```
 
-[`docs/architecture.md`](docs/architecture.md) describes the layers.
+[`docs/architecture/overview.md`](docs/architecture/overview.md) describes the layers, and [`docs/architecture/`](docs/architecture/) holds the decision records.
 
 ## How the replacement is built and checked
 
@@ -46,7 +45,7 @@ The investigation does not decompile the vendor library. It uses the library's s
 
 This repository contains no OBSBOT code, and libobsbot neither links nor loads `libdev`. You need the vendor SDK only to record new expected outputs, or to compare a libobsbot build against the vendor library directly.
 
-To do either, get the SDK from OBSBOT through the application form at [obsbot.com/sdk](https://www.obsbot.com/sdk) and keep it outside this repository. The planned tooling looks for it in `$OBSBOT_SDK_DIR`, by default `~/.local/share/libobsbot/sdk/<package>/`, and refuses any file whose SHA256 does not match a pinned version:
+The SDK is not a download, and this project does not hand out copies. To get one, ask OBSBOT at [obsbot.com/sdk](https://www.obsbot.com/sdk). They supply the SDK library by email at no cost, and the library is all this project uses. Keep it outside this repository. The planned tooling looks for it in `$OBSBOT_SDK_DIR`, by default `~/.local/share/libobsbot/sdk/<package>/`, and refuses any file whose SHA256 does not match a pinned version:
 
 | SDK package | Library file | SHA256 |
 |---|---|---|
@@ -81,7 +80,7 @@ Out of scope for now:
 
 ## Related projects
 
-- [obsbot-camera-control](https://github.com/aaronsb/obsbot-camera-control): a Qt application for OBSBOT cameras. It uses the vendor SDK today and is developed alongside libobsbot, which it will move to.
+- [obsbot-camera-control](https://github.com/aaronsb/obsbot-camera-control): a Qt application for OBSBOT cameras. It uses the vendor SDK, works on its own, and does not depend on libobsbot. It may move to libobsbot once libobsbot can replace the vendor SDK for it.
 - [bosectl](https://github.com/aaronsb/bosectl): the same Linux-native approach applied to Bose headphones.
 
 ## License

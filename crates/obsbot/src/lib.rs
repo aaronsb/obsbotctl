@@ -2,12 +2,11 @@
 //!
 //! This crate is the protocol, transport and catalog layer, and the product:
 //! applications link it directly in place of OBSBOT's closed `libdev`. The
-//! `obsbotctl` CLI and the optional `obsbotd` D-Bus daemon in this workspace
-//! are built on it.
+//! `obsbotctl` CLI in this workspace is built on it.
 //!
 //! # Scaffold phase
 //!
-//! Nothing is implemented yet. See `docs/architecture.md` for the intended
+//! Nothing is implemented yet. See `docs/architecture/overview.md` for the intended
 //! layering and `docs/protocol/` for the protocol notes that
 //! seed the protocol layer.
 

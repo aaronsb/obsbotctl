@@ -3,7 +3,7 @@
 //! # Scaffold phase
 //!
 //! Prints a banner and exits. The intended shape is a small subcommand
-//! dispatcher that calls the library directly, so it works without `obsbotd`:
+//! dispatcher that calls the library directly:
 //!
 //! ```text
 //! obsbotctl list                      # enumerate managed cameras

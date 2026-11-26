@@ -1,0 +1,111 @@
+# ADR Configuration
+# Defines domain numbering and validation rules.
+# Used by: docs/scripts/adr  — and, if the doc catalog is installed,
+#          docs/scripts/{doc,doclint}: prose docs share these same domain bands
+#          (the "shared first octet"; catalog ids are DD.NNN.P). See ADR-302.
+#
+# Customize domains for your project. Each domain reserves a number range.
+# New ADRs get the next available number in their domain.
+
+# Project name (used in generated index)
+project_name: libobsbot
+
+# Domain Number Series
+domains:
+  core:
+    range: [100, 199]
+    name: Core
+    description: The library's architecture, public surface, protocol and product catalog
+    folder: core
+
+  factory:
+    range: [200, 299]
+    name: Factory
+    description: Pinned vendor inputs, hydration, extraction, code generation and verification
+    folder: factory
+
+# The record contract (ADR-304). With `contract: adr/v1`, records are typed:
+# each declares a kind, and a decision names a verb, a capability and its
+# basis. Delete this line and the v1 blocks below to stay on adr/v0.
+contract: adr/v1
+
+kinds:
+  decision:
+    verb: required
+    requires: [capability, basis, agent]
+    sections: [Summary]
+    edges: { supersedes: decision, amends: decision, extends: decision, basis: [decision, spec, evidence] }
+  spec:
+    verb: forbidden
+    requires: [capability]
+    edges: { supersedes: spec, decided_by: decision }
+  evidence:
+    verb: forbidden
+    requires: [capability]
+    edges: { supersedes: evidence }
+
+# What the project does, one line each. A record's `capability` names one of
+# these, and a decision adds, cuts, changes or constrains them. Replace the
+# `core` placeholder with the project's own list. `process` and `adr` apply
+# to every project that keeps these records.
+capabilities:
+  library: The public surface applications use (Rust API, C API) and how the workspace is shaped around it
+  transport: Getting bytes to and from a camera (UVC extension units, V4L2)
+  protocol: Framing, encoding and dispatching camera commands
+  catalog: Product profiles keyed by USB ID and firmware version, with evidence grades
+  factory: Pinned vendor inputs kept outside the repo, hydration scripts, extraction and code generation
+  verification: Recorded traces, the comparison harness and hardware tests
+  cli: The obsbotctl command-line tool
+  process: Conventions, documentation and the development process that belong to no product capability
+  adr: Decision records, their contract and the adr tool
+
+# This repository, as URLs name it (host/owner/repo, or a list). A URL into
+# it at a branch is a path in the tree: `adr domain` rewrites it when a
+# record moves. Without this key the origin remote is used, so set it to
+# rewrite the same URLs in every clone.
+repository: github.com/aaronsb/libobsbot
+
+# Valid ADR statuses (adr/v0 records)
+statuses:
+  - Draft         # Initial creation, not yet proposed
+  - Proposed      # Under discussion/review
+  - Accepted      # Approved and ready for implementation
+  - Superseded    # Replaced by another ADR
+  - Deprecated    # No longer relevant
+  - Rejected      # Decided against; kept for the record
+
+# Default values for new ADRs
+defaults:
+  deciders: [aaronsb]
+  status: Draft
+
+# Legacy ADR range (pre-domain numbering)
+legacy:
+  range: [1, 99]
+  label: "Legacy"
+  # retired: true   # Uncomment ONLY if the legacy range is VACATED (its ADRs
+  #                 # were renumbered into domains). doclint then fails on any
+  #                 # reference into the range. Leave off if the project still
+  #                 # uses its legacy numbers (the common case).
+  # defining_adr: ADR-NNN   # With retired: true, exempt the ADR that vacated the
+  #                         # range — it names retired numbers legitimately.
+
+# Viewer command for `adr view` (use {file} as placeholder)
+# Options: cat {file}, glow {file}, bat {file}
+viewer: cat {file}
+
+# `adr cite` checks each ADR-N citation in the code: that it resolves to a
+# record in force, and where it sits. A comment cites in a `References:`
+# block at its end, a Markdown page under a `References` heading, and each
+# entry says what the record decides there. A string or code in a program
+# source ships with the built program and cites nothing.
+cite:
+  exclude:          # the vendored adr tool cites agent-ways records, not ours
+    - docs/scripts
+# cite:
+#   placement: warn   # error, warn (the default) or off; `adr cite --since
+#                     # <ref>` holds lines changed since <ref> to it as errors
+#   shipped:          # paths whose text ships whole, such as help pages or
+#     - docs/help     # prompts the program loads (a glob, or a directory)
+#   exclude:          # paths not checked at all
+#     - tests/fixtures

@@ -2,7 +2,6 @@
 resolver = "2"
 members = [
     "crates/obsbot",
-    "crates/obsbotd",
     "crates/obsbotctl",
 ]
 
@@ -19,12 +18,10 @@ rust-version = "1.75"
 # document the intended stack for future sessions.
 [workspace.dependencies]
 thiserror = "1"
-tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal"] }
 tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
-# (planned) D-Bus server for obsbotd
-zbus = { version = "4", default-features = false, features = ["tokio"] }
+# (planned) BlueZ client for the Bluetooth transport
+zbus = "4"
 
 # (planned) USB and device access
 nusb = "0.1"
