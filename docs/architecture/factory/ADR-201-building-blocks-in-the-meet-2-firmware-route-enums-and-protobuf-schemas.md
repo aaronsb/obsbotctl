@@ -2,7 +2,7 @@
 contract: adr/v1
 kind: evidence
 capability: factory
-status: proposed
+status: accepted
 date: 2026-11-25
 deciders:
   - aaronsb
