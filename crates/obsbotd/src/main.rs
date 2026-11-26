@@ -26,7 +26,7 @@ async fn main() {
         .init();
 
     info!(
-        version = obsbotctl_core::VERSION,
+        version = obsbot::VERSION,
         "obsbotd scaffold — daemon shell only, nothing to do yet"
     );
 }

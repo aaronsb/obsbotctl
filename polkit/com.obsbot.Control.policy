@@ -11,8 +11,8 @@
   site-specific override.
 -->
 <policyconfig>
-  <vendor>obsbotctl</vendor>
-  <vendor_url>https://github.com/aaronsb/obsbotctl</vendor_url>
+  <vendor>libobsbot</vendor>
+  <vendor_url>https://github.com/aaronsb/libobsbot</vendor_url>
 
   <action id="com.obsbot.Control1.control-camera">
     <description>Control an OBSBOT camera</description>

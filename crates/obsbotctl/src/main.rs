@@ -1,9 +1,9 @@
-//! obsbotctl — command-line client for the obsbotd D-Bus service.
+//! obsbotctl — command-line tool for OBSBOT cameras, built on the `obsbot` library.
 //!
 //! # Scaffold phase
 //!
 //! Prints a banner and exits. The intended shape is a small subcommand
-//! dispatcher that talks to `obsbotd` over D-Bus:
+//! dispatcher that calls the library directly, so it works without `obsbotd`:
 //!
 //! ```text
 //! obsbotctl list                      # enumerate managed cameras
@@ -17,5 +17,5 @@
 #![deny(rust_2018_idioms)]
 
 fn main() {
-    println!("obsbotctl scaffold (version {})", obsbotctl_core::VERSION);
+    println!("obsbotctl scaffold (version {})", obsbot::VERSION);
 }
