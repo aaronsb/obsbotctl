@@ -1,0 +1,374 @@
+{
+ "usb_id": "3564:ff04",
+ "sdk": "libdev_v2.1.0_8",
+ "product_type": 19,
+ "identity_from": [
+  "Obsbot_tiny3lite_OA_E_PW105_6.5.11.1_release.bin"
+ ],
+ "grade": "vendor-oracle",
+ "library_to_camera_set": {
+  "1": 2,
+  "5": 8
+ },
+ "set_translation_from_names": {
+  "1": 2,
+  "2": 3,
+  "3": 4,
+  "4": 5,
+  "5": 8,
+  "6": 1,
+  "7": 6,
+  "8": 7,
+  "9": 10,
+  "11": 9,
+  "12": 14,
+  "13": 13
+ },
+ "commands": [
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_WDR_MODE",
+   "libdev_ids": [
+    1,
+    19
+   ],
+   "opcode": "0x02c2",
+   "camera_set": 2,
+   "camera_number": 11,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 41,
+   "reply_header_len": 12,
+   "reply_payload_len": 4,
+   "seen_in": [
+    "wdr"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_WDR_MODE_LIST",
+   "libdev_ids": [
+    1,
+    21
+   ],
+   "opcode": "0x0342",
+   "camera_set": 2,
+   "camera_number": 13,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "wdrList"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_MIRROR_FLIP",
+   "libdev_ids": [
+    1,
+    45
+   ],
+   "opcode": "0x1802",
+   "camera_set": 2,
+   "camera_number": 96,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "mirrorFlip"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_WHITE_BALANCE_LIST",
+   "libdev_ids": [
+    1,
+    63
+   ],
+   "opcode": "0x20c2",
+   "camera_set": 2,
+   "camera_number": 131,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "wbList"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_ISO_LIMIT",
+   "libdev_ids": [
+    1,
+    64
+   ],
+   "opcode": "0x2142",
+   "camera_set": 2,
+   "camera_number": 133,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "isoLimit"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_AE_LOCK",
+   "libdev_ids": [
+    1,
+    66
+   ],
+   "opcode": "0x21c2",
+   "camera_set": 2,
+   "camera_number": 135,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "aeLock"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_FACE_AE",
+   "libdev_ids": [
+    1,
+    68
+   ],
+   "opcode": "0x2242",
+   "camera_set": 2,
+   "camera_number": 137,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "faceAE"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_EXPOSURE_MODE",
+   "libdev_ids": [
+    1,
+    70
+   ],
+   "opcode": "0x2402",
+   "camera_set": 2,
+   "camera_number": 144,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 41,
+   "reply_header_len": 12,
+   "reply_payload_len": 4,
+   "seen_in": [
+    "expMode"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_S_AE_SHUTTER",
+   "libdev_ids": [
+    1,
+    77
+   ],
+   "opcode": "0x25c2",
+   "camera_set": 2,
+   "camera_number": 151,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "saeShutter"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_A_AE_EVBIAS",
+   "libdev_ids": [
+    1,
+    79
+   ],
+   "opcode": "0x2642",
+   "camera_set": 2,
+   "camera_number": 153,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "aaeEvBias"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_M_AE_SHUTTER",
+   "libdev_ids": [
+    1,
+    82
+   ],
+   "opcode": "0x2742",
+   "camera_set": 2,
+   "camera_number": 157,
+   "destination": 2,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "maeShutter"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_CAMERA",
+   "libdev_cmd": "CAM_GET_IQ_PARAMETER",
+   "libdev_ids": [
+    1,
+    107
+   ],
+   "opcode": "0x3882",
+   "camera_set": 2,
+   "camera_number": 226,
+   "destination": 2,
+   "request_flags": 65,
+   "request_header_len": 12,
+   "request_payload_len": 2,
+   "reply_flags": 137,
+   "reply_header_len": 16,
+   "reply_payload_len": null,
+   "seen_in": [
+    "whiteBalance"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_UPGRADE",
+   "libdev_cmd": "UG_GET_PKG_VER",
+   "libdev_ids": [
+    5,
+    3
+   ],
+   "opcode": "0x0408",
+   "camera_set": 8,
+   "camera_number": 16,
+   "destination": 13,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 41,
+   "reply_header_len": 12,
+   "reply_payload_len": 8,
+   "seen_in": [
+    "initialisation"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_UPGRADE",
+   "libdev_cmd": "UG_GET_UUID",
+   "libdev_ids": [
+    5,
+    4
+   ],
+   "opcode": "0x1808",
+   "camera_set": 8,
+   "camera_number": 96,
+   "destination": 13,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 41,
+   "reply_header_len": 12,
+   "reply_payload_len": 24,
+   "seen_in": [
+    "initialisation"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_UPGRADE",
+   "libdev_cmd": "UG_GET_DEV_INFO",
+   "libdev_ids": [
+    5,
+    7
+   ],
+   "opcode": "0x1948",
+   "camera_set": 8,
+   "camera_number": 101,
+   "destination": 13,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 41,
+   "reply_header_len": 12,
+   "reply_payload_len": 34,
+   "seen_in": [
+    "initialisation"
+   ]
+  },
+  {
+   "libdev_set": "CMD_SET_UPGRADE",
+   "libdev_cmd": "UG_GET_SN",
+   "libdev_ids": [
+    5,
+    8
+   ],
+   "opcode": "0x18c8",
+   "camera_set": 8,
+   "camera_number": 99,
+   "destination": 13,
+   "request_flags": 1,
+   "request_header_len": 12,
+   "request_payload_len": 0,
+   "reply_flags": 41,
+   "reply_header_len": 12,
+   "reply_payload_len": 14,
+   "seen_in": [
+    "initialisation"
+   ]
+  }
+ ],
+ "unlogged_requests": [
+  {
+   "opcode": "0x1ac8",
+   "camera_set": 8,
+   "camera_number": 107,
+   "destination": 13,
+   "request_flags": 37
+  }
+ ]
+}

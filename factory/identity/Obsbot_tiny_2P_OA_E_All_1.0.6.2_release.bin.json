@@ -72,7 +72,8 @@
   "AIFS.ubi": {
    "exit": 0,
    "files": 18,
-   "gadget_modules": []
+   "gadget_modules": [],
+   "route_enums": null
   },
   "ROOTFS.ubi": {
    "exit": 0,
@@ -141,7 +142,8 @@
       }
      ]
     }
-   ]
+   ],
+   "route_enums": null
   },
   "UPDATERFS.ubi": {
    "exit": 0,
@@ -210,7 +212,8 @@
       }
      ]
     }
-   ]
+   ],
+   "route_enums": null
   }
  },
  "unpacked": true

@@ -170,6 +170,53 @@ ssize_t readlink(const char *path, char *buf, size_t n) {
     return real(path, buf, n);
 }
 
+
+// Log capture, for pairing. With XU_TRACE_LOG set, the shim points stdout
+// and stderr at a pipe when it loads, and a reader thread copies each line
+// into the trace with a timestamp, on the same clock as the packet lines,
+// then forwards it to the original output. Lines that carry a library
+// command log ("sendMsgSync") or a probe result ("[collect]", "[varied]",
+// "[probe]") are copied. glibc's stdio writes through an internal call that
+// an LD_PRELOAD hook on write() cannot see; a pipe sees every byte. The
+// probes make stdout unbuffered, so a line arrives when it is printed.
+static int log_fwd = -1;
+
+static void *log_reader(void *arg) {
+    int fd = (int)(long)arg;
+    char buf[8192], line[4096];
+    size_t len = 0;
+    ssize_t n;
+    while ((n = read(fd, buf, sizeof buf)) > 0) {
+        double t = now();
+        if (log_fwd >= 0) { ssize_t w = write(log_fwd, buf, (size_t)n); (void)w; }
+        for (ssize_t k = 0; k < n; k++) {
+            if (buf[k] != '\n' && len < sizeof line - 1) { line[len++] = buf[k]; continue; }
+            line[len] = 0;
+            if (strstr(line, "sendMsgSync") || strstr(line, "[collect]") || strstr(line, "[varied]") || strstr(line, "[probe]")) {
+                pthread_mutex_lock(&lock);
+                init_out();
+                if (out != stderr) fprintf(out, "%.6f log %s\n", t, line);
+                pthread_mutex_unlock(&lock);
+            }
+            len = 0;
+        }
+    }
+    return NULL;
+}
+
+__attribute__((constructor)) static void start_log_capture(void) {
+    if (!getenv("XU_TRACE_LOG")) return;
+    int p[2];
+    if (pipe(p) != 0) return;
+    log_fwd = dup(1);
+    dup2(p[1], 1);
+    dup2(p[1], 2);
+    close(p[1]);
+    pthread_t th;
+    pthread_create(&th, NULL, log_reader, (void *)(long)p[0]);
+    pthread_detach(th);
+}
+
 int open(const char *path, int flags, ...) {
     static int (*real)(const char *, int, ...);
     if (!real) real = dlsym(RTLD_NEXT, "open");

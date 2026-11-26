@@ -269,8 +269,35 @@ def products(args):
 
 # --- trace -------------------------------------------------------------------
 
+def camera_sets():
+    """The camera's command-set numbers by name, from the firmware's
+    route/enum.json as recorded in factory/identity/*.json."""
+    out = {}
+    for path in sorted(glob.glob(os.path.join(FACTORY, "identity", "*.json"))):
+        for fs in (json.load(open(path)).get("filesystems") or {}).values():
+            for name, num in ((fs.get("route_enums") or {}).get("CMDSET") or {}).items():
+                out.setdefault(name.replace("CMDSET_", "").replace("_", ""), num)
+    return out
+
+
+def set_translation(sets):
+    """Library set number -> camera set number, joined by name."""
+    cam = camera_sets()
+    xl = {}
+    for num, name in sets.items():
+        key = name.replace("CMD_SET_", "").replace("_", "")
+        for cand in (key, key + "R"):  # CMD_SET_ROUTE ~ CMDSET_ROUTER
+            if cand in cam:
+                xl[num] = cam[cand]
+                break
+    return xl
+
+
 def trace(args):
     sets, per_set = load_enums(args.sdk)
+    xlate = set_translation(sets)
+    if not xlate:
+        sys.exit("no camera command-set table in factory/identity; run factory/identity.py first")
     prods = {p["usb_id"].split(":")[1]: p for p in json.load(open(os.path.join(HERE, "products.json")))["products"]}
     pids = args.pids or [pid for pid, p in prods.items() if p["recognised_by"]]
     os.makedirs(os.path.join(HERE, "commands"), exist_ok=True)
@@ -279,22 +306,28 @@ def trace(args):
         env = {"XU_FAKE_PID": pid}
         if p["devinfo_product"] is not None:
             env["XU_FAKE_DEVINFO"] = f"0={p['devinfo_product']}"
-        cmds = {}
+        env["XU_TRACE_LOG"] = "1"
+        cmds, unlogged, set_map = {}, {}, {}
         for probe, pargs in (("probe_collect", ["3", "6000"]), ("probe_collect_varied", ["1", "6000"])):
-            tr, out = run_probe(args.sdk, probe, f"trace-{pid}-{probe}", env, pargs)
-            reqs = packets(tr, "SET_CUR")
+            tr, _ = run_probe(args.sdk, probe, f"trace-{pid}-{probe}", env, pargs)
             reps = {}
             for d in packets(tr, "GET_CUR"):
                 if d[0] == 0xAA:
                     reps.setdefault(d[2], d)
-            # The library logs "sendMsgSync, cmd_id = …; cmd_set = …" for each
-            # command, in the same order as the requests in the trace. Commands
-            # before the probe's "product=" line belong to initialisation; each
-            # later command belongs to the getter whose result line follows it.
-            i, pending = 0, []
+            # One timeline: the shim writes the library's command log lines and
+            # the probe's result lines into the trace with timestamps, in order
+            # with the packets. A logged command ("sendMsgSync, cmd_id = …;
+            # cmd_set = …") waits for the next request in the camera command set
+            # its library set translates to (joined by name), and pairs with it.
+            # A request that arrives while no logged command waits for its set
+            # was sent without a log line, and is recorded as unlogged. Paired
+            # commands are labelled with the probe result line that follows
+            # them: "initialisation" before the probe's "product=" line, then
+            # the getter's name.
+            waiting, paired = [], []
 
-            def flush(label):
-                for cs, ci, q in pending:
+            def label(name):
+                for cs, ci, q in paired:
                     op = q[10] | q[11] << 8
                     rep = reps.get(q[2])
                     entry = cmds.setdefault(f"{cs}/{ci}", {
@@ -306,26 +339,40 @@ def trace(args):
                         "reply_payload_len": (rep[12] | rep[13] << 8) if rep and rep[4] == 12 else None,
                         "seen_in": [],
                     })
-                    if label not in entry["seen_in"]:
-                        entry["seen_in"].append(label)
-                pending.clear()
+                    if name not in entry["seen_in"]:
+                        entry["seen_in"].append(name)
+                paired.clear()
 
-            for line in out:
-                m = re.search(r"cmd_id = (\d+); cmd_set = (\d+)", line)
-                if m and i < len(reqs):
-                    pending.append((int(m.group(2)), int(m.group(1)), reqs[i]))
-                    i += 1
+            for line in tr:
+                if " log " in line:
+                    for m in re.finditer(r"cmd_id = (\d+); cmd_set = (\d+)", line):
+                        waiting.append((int(m.group(2)), int(m.group(1))))
+                    if re.search(r"\[(?:collect|varied)\] product=", line):
+                        label("initialisation")
+                    m = re.search(r"\[(?:collect|varied)\] r=\d+ (\S+) rc=", line)
+                    if m:
+                        label(m.group(1))
                     continue
-                if re.match(r"^\[(?:collect|varied)\] product=", line):
-                    flush("initialisation")
+                m = re.search(r" xu .*sel=2 SET_CUR.*data=([0-9a-f]+)", line)
+                if not m:
                     continue
-                m = re.match(r"^\[(?:collect|varied)\] r=\d+ (\S+) rc=", line)
-                if m:
-                    flush(m.group(1))
+                q = bytes.fromhex(m.group(1))
+                op = q[10] | q[11] << 8
+                match = next((w for w in waiting if xlate.get(w[0], op & 0x3F) == op & 0x3F), None)
+                if match is None:
+                    unlogged.setdefault(f"{op:#06x}", {"opcode": f"{op:#06x}", "camera_set": op & 0x3F,
+                                                      "camera_number": op >> 6, "destination": q[9], "request_flags": q[1]})
+                    continue
+                waiting.remove(match)
+                set_map.setdefault(match[0], op & 0x3F)
+                paired.append((match[0], match[1], q))
         rec = {"usb_id": p["usb_id"], "sdk": args.sdk, "product_type": p["product_type"],
                "identity_from": sorted({f["image"] for f in p["firmware"]}) or ["recognised by the SDK only; no firmware declares this ID"],
                "grade": "vendor-oracle" if pid != "fefb" else "hardware-verified transport (attached Meet 2)",
-               "commands": [cmds[k] for k in sorted(cmds, key=lambda k: tuple(map(int, k.split("/"))))]}
+               "library_to_camera_set": {str(k): v for k, v in sorted(set_map.items())},
+               "set_translation_from_names": {str(k): v for k, v in sorted(xlate.items())},
+               "commands": [cmds[k] for k in sorted(cmds, key=lambda k: tuple(map(int, k.split("/"))))],
+               "unlogged_requests": sorted(unlogged.values(), key=lambda u: u["opcode"])}
         path = os.path.join(HERE, "commands", f"{pid}.json")
         json.dump(rec, open(path, "w"), indent=1)
         print(f"  {pid}: {len(cmds)} distinct commands -> {os.path.relpath(path)}")

@@ -12,6 +12,7 @@
 #include <dev/devs.hpp>
 
 int main(int argc, char **argv) {
+    std::setvbuf(stdout, nullptr, _IONBF, 0);  // unbuffered, so the shim timestamps each line when printed
     int rounds = argc > 1 ? std::stoi(argv[1]) : 3;
     int wait_ms = argc > 2 ? std::stoi(argv[2]) : 6000;
     Devices::get().setEnableMdnsScan(false);

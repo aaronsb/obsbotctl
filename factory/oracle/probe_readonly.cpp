@@ -20,6 +20,7 @@ static std::string mask(const std::string &s) {
 }
 
 int main(int argc, char **argv) {
+    std::setvbuf(stdout, nullptr, _IONBF, 0);  // unbuffered, so the shim timestamps each line when printed
     int wait_ms = argc > 1 ? std::stoi(argv[1]) : 8000;
     Devices::get().setDevChangedCallback(
         [](std::string sn, bool connected, void *) {
