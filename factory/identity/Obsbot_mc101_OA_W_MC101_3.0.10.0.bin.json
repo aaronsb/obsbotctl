@@ -1,0 +1,10 @@
+{
+ "image": "Obsbot_mc101_OA_W_MC101_3.0.10.0.bin",
+ "sha256": "8a645be7968288357d1cb3f2c6f7e9ef5837bb54e86739333117bda10023bafd",
+ "size": 795392,
+ "header": null,
+ "partition_table_base": null,
+ "partitions": [],
+ "unpacked": false,
+ "reason": "no OBSBOT partition table found"
+}

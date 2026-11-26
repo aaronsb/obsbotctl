@@ -1,0 +1,16 @@
+{
+ "image": "Obsbot_tailair_OA_E_SSC359G_15.6.0.0_release.bin",
+ "sha256": "bf10fdb9ab35e57de3ccc8bf5bb16b7bc71cb2d5ec93894ca0d146beaa5b2456",
+ "size": 158192,
+ "header": {
+  "product": "Obsbot_tailair",
+  "region": "OA_E",
+  "version": "15.6.0.0",
+  "chip": "SSC359G",
+  "build": "release"
+ },
+ "partition_table_base": null,
+ "partitions": [],
+ "unpacked": false,
+ "reason": "no OBSBOT partition table found"
+}

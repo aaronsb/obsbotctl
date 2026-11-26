@@ -1,0 +1,16 @@
+{
+ "image": "Obsbot_Tail2ADV_OA_E_CM104_1.26.2.1_release.bin",
+ "sha256": "280ed911178d4166b3c54a3a0c3477a674e487c1c236dda01502abcb74dde58f",
+ "size": 471810432,
+ "header": {
+  "product": "Obsbot_cm104",
+  "region": "OA_E",
+  "version": "1.26.2.1",
+  "chip": "CM104",
+  "build": "release"
+ },
+ "partition_table_base": null,
+ "partitions": [],
+ "unpacked": false,
+ "reason": "no OBSBOT partition table found"
+}

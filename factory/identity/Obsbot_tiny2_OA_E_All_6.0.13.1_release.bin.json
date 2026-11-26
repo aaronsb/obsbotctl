@@ -1,0 +1,233 @@
+{
+ "image": "Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin",
+ "sha256": "70d0cd9b89cfd569cd693c32b9408baf6bddba1a3ea8205c92cbf2d3cfc2b9f2",
+ "size": 148272024,
+ "header": {
+  "product": "Obsbot_tiny2",
+  "region": "OA_E",
+  "version": "6.0.13.1",
+  "chip": "SSD268G",
+  "build": "release"
+ },
+ "partition_table_base": 125044,
+ "partitions": [
+  {
+   "name": "AIFS.ubi",
+   "type": 10,
+   "offset": 127348,
+   "size": 64487424,
+   "magic": "55424923"
+  },
+  {
+   "name": "config",
+   "type": 0,
+   "offset": 64614772,
+   "size": 3300,
+   "magic": "23212f62"
+  },
+  {
+   "name": "KERNEL.bin",
+   "type": 7,
+   "offset": 64618072,
+   "size": 1959348,
+   "magic": "27051956"
+  },
+  {
+   "name": "RECOVERY.bin",
+   "type": 8,
+   "offset": 66577420,
+   "size": 1959348,
+   "magic": "27051956"
+  },
+  {
+   "name": "ROOTFS.ubi",
+   "type": 11,
+   "offset": 68536768,
+   "size": 64487424,
+   "magic": "55424923"
+  },
+  {
+   "name": "UBOOT0.bin",
+   "type": 4,
+   "offset": 133024192,
+   "size": 218348,
+   "magic": "27051956"
+  },
+  {
+   "name": "UBOOT1.bin",
+   "type": 5,
+   "offset": 133242540,
+   "size": 218348,
+   "magic": "27051956"
+  },
+  {
+   "name": "UPDATERFS.ubi",
+   "type": 9,
+   "offset": 133460888,
+   "size": 14811136,
+   "magic": "55424923"
+  }
+ ],
+ "filesystems": {
+  "AIFS.ubi": {
+   "exit": 0,
+   "files": 41,
+   "gadget_modules": []
+  },
+  "ROOTFS.ubi": {
+   "exit": 0,
+   "files": 1245,
+   "gadget_modules": [
+    {
+     "path": "780128390/root/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "sha256": "fa9f4dfc43049a0a98a4ae68e82cf9e27706b23b218c5a1a431b701f856983ae",
+     "modinfo": {
+      "description": "OBSBOT Tiny 2",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,usb_f_uvc,u_ether,u_audio",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fef8"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 19
+      }
+     ]
+    },
+    {
+     "path": "780128390/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "92305d50c93462ccd0bd4b5bdfefbc15a12c26627e182ede0367bb6180c9565e",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "780128390/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "57a33280ef1c50e8bcbc73059c70a523a3fceaa440eea0ffc500426211c5c560",
+     "modinfo": {
+      "description": "USB Function Filesystem",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "780128390/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "b9af1a43e19ab765b584ff8d6ec156726635a69536ea5365db88ec26704d55d7",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  },
+  "UPDATERFS.ubi": {
+   "exit": 0,
+   "files": 549,
+   "gadget_modules": [
+    {
+     "path": "1927291275/updater/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "sha256": "fa9f4dfc43049a0a98a4ae68e82cf9e27706b23b218c5a1a431b701f856983ae",
+     "modinfo": {
+      "description": "OBSBOT Tiny 2",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,usb_f_uvc,u_ether,u_audio",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fef8"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 19
+      }
+     ]
+    },
+    {
+     "path": "1927291275/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "92305d50c93462ccd0bd4b5bdfefbc15a12c26627e182ede0367bb6180c9565e",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "1927291275/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "57a33280ef1c50e8bcbc73059c70a523a3fceaa440eea0ffc500426211c5c560",
+     "modinfo": {
+      "description": "USB Function Filesystem",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "1927291275/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "b9af1a43e19ab765b584ff8d6ec156726635a69536ea5365db88ec26704d55d7",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "unpacked": true
+}

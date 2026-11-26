@@ -1,0 +1,16 @@
+{
+ "image": "Obsbot_tail2s_OA_E_CM103A_7.5.5.1_release.bin",
+ "sha256": "2219ed6300eaefd0d2e274ff31ed73ca8f6ed874aa6b3c9e1c85f1059823e795",
+ "size": 398640724,
+ "header": {
+  "product": "Obsbot_tail2s",
+  "region": "OA_E",
+  "version": "7.5.5.1",
+  "chip": "CM103A",
+  "build": "release"
+ },
+ "partition_table_base": null,
+ "partitions": [],
+ "unpacked": false,
+ "reason": "no OBSBOT partition table found"
+}

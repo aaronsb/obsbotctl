@@ -1,0 +1,221 @@
+{
+ "image": "Obsbot_hdmibox_OA_E_SSC359G_8.0.5.1_release.bin",
+ "sha256": "94734a353f738e880299d59d883f4d911c0aa420e58078328fe8d8bc8d8cc695",
+ "size": 63233596,
+ "header": {
+  "product": "Obsbot_hdmibox",
+  "region": "OA_E",
+  "version": "8.0.5.1",
+  "chip": "SSC359G",
+  "build": "release"
+ },
+ "partition_table_base": 512,
+ "partitions": [
+  {
+   "name": "config",
+   "type": 0,
+   "offset": 2560,
+   "size": 3252,
+   "magic": "23212f62"
+  },
+  {
+   "name": "KERNEL.bin",
+   "type": 7,
+   "offset": 5812,
+   "size": 1959800,
+   "magic": "27051956"
+  },
+  {
+   "name": "RECOVERY.bin",
+   "type": 8,
+   "offset": 1965612,
+   "size": 1959800,
+   "magic": "27051956"
+  },
+  {
+   "name": "ROOTFS.ubi",
+   "type": 11,
+   "offset": 3925412,
+   "size": 42336256,
+   "magic": "55424923"
+  },
+  {
+   "name": "UBOOT0.bin",
+   "type": 4,
+   "offset": 46261668,
+   "size": 228428,
+   "magic": "27051956"
+  },
+  {
+   "name": "UBOOT1.bin",
+   "type": 5,
+   "offset": 46490096,
+   "size": 228428,
+   "magic": "27051956"
+  },
+  {
+   "name": "UPDATERFS.ubi",
+   "type": 9,
+   "offset": 46718524,
+   "size": 16515072,
+   "magic": "55424923"
+  }
+ ],
+ "filesystems": {
+  "ROOTFS.ubi": {
+   "exit": 0,
+   "files": 1254,
+   "gadget_modules": [
+    {
+     "path": "423687857/root/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "sha256": "df0e95d4b7b7d293f56a1d9364888f27d6d8c12a66ac8e226504b7bc632f18fa",
+     "modinfo": {
+      "description": "OBSBOT HDMI Adapter",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,usb_f_uvc,u_ether,u_audio",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fefa"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 7
+      }
+     ]
+    },
+    {
+     "path": "423687857/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_audio.ko",
+     "sha256": "754fa500c49696c8655109e45f77606db5db3ae2cec0a9501ed670362c718342",
+     "modinfo": {
+      "description": "Linux USB Audio Gadget",
+      "license": "GPL",
+      "author": "Bryan Wu <cooloney@kernel.org>",
+      "depends": "libcomposite",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "423687857/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "89f6c8765054815a9f1b352afbc960c92a4ae893f9058b73734cc8ed30ffcae0",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "423687857/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "9979e617b260e005c58028498b808b1602061c3ceaee531b9809252f553c5158",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  },
+  "UPDATERFS.ubi": {
+   "exit": 0,
+   "files": 793,
+   "gadget_modules": [
+    {
+     "path": "2121088280/updater/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "sha256": "df0e95d4b7b7d293f56a1d9364888f27d6d8c12a66ac8e226504b7bc632f18fa",
+     "modinfo": {
+      "description": "OBSBOT HDMI Adapter",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,usb_f_uvc,u_ether,u_audio",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fefa"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 7
+      }
+     ]
+    },
+    {
+     "path": "2121088280/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_audio.ko",
+     "sha256": "754fa500c49696c8655109e45f77606db5db3ae2cec0a9501ed670362c718342",
+     "modinfo": {
+      "description": "Linux USB Audio Gadget",
+      "license": "GPL",
+      "author": "Bryan Wu <cooloney@kernel.org>",
+      "depends": "libcomposite",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "2121088280/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "89f6c8765054815a9f1b352afbc960c92a4ae893f9058b73734cc8ed30ffcae0",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "2121088280/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "9979e617b260e005c58028498b808b1602061c3ceaee531b9809252f553c5158",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "unpacked": true
+}
