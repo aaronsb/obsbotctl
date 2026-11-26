@@ -362,5 +362,864 @@
    ]
   }
  ],
- "unlogged_requests": []
+ "unlogged_requests": [],
+ "setters": {
+  "evidence": "observed-on-device",
+  "observed_on": "3564:fefb, the attached camera, only; no other product is observed",
+  "firmware_version": "4.4.2.2",
+  "recorded": "2026-11-25",
+  "method": "probe_setters: read each setting, write the value read (or a neighbour, then the value read again), read back; every setting is read again at the end",
+  "restored": {
+   "all": true,
+   "settings": {
+    "brightness": {
+     "start": "50",
+     "now": "50",
+     "ok": true
+    },
+    "contrast": {
+     "start": "50",
+     "now": "50",
+     "ok": true
+    },
+    "saturation": {
+     "start": "50",
+     "now": "50",
+     "ok": true
+    },
+    "hue": {
+     "start": "50",
+     "now": "50",
+     "ok": true
+    },
+    "sharpness": {
+     "start": "50",
+     "now": "50",
+     "ok": true
+    },
+    "zoom": {
+     "start": "100",
+     "now": "100",
+     "ok": true
+    },
+    "aeLock": {
+     "start": "0",
+     "now": "0",
+     "ok": true
+    },
+    "faceAE": {
+     "start": "0",
+     "now": "0",
+     "ok": true
+    },
+    "wdr": {
+     "start": "1",
+     "now": "1",
+     "ok": true
+    },
+    "antiFlick": {
+     "start": "2",
+     "now": "2",
+     "ok": true
+    },
+    "mirrorFlip": {
+     "start": "0",
+     "now": "0",
+     "ok": true
+    },
+    "expMode": {
+     "start": "2",
+     "now": "2",
+     "ok": true
+    },
+    "paeEvBias": {
+     "start": "9",
+     "now": "9",
+     "ok": true
+    },
+    "aaeEvBias": {
+     "start": "-1",
+     "now": "-1",
+     "ok": true
+    },
+    "saeShutter": {
+     "start": "0",
+     "now": "0",
+     "ok": true
+    },
+    "maeShutter": {
+     "start": "0",
+     "now": "0",
+     "ok": true
+    },
+    "isoLimit": {
+     "start": "0",
+     "now": "0",
+     "ok": true
+    },
+    "whiteBalance": {
+     "start": "4800",
+     "now": "4800",
+     "ok": true
+    },
+    "focusAbsolute": {
+     "start": "65556",
+     "now": "65556",
+     "ok": true
+    },
+    "exposureAbsolute": {
+     "start": "65569",
+     "now": "65569",
+     "ok": true
+    },
+    "faceFocus": {
+     "start": "1",
+     "now": "1",
+     "ok": true
+    },
+    "fov": {
+     "start": "3",
+     "now": "3",
+     "ok": true
+    },
+    "imageFlipHorizon": {
+     "start": "0",
+     "now": "0",
+     "ok": true
+    },
+    "aiMode": {
+     "start": "257",
+     "now": "257",
+     "ok": true
+    }
+   }
+  },
+  "skipped": [
+   {
+    "setting": "fov",
+    "why": "start=3 is not a value this setter takes"
+   }
+  ],
+  "commands": [
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x1842",
+    "camera_set": 2,
+    "camera_number": 97,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 4,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "mirrorFlip"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetMirrorFlipR"
+    ],
+    "getter": {
+     "libdev_cmd": "CAM_GET_MIRROR_FLIP",
+     "opcode": "0x1802",
+     "camera_number": 96
+    },
+    "writes": [
+     {
+      "setting": "mirrorFlip",
+      "value": 0,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "payload": "00000000",
+      "payload_len": 4
+     }
+    ],
+    "libdev_cmd_from_getter_name": "CAM_SET_MIRROR_FLIP",
+    "getter_plus_one": true
+   },
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x2182",
+    "camera_set": 2,
+    "camera_number": 134,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 8,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "isoLimit"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetISOLimitR"
+    ],
+    "getter": {
+     "libdev_cmd": "CAM_GET_ISO_LIMIT",
+     "opcode": "0x2142",
+     "camera_number": 133
+    },
+    "writes": [
+     {
+      "setting": "isoLimit",
+      "value": 0,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "payload": "0000000000000000",
+      "payload_len": 8
+     }
+    ],
+    "libdev_cmd_from_getter_name": "CAM_SET_ISO_LIMIT",
+    "getter_plus_one": true
+   },
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x2202",
+    "camera_set": 2,
+    "camera_number": 136,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 4,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "aeLock"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetAELockR"
+    ],
+    "getter": {
+     "libdev_cmd": "CAM_GET_AE_LOCK",
+     "opcode": "0x21c2",
+     "camera_number": 135
+    },
+    "writes": [
+     {
+      "setting": "aeLock",
+      "value": 1,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "payload": "01000000",
+      "payload_len": 4
+     },
+     {
+      "setting": "aeLock.restore",
+      "value": 0,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "payload": "00000000",
+      "payload_len": 4
+     }
+    ],
+    "libdev_cmd_from_getter_name": "CAM_SET_AE_LOCK",
+    "getter_plus_one": true
+   },
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x2442",
+    "camera_set": 2,
+    "camera_number": 145,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 4,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "expMode"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetExposureModeR"
+    ],
+    "getter": {
+     "libdev_cmd": "CAM_GET_EXPOSURE_MODE",
+     "opcode": "0x2402",
+     "camera_number": 144
+    },
+    "writes": [
+     {
+      "setting": "expMode",
+      "value": 2,
+      "rc": 0,
+      "before": "2",
+      "after": "2",
+      "payload": "02000000",
+      "payload_len": 4
+     }
+    ],
+    "libdev_cmd_from_getter_name": "CAM_SET_EXPOSURE_MODE",
+    "getter_plus_one": true
+   },
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x2602",
+    "camera_set": 2,
+    "camera_number": 152,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 4,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "saeShutter"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetSAEShutterR"
+    ],
+    "getter": {
+     "libdev_cmd": "CAM_GET_S_AE_SHUTTER",
+     "opcode": "0x25c2",
+     "camera_number": 151
+    },
+    "writes": [
+     {
+      "setting": "saeShutter",
+      "value": 0,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "payload": "00000000",
+      "payload_len": 4
+     }
+    ],
+    "libdev_cmd_from_getter_name": "CAM_SET_S_AE_SHUTTER",
+    "getter_plus_one": true
+   },
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x2682",
+    "camera_set": 2,
+    "camera_number": 154,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 4,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "aaeEvBias"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetAAEEvBiasR"
+    ],
+    "getter": {
+     "libdev_cmd": "CAM_GET_A_AE_EVBIAS",
+     "opcode": "0x2642",
+     "camera_number": 153
+    },
+    "writes": [
+     {
+      "setting": "aaeEvBias",
+      "value": -1,
+      "rc": 0,
+      "before": "-1",
+      "after": "-1",
+      "payload": "ffffffff",
+      "payload_len": 4
+     }
+    ],
+    "libdev_cmd_from_getter_name": "CAM_SET_A_AE_EVBIAS",
+    "getter_plus_one": true
+   },
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x2782",
+    "camera_set": 2,
+    "camera_number": 158,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 4,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "maeShutter"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetMAEShutterR"
+    ],
+    "getter": {
+     "libdev_cmd": "CAM_GET_M_AE_SHUTTER",
+     "opcode": "0x2742",
+     "camera_number": 157
+    },
+    "writes": [
+     {
+      "setting": "maeShutter",
+      "value": 0,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "payload": "00000000",
+      "payload_len": 4
+     }
+    ],
+    "libdev_cmd_from_getter_name": "CAM_SET_M_AE_SHUTTER",
+    "getter_plus_one": true
+   },
+   {
+    "libdev_set": null,
+    "libdev_cmd": null,
+    "libdev_ids": [
+     null,
+     null
+    ],
+    "opcode": "0x3602",
+    "camera_set": 2,
+    "camera_number": 216,
+    "destination": 2,
+    "request_flags": 37,
+    "request_header_len": 12,
+    "request_payload_len": 4,
+    "reply_flags": null,
+    "reply_header_len": null,
+    "reply_payload_len": null,
+    "seen_in": [
+     "faceFocus"
+    ],
+    "logged": false,
+    "sdk_calls": [
+     "cameraSetFaceFocusR"
+    ],
+    "getter": null,
+    "writes": [
+     {
+      "setting": "faceFocus",
+      "value": 1,
+      "rc": 0,
+      "before": "1",
+      "after": "1",
+      "payload": "01000000",
+      "payload_len": 4
+     }
+    ],
+    "getter_plus_one": null
+   }
+  ],
+  "v4l2": [
+   {
+    "sdk_call": "cameraSetImageBrightnessR",
+    "setting": "brightness",
+    "v4l2_control": "0x00980900",
+    "v4l2_name": "brightness",
+    "getter": {
+     "v4l2_controls": [
+      "0x00980900"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "brightness",
+      "value": 51,
+      "rc": 0,
+      "before": "50",
+      "after": "51",
+      "control_value": 51
+     },
+     {
+      "setting": "brightness.restore",
+      "value": 50,
+      "rc": 0,
+      "before": "51",
+      "after": "50",
+      "control_value": 50
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetImageContrastR",
+    "setting": "contrast",
+    "v4l2_control": "0x00980901",
+    "v4l2_name": "contrast",
+    "getter": {
+     "v4l2_controls": [
+      "0x00980901"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "contrast",
+      "value": 51,
+      "rc": 0,
+      "before": "50",
+      "after": "51",
+      "control_value": 51
+     },
+     {
+      "setting": "contrast.restore",
+      "value": 50,
+      "rc": 0,
+      "before": "51",
+      "after": "50",
+      "control_value": 50
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetImageSaturationR",
+    "setting": "saturation",
+    "v4l2_control": "0x00980902",
+    "v4l2_name": "saturation",
+    "getter": {
+     "v4l2_controls": [
+      "0x00980902"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "saturation",
+      "value": 51,
+      "rc": 0,
+      "before": "50",
+      "after": "51",
+      "control_value": 51
+     },
+     {
+      "setting": "saturation.restore",
+      "value": 50,
+      "rc": 0,
+      "before": "51",
+      "after": "50",
+      "control_value": 50
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetImageHueR",
+    "setting": "hue",
+    "v4l2_control": "0x00980903",
+    "v4l2_name": "hue",
+    "getter": {
+     "v4l2_controls": [
+      "0x00980903"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "hue",
+      "value": 51,
+      "rc": 0,
+      "before": "50",
+      "after": "51",
+      "control_value": 51
+     },
+     {
+      "setting": "hue.restore",
+      "value": 50,
+      "rc": 0,
+      "before": "51",
+      "after": "50",
+      "control_value": 50
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetWhiteBalanceR",
+    "setting": "whiteBalance",
+    "v4l2_control": "0x0098090c",
+    "v4l2_name": "white_balance_automatic",
+    "getter": {
+     "v4l2_controls": [
+      "0x0098091a",
+      "0x0098090c"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "whiteBalance",
+      "value": 4800,
+      "rc": 0,
+      "before": "4800",
+      "after": "4800",
+      "control_value": 1
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetAntiFlickR",
+    "setting": "antiFlick",
+    "v4l2_control": "0x00980918",
+    "v4l2_name": "power_line_frequency",
+    "getter": {
+     "v4l2_controls": [
+      "0x00980918"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "antiFlick",
+      "value": 2,
+      "rc": 0,
+      "before": "2",
+      "after": "2",
+      "control_value": 2
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetImageSharpR",
+    "setting": "sharpness",
+    "v4l2_control": "0x0098091b",
+    "v4l2_name": "sharpness",
+    "getter": {
+     "v4l2_controls": [
+      "0x0098091b"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "sharpness",
+      "value": 51,
+      "rc": 0,
+      "before": "50",
+      "after": "51",
+      "control_value": 51
+     },
+     {
+      "setting": "sharpness.restore",
+      "value": 50,
+      "rc": 0,
+      "before": "51",
+      "after": "50",
+      "control_value": 50
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetPAEEvBiasR",
+    "setting": "paeEvBias",
+    "v4l2_control": "0x0098091c",
+    "v4l2_name": "backlight_compensation",
+    "getter": {
+     "v4l2_controls": [
+      "0x0098091c"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "paeEvBias",
+      "value": 9,
+      "rc": 0,
+      "before": "9",
+      "after": "9",
+      "control_value": 9
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetExposureAbsolute",
+    "setting": "exposureAbsolute",
+    "v4l2_control": "0x009a0901",
+    "v4l2_name": "auto_exposure",
+    "getter": {
+     "v4l2_controls": [
+      "0x009a0902",
+      "0x009a0901"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "exposureAbsolute",
+      "value": 65569,
+      "rc": 0,
+      "before": "65569",
+      "after": "65569",
+      "control_value": 0
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetFocusAbsolute",
+    "setting": "focusAbsolute",
+    "v4l2_control": "0x009a090c",
+    "v4l2_name": "focus_automatic_continuous",
+    "getter": {
+     "v4l2_controls": [
+      "0x009a090a",
+      "0x009a090c"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "focusAbsolute",
+      "value": 65556,
+      "rc": 0,
+      "before": "65556",
+      "after": "65556",
+      "control_value": 1
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetZoomAbsoluteR",
+    "setting": "zoom",
+    "v4l2_control": "0x009a090d",
+    "v4l2_name": "zoom_absolute",
+    "getter": {
+     "v4l2_controls": [
+      "0x009a090d"
+     ]
+    },
+    "writes": [
+     {
+      "setting": "zoom",
+      "value": 120,
+      "rc": 0,
+      "before": "100",
+      "after": "120",
+      "control_value": 20
+     },
+     {
+      "setting": "zoom.restore",
+      "value": 100,
+      "rc": 0,
+      "before": "120",
+      "after": "100",
+      "control_value": 0
+     }
+    ]
+   }
+  ],
+  "other_requests": [
+   {
+    "sdk_call": "cameraSetAiModeU",
+    "setting": "aiMode",
+    "selector": 6,
+    "size": 60,
+    "getter": null,
+    "writes": [
+     {
+      "setting": "aiMode",
+      "value": 257,
+      "rc": 0,
+      "before": "257",
+      "after": "257",
+      "data": "160201010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetFaceAER",
+    "setting": "faceAE",
+    "selector": 6,
+    "size": 60,
+    "getter": {
+     "libdev_cmd": "CAM_GET_FACE_AE",
+     "opcode": "0x2242",
+     "camera_number": 137
+    },
+    "writes": [
+     {
+      "setting": "faceAE",
+      "value": 1,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "data": "030101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+     },
+     {
+      "setting": "faceAE.restore",
+      "value": 0,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "data": "030100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetImageFlipHorizonU",
+    "setting": "imageFlipHorizon",
+    "selector": 6,
+    "size": 60,
+    "getter": null,
+    "writes": [
+     {
+      "setting": "imageFlipHorizon",
+      "value": 0,
+      "rc": 0,
+      "before": "0",
+      "after": "0",
+      "data": "140100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+     }
+    ]
+   },
+   {
+    "sdk_call": "cameraSetWdrR",
+    "setting": "wdr",
+    "selector": 6,
+    "size": 60,
+    "getter": {
+     "libdev_cmd": "CAM_GET_WDR_MODE",
+     "opcode": "0x02c2",
+     "camera_number": 11
+    },
+    "writes": [
+     {
+      "setting": "wdr",
+      "value": 1,
+      "rc": 0,
+      "before": "1",
+      "after": "1",
+      "data": "010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+     }
+    ]
+   }
+  ],
+  "no_request_seen": []
+ }
 }
