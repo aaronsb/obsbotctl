@@ -69,7 +69,7 @@ basis:
   - evidence: ADR-203
   - evidence: ADR-204
 observable:
-  - 'run: cargo metadata --no-deps --format-version 1 | python3 -c "import sys,json;print(sorted(p[\"name\"] for p in json.load(sys.stdin)[\"packages\"]))"   # prints [''obsbot'', ''obsbotctl'']'
+  - 'run: cargo metadata --no-deps --format-version 1 | python3 -c "import sys,json;print(sorted(p[\"name\"] for p in json.load(sys.stdin)[\"packages\"]))"   # prints [''obsbot'', ''obsbot-proto'', ''obsbotctl'']'
   - 'see: no file in the repository has the SHA256 of a pinned vendor SDK file or firmware image'
   - 'see: each camera listed as supported names the evidence grade behind each of its controls'
 agent:
