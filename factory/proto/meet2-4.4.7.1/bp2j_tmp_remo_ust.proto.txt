@@ -1,0 +1,860 @@
+name: "bp2j_tmp_remo_ust.proto"
+dependency: "bp2j_tmp_remo_common.proto"
+dependency: "bp2j_tmp_remo_media.proto"
+dependency: "bp2j_tmp_remo_device.proto"
+dependency: "bp2j_tmp_remo_stream.proto"
+dependency: "bp2j_tmp_remo_protocol.proto"
+message_type {
+  name: "CameraIspUst"
+  field {
+    name: "hdr_enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "mirror_flip"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MIRROR_FLIP_e"
+  }
+  field {
+    name: "rotation"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_ROTATION_e"
+  }
+  field {
+    name: "mirror"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "flip"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "dro_enable"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "aemode"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_MODE_e"
+  }
+  field {
+    name: "iso"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ev_bias"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_EVBIAS_e"
+  }
+  field {
+    name: "shutter"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_SHUTTER_TIME_e"
+  }
+  field {
+    name: "aelock"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "faceae"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "auto_down_frame_rate"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "awb"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_IQ_WhiteBalance_t"
+  }
+  field {
+    name: "aperture"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_APERTURE_APEX_e"
+  }
+  field {
+    name: "ae_meter_mode"
+    number: 22
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AE_METER_MODE_e"
+  }
+  field {
+    name: "antiflick"
+    number: 23
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_ANTIFLICK_MODE_e"
+  }
+  field {
+    name: "brightness"
+    number: 31
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "contrast"
+    number: 32
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hue"
+    number: 33
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "saturation"
+    number: 34
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sharpness"
+    number: 35
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "af_mode"
+    number: 41
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_AF_MODE_e"
+  }
+  field {
+    name: "face_af"
+    number: 42
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "mf_code"
+    number: 43
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "tof_enable"
+    number: 44
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "pdaf_enable"
+    number: 45
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "colorSpaceTrans"
+    number: 62
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_COLOR_SPACE_TRANS_e"
+  }
+  field {
+    name: "iq_style"
+    number: 63
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_IQ_STYLE_TYPE_e"
+  }
+  field {
+    name: "iqstyle_custom_brightness"
+    number: 64
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "iqstyle_custom_contrast"
+    number: 65
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "iqstyle_custom_hue"
+    number: 66
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "iqstyle_custom_saturation"
+    number: 67
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "iqstyle_custom_sharpness"
+    number: 68
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Ust_System_PowerCtrl_t"
+  field {
+    name: "auto_suspend_time"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Ust_System_t"
+  field {
+    name: "boot_workmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "power_ctrl"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_System_PowerCtrl_t"
+  }
+  field {
+    name: "suspend_mode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "background_file"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "log_print"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Ust_Usb_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_USB_WORKMODE_e"
+  }
+  field {
+    name: "lastmode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_USB_WORKMODE_e"
+  }
+  field {
+    name: "zoomProduct"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Ust_Led_t"
+  field {
+    name: "brightness_level"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_SYSTEM_LED_BRIGHTNESS_LEVEL_e"
+  }
+}
+message_type {
+  name: "Remo_Ust_Device_t"
+  field {
+    name: "usb"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_Usb_t"
+  }
+  field {
+    name: "led"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_Led_t"
+  }
+}
+message_type {
+  name: "Remo_NS_Param_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "ns_level"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_AGC_Param_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "gain_db"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "target_db"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Ust_VqeSetting"
+  field {
+    name: "enable_ans"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "enable_agc"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "enable_dereverb"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "denoise_level"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "agc_targetLevel"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "agc_gain_db"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "vqemode"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "enable_hpf"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Ust_VqeRange"
+  field {
+    name: "ns_level_min"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ns_level_max"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_gain_db_min"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_gain_db_max"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_tag_db_min"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "agc_tag_db_max"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Ust_WakeUpSetting"
+  field {
+    name: "lang"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_WakeUp_Language_e"
+  }
+  field {
+    name: "wordmask_cn"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "wordmask_en"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_ratio"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Ust_AcapChn_t"
+  field {
+    name: "volume"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "enablevqe"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "vqeset"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_VqeSetting"
+  }
+  field {
+    name: "bstreeo"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "mute"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Ust_AudioStream_t"
+  field {
+    name: "jack"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_JACK_DEVICE_e"
+  }
+  field {
+    name: "uac_src"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_ACap_Chn_e"
+  }
+  field {
+    name: "chn"
+    number: 3
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_AcapChn_t"
+  }
+  field {
+    name: "enable_kws"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "wakeup"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_WakeUpSetting"
+  }
+  field {
+    name: "suspend_audio"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "main_src"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_AUDIO_PORT_SRC_e"
+  }
+}
+message_type {
+  name: "Remo_Ust_Uvc_t"
+  field {
+    name: "resolution"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_RES_e"
+  }
+  field {
+    name: "enc_fmt"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_ENCODER_FORMAT_e"
+  }
+  field {
+    name: "bps_level"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_BITRATE_LEVEL_e"
+  }
+}
+message_type {
+  name: "Remo_Ust_Gesture_t"
+  field {
+    name: "autoframe"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "autoframe_mode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "zoom_control"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ratio"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Ust_MediaMode_t"
+  field {
+    name: "workmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_WorkMode_t"
+  }
+  field {
+    name: "uvc"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_Uvc_t"
+  }
+  field {
+    name: "gesture"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_Gesture_t"
+  }
+}
+message_type {
+  name: "Remo_Ust_VideoFov_t"
+  field {
+    name: "idx"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VIDEO_FOV_e"
+  }
+  field {
+    name: "fov_ratio"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_zoom_ratio"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_out_x"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_out_y"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_out_w"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_out_h"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "aspect_ratio"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sender_ratio"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Ust_Media_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_MediaMode_t"
+  }
+  field {
+    name: "isp_ust"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".CameraIspUst"
+  }
+  field {
+    name: "audio"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_AudioStream_t"
+  }
+  field {
+    name: "fov"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_VideoFov_t"
+  }
+}
+message_type {
+  name: "Remo_Ust_t"
+  field {
+    name: "system"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_System_t"
+  }
+  field {
+    name: "device"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_Device_t"
+  }
+  field {
+    name: "media"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Ust_Media_t"
+  }
+}
+message_type {
+  name: "Remo_MediaModeAttr_t"
+  field {
+    name: "user_mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_WORKMODE_e"
+  }
+  field {
+    name: "hdrType"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rotate"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DEVICE_ROTATE"
+  }
+  field {
+    name: "res_mode"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_RES_e"
+  }
+}
+enum_type {
+  name: "REMO_UST_CMDID_e"
+  value {
+    name: "REMO_UST_CMDID_STREAM_ACT"
+    number: 0
+  }
+  value {
+    name: "REMO_UST_CMDID_STREAM_SET_MODE"
+    number: 1
+  }
+  value {
+    name: "REMO_UST_CMDID_STREAM_RESET_MODE"
+    number: 2
+  }
+  value {
+    name: "REMO_UST_CMDID_MEDIA_SET_WORKMODE"
+    number: 3
+  }
+  value {
+    name: "REMO_UST_CMDID_USB_SWITCH"
+    number: 4
+  }
+  value {
+    name: "REMO_UST_CMDID_AUDIOSTREAM_SWITCH"
+    number: 5
+  }
+  value {
+    name: "REMO_UST_CMDID_FACTORY_RESET"
+    number: 6
+  }
+  value {
+    name: "REMO_UST_CMDID_MEDIA_PRESET_SET_WORKMODE"
+    number: 7
+  }
+}
+enum_type {
+  name: "REMO_AUDIO_PORT_SRC_e"
+  value {
+    name: "REMO_AUDIO_PORT_SRC_BUILD_IN"
+    number: 0
+  }
+  value {
+    name: "REMO_AUDIO_PORT_SRC_AUX"
+    number: 1
+  }
+}
+enum_type {
+  name: "REMO_WORKMODE_e"
+  value {
+    name: "REMO_WORKMODE_NORMAL"
+    number: 0
+  }
+  value {
+    name: "REMO_WORKMODE_GROUP_FRAMING"
+    number: 1
+  }
+  value {
+    name: "REMO_WORKMODE_AUTOTRACK"
+    number: 2
+  }
+  value {
+    name: "REMO_WORKMODE_HANDSTRACK"
+    number: 3
+  }
+  value {
+    name: "REMO_WORKMODE_WHITEBOARD"
+    number: 4
+  }
+  value {
+    name: "REMO_WORKMODE_DESKTOP"
+    number: 5
+  }
+  value {
+    name: "REMO_WORKMODE_SINGLE_CLOSEUP"
+    number: 6
+  }
+  value {
+    name: "REMO_WORKMODE_SINGLE_UPPERBODY"
+    number: 7
+  }
+  value {
+    name: "REMO_WORKMODE_SWITCHING"
+    number: 8
+  }
+}
+syntax: "proto3"

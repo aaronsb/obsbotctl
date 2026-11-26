@@ -18,4 +18,15 @@ _The library's architecture, public surface, protocol and product catalog_
 
 | ADR | Title | Status |
 |-----|-------|--------|
-| [ADR-100](./core/ADR-100-libobsbot-is-a-library-built-from-pinned-vendor-inputs.md) | libobsbot is a library built from pinned vendor inputs | proposed |
+| [ADR-100](./core/ADR-100-libobsbot-is-a-library-built-from-pinned-vendor-inputs.md) | libobsbot is a library built from pinned vendor inputs | accepted |
+
+## Factory
+_Pinned vendor inputs, hydration, extraction, code generation and verification_
+
+| ADR | Title | Status |
+|-----|-------|--------|
+| [ADR-200](./factory/ADR-200-the-camera-side-of-obsbot-s-uvc-extension-unit.md) | The camera side of OBSBOT's UVC extension unit | accepted |
+| [ADR-201](./factory/ADR-201-building-blocks-in-the-meet-2-firmware-route-enums-and-protobuf-schemas.md) | Building blocks in the Meet 2 firmware: route enums and protobuf schemas | accepted |
+| [ADR-202](./factory/ADR-202-extension-unit-packet-format-crc-16-usb-checks-and-opcode-layout.md) | Extension-unit packet format, CRC-16/USB checks and opcode layout | accepted |
+| [ADR-203](./factory/ADR-203-how-the-vendor-library-identifies-a-camera-and-claiming-another-identity.md) | How the vendor library identifies a camera, and claiming another identity | accepted |
+| [ADR-204](./factory/ADR-204-usb-product-ids-the-vendor-library-recognises-against-the-firmware.md) | USB product IDs the vendor library recognises, against the firmware | accepted |

@@ -1,0 +1,128 @@
+name: "bp2j_tmp_remo_pdt_status.proto"
+dependency: "bp2j_tmp_remo_status.proto"
+dependency: "bp2j_tmp_remo_media.proto"
+dependency: "bp2j_tmp_remo_pdt_cfg.proto"
+message_type {
+  name: "Remo_Pdt_Status_VprocChn_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_Pdt_VprocPipeMode_e"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Status_Vproc_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "chn"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Status_VprocChn_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Status_VcapChn_t"
+  field {
+    name: "mode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_Pdt_VcapPipeMode_e"
+  }
+  field {
+    name: "pdafType"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Pdt_Status_Vcap_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "chn"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Status_VcapChn_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Status_Media_t"
+  field {
+    name: "bIqServerEnabled"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "mediamode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_Pdt_MediaWorkMode_e"
+  }
+  field {
+    name: "hdrType"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "vproc"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Status_Vproc_t"
+  }
+  field {
+    name: "vcap"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Status_Vcap_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Status_t"
+  field {
+    name: "media"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Status_Media_t"
+  }
+}
+message_type {
+  name: "Remo_Pdt_Status_Data_t"
+  field {
+    name: "status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_t"
+  }
+  field {
+    name: "pdtStatus"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Pdt_Status_t"
+  }
+}
+syntax: "proto3"

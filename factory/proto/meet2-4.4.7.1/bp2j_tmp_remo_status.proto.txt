@@ -1,0 +1,1830 @@
+name: "bp2j_tmp_remo_status.proto"
+dependency: "bp2j_tmp_remo_media.proto"
+dependency: "bp2j_tmp_remo_stream.proto"
+dependency: "bp2j_tmp_remo_protocol.proto"
+dependency: "bp2j_tmp_remo_device.proto"
+message_type {
+  name: "Remo_Status_Upgrade_t"
+  field {
+    name: "status"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "upgrading"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Status_SysVersion_t"
+  field {
+    name: "VERSION"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "PATCHLEVEL"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "SUBLEVEL"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rc"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "RC_VERSION"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_System_t"
+  field {
+    name: "bootStage"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_BOOT_STAGE_e"
+  }
+  field {
+    name: "upgrade"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Upgrade_t"
+  }
+  field {
+    name: "version"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_SysVersion_t"
+  }
+  field {
+    name: "hardversion"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_SysVersion_t"
+  }
+  field {
+    name: "power_status"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_CAMERA_POWER_STATUS_e"
+  }
+  field {
+    name: "ready"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Status_AiStatus_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "ready"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "main_mode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sub_mode"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "refound"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hand_traking_left"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hp_enable_ts"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hp_enable_zoom"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hp_enable_dynamic_zoom"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "dynamic_zoom_dir"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "hp_zoom_ratio"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "y_trim_mode"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "region_track_enable"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "pan_control_invert"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "portraitmode"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "speed_mode"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_AiTarget_t"
+  field {
+    name: "id"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "alive"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "real"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "st_type"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "cst_type"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_AiRoiType_e"
+  }
+  field {
+    name: "xmin"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymin"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xmax"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymax"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "distance"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "dis_score"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Status_AiRoi_t"
+  field {
+    name: "type"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_AiRoiType_e"
+  }
+  field {
+    name: "xmin"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymin"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xmax"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ymax"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "score"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "distance"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "dis_score"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Status_AiFrameStatus_t"
+  field {
+    name: "ts"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+  field {
+    name: "target"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiTarget_t"
+  }
+  field {
+    name: "rois"
+    number: 3
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiRoi_t"
+  }
+}
+message_type {
+  name: "Remo_Status_WhiteBoardStatus_t"
+  field {
+    name: "has_laser"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "has_board"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "board_type"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "laser_x"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "laser_y"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "x0"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y0"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "x1"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y1"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "x2"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y2"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "x3"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y3"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "has_invoke"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "yaw_angle"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "pitch_angle"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Status_Ai_t"
+  field {
+    name: "version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "online"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "status"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiStatus_t"
+  }
+  field {
+    name: "frame_status"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiFrameStatus_t"
+  }
+  field {
+    name: "view_seq"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "target_view"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Protocol_TargetViewBox_t"
+  }
+  field {
+    name: "whiter_board"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_WhiteBoardStatus_t"
+  }
+  field {
+    name: "ffd_status"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiFrameStatus_t"
+  }
+}
+message_type {
+  name: "Remo_Status_GimbalVersion_t"
+  field {
+    name: "main_version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "roll_version"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "pitch_version"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "yaw_version"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_GimbalStatus_t"
+  field {
+    name: "x_euler_angle"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y_euler_angle"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "z_euler_angle"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "x_joint_angle"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y_joint_angle"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "z_joint_angle"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "x_velo"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "y_velo"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "z_velo"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "roll_ref"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "lock_status"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "invert_status"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "xaxis_status"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "cali_status"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "sys_state"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "roll_hor_bias"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "roll_vec_bias"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "factory_check_state"
+    number: 18
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "user_cali_pecent"
+    number: 19
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "yaw_range_state"
+    number: 20
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "warn_flag"
+    number: 21
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "error_flag"
+    number: 22
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_Gimbal_t"
+  field {
+    name: "version"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_GimbalVersion_t"
+  }
+  field {
+    name: "online"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "status"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_GimbalStatus_t"
+  }
+  field {
+    name: "attitude"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_BASE_ATTITUDE"
+  }
+}
+message_type {
+  name: "Remo_Status_Uac_t"
+  field {
+    name: "enable"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "is_transfer"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "samplerate"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "soundmode"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_AUDIO_SOUNDMODE_e"
+  }
+}
+message_type {
+  name: "Remo_Status_Usb_t"
+  field {
+    name: "uvc_vertical"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "uac_show"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "uvc_name"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_STRING
+  }
+}
+message_type {
+  name: "Remo_Status_OpticalZoom_t"
+  field {
+    name: "runing"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "pos"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+}
+message_type {
+  name: "Remo_Status_DigitalZoom_t"
+  field {
+    name: "runing"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bCornerTrack"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "ratio"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "speed"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "in_x"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "in_y"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "in_width"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "in_height"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "out_x"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "out_y"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "out_width"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "out_height"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "target_x"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "target_y"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "target_width"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "target_height"
+    number: 16
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "bContinual"
+    number: 17
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Status_Lens_t"
+  field {
+    name: "bonline"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "bworking"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "focus_pos"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "focus_running"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "optical_zoom"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_OpticalZoom_t"
+  }
+  field {
+    name: "digital_zoom"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_DigitalZoom_t"
+  }
+  field {
+    name: "temperature"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "software_version"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hardware_version"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "tof_distance"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "tof_reliability"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "tof_running"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "tof_status"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_ACapDevice_t"
+  field {
+    name: "jackplugin"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Status_Terminal_t"
+  field {
+    name: "isPcSetting"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Status_Bluetooth_t"
+  field {
+    name: "bleOnline"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "remoteOnline"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "is_pairing"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Status_Device_t"
+  field {
+    name: "uuid"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+  field {
+    name: "factory_mode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "ai_status"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Ai_t"
+  }
+  field {
+    name: "gimbal_status"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Gimbal_t"
+  }
+  field {
+    name: "uac"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Uac_t"
+  }
+  field {
+    name: "lens"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Lens_t"
+  }
+  field {
+    name: "acap"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_ACapDevice_t"
+  }
+  field {
+    name: "terminal"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Terminal_t"
+  }
+  field {
+    name: "ble"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Bluetooth_t"
+  }
+  field {
+    name: "usb"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Usb_t"
+  }
+}
+message_type {
+  name: "Remo_Status_VcapChn_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "mode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VCAP_MODE_e"
+  }
+  field {
+    name: "inWidth"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "inHeight"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "inFps"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "outWidth"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "outHeight"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "outFps"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "mirror"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "flip"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "hdrType"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_INT32
+  }
+  field {
+    name: "sensor_orien"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "rotation"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_ROTATION_e"
+  }
+  field {
+    name: "bayer_id"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "pixFormat"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_Vcap_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_VcapChn_t"
+  }
+}
+message_type {
+  name: "Remo_Status_VprocChn_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "outWidth"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "outHeight"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "outFps"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "dataType"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DATA_TYPE_e"
+  }
+  field {
+    name: "rotate"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "mirror"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "flip"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ldc"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ldcWidth"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ldcHeight"
+    number: 11
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "target_outWidth"
+    number: 12
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "target_outHeight"
+    number: 13
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "target_dataType"
+    number: 14
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DATA_TYPE_e"
+  }
+  field {
+    name: "b_port_init"
+    number: 15
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_Vproc_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "chn"
+    number: 3
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_VprocChn_t"
+  }
+}
+message_type {
+  name: "Remo_Status_StreamChn_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "mode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Stream_Mode_t"
+  }
+  field {
+    name: "rcMode"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_VENC_RC_MODE_e"
+  }
+  field {
+    name: "bpsLevel"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STREAM_BPS_LEVEL_e"
+  }
+  field {
+    name: "bps"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "gop"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "outFps"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "frameCount"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "rotation"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_ROTATION_e"
+  }
+}
+message_type {
+  name: "Remo_Status_Stream_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_StreamChn_t"
+  }
+}
+message_type {
+  name: "Remo_Status_ACapChn_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "soundmode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_AUDIO_SOUNDMODE_e"
+  }
+  field {
+    name: "samplerate"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "bresample"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "resamplerate"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "mode"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_ACAP_MODE_e"
+  }
+  field {
+    name: "vqemode"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_AUDIO_VQE_MODE_e"
+  }
+  field {
+    name: "volume"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_ACap_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_ACapChn_t"
+  }
+  field {
+    name: "plug_in"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+  field {
+    name: "line_in"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_BOOL
+  }
+}
+message_type {
+  name: "Remo_Status_AEncChn_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "samplerate"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "chnnum"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "encoder"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_AENC_Code_Type_e"
+  }
+  field {
+    name: "src"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STREAM_CHN_ID_e"
+  }
+  field {
+    name: "aac_mux"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".AAC_TRANSMUX_e"
+  }
+}
+message_type {
+  name: "Remo_Status_AEnc_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AEncChn_t"
+  }
+}
+message_type {
+  name: "Remo_Status_ADEC_Chn_t"
+  field {
+    name: "state"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_MEDIA_STATE_e"
+  }
+  field {
+    name: "samplerate"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "chnnum"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "payload"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".ADEC_PAYLOAD_e"
+  }
+  field {
+    name: "src"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_STREAM_CHN_ID_e"
+  }
+  field {
+    name: "aac_mux"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".AAC_TRANSMUX_e"
+  }
+  field {
+    name: "frame_size"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_ADEC_t"
+  field {
+    name: "chn"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_ADEC_Chn_t"
+  }
+}
+message_type {
+  name: "Remo_Status_Mode_t"
+  field {
+    name: "workmode"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_WorkMode_t"
+  }
+  field {
+    name: "premode"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Camera_WorkMode_t"
+  }
+}
+message_type {
+  name: "Remo_Status_Target_t"
+  field {
+    name: "ai_target"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiTarget_t"
+  }
+}
+message_type {
+  name: "Remo_Status_Rois_t"
+  field {
+    name: "ai_rois"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiRoi_t"
+  }
+  field {
+    name: "ffd_rois"
+    number: 2
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AiRoi_t"
+  }
+}
+message_type {
+  name: "Remo_Status_Rect_t"
+  field {
+    name: "xstart"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "ystart"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "xend"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+  field {
+    name: "yend"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_FLOAT
+  }
+}
+message_type {
+  name: "Remo_Status_Media_t"
+  field {
+    name: "vcap"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Vcap_t"
+  }
+  field {
+    name: "vproc"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Vproc_t"
+  }
+  field {
+    name: "stream"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Stream_t"
+  }
+  field {
+    name: "acap"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_ACap_t"
+  }
+  field {
+    name: "aenc"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_AEnc_t"
+  }
+  field {
+    name: "adec"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_ADEC_t"
+  }
+  field {
+    name: "mode"
+    number: 7
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Mode_t"
+  }
+  field {
+    name: "crop_window"
+    number: 8
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Rect_t"
+  }
+  field {
+    name: "target"
+    number: 9
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Target_t"
+  }
+  field {
+    name: "rois"
+    number: 10
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Rois_t"
+  }
+}
+message_type {
+  name: "Remo_Status_RouterInfo_t"
+  field {
+    name: "device"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "port_type"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".Remo_RouterPortType_e"
+  }
+  field {
+    name: "token"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT64
+  }
+  field {
+    name: "port_id"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "ip"
+    number: 5
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "port"
+    number: 6
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_Router_t"
+  field {
+    name: "router_info"
+    number: 1
+    label: LABEL_REPEATED
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_RouterInfo_t"
+  }
+  field {
+    name: "app_client_count"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "monitor_client_count"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+}
+message_type {
+  name: "Remo_Status_t"
+  field {
+    name: "system"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_System_t"
+  }
+  field {
+    name: "device"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Device_t"
+  }
+  field {
+    name: "media"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Media_t"
+  }
+  field {
+    name: "router"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_MESSAGE
+    type_name: ".Remo_Status_Router_t"
+  }
+}
+enum_type {
+  name: "Remo_AiRoiType_e"
+  value {
+    name: "AI_ROITYPE_HUMAN"
+    number: 0
+  }
+  value {
+    name: "AI_ROITYPE_CAT"
+    number: 1
+  }
+  value {
+    name: "AI_ROITYPE_DOG"
+    number: 2
+  }
+  value {
+    name: "AI_ROITYPE_HORSE"
+    number: 3
+  }
+  value {
+    name: "AI_ROITYPE_FACE"
+    number: 4
+  }
+  value {
+    name: "AI_ROITYPE_HEAD"
+    number: 5
+  }
+  value {
+    name: "AI_ROITYPE_HAND"
+    number: 6
+  }
+  value {
+    name: "AI_ROITYPE_WB"
+    number: 7
+  }
+  value {
+    name: "AI_ROITYPE_DEFAULT"
+    number: 255
+  }
+}
+enum_type {
+  name: "Remo_RouterPortType_e"
+  value {
+    name: "ROUTER_PORTTYPE_NETLINK"
+    number: 0
+  }
+  value {
+    name: "ROUTER_PORTTYPE_UDP"
+    number: 1
+  }
+  value {
+    name: "ROUTER_PORTTYPE_TCP"
+    number: 2
+  }
+  value {
+    name: "ROUTER_PORTTYPE_SERIAL"
+    number: 3
+  }
+  value {
+    name: "ROUTER_PORTTYPE_I2C"
+    number: 4
+  }
+}
+syntax: "proto3"

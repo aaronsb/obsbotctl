@@ -1,0 +1,115 @@
+name: "bp2j_tmp_remo_common.proto"
+enum_type {
+  name: "REMO_EVENT_ID_e"
+  value {
+    name: "REMO_EVENT_ID_SYS_TEST"
+    number: 0
+  }
+  value {
+    name: "REMO_EVENT_ID_SYS_POWEROFF"
+    number: 1
+  }
+  value {
+    name: "REMO_EVENT_ID_SYS_STRMODE"
+    number: 2
+  }
+  value {
+    name: "REMO_EVENT_ID_SYS_JACK_PLUG"
+    number: 3
+  }
+  value {
+    name: "REMO_EVENT_ID_SYS_HDMI"
+    number: 4
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_STORAGE"
+    number: 10
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_FMNG"
+    number: 11
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_SET_MODE"
+    number: 12
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_RECORD"
+    number: 13
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_REPAIRVIDEO"
+    number: 14
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_ROUTER"
+    number: 15
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_NEWFILE_CREATE"
+    number: 16
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_AUDIO_WAKEUP"
+    number: 17
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_ZOOM"
+    number: 18
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_ISP_OUTPUT"
+    number: 19
+  }
+  value {
+    name: "REMO_EVENT_ID_CAM_WINDOW_CHANGE"
+    number: 20
+  }
+  value {
+    name: "REMO_EVENT_ID_FTP_DISCONNECT"
+    number: 30
+  }
+  value {
+    name: "REMO_EVENT_ID_FTP_CONNECTED"
+    number: 31
+  }
+  value {
+    name: "REMO_EVENT_ID_FTP_TASK_INFO"
+    number: 32
+  }
+  value {
+    name: "REMO_EVENT_ID_REDETECT_WHITEBOARD"
+    number: 40
+  }
+}
+enum_type {
+  name: "REMO_TEST_STATE_e"
+  value {
+    name: "REMO_TEST_STATE_IDLE"
+    number: 0
+  }
+  value {
+    name: "REMO_TEST_STATE_DOING"
+    number: 1
+  }
+  value {
+    name: "REMO_TEST_STATE_SUCCESS"
+    number: 2
+  }
+  value {
+    name: "REMO_TEST_STATE_FAIL"
+    number: 3
+  }
+}
+enum_type {
+  name: "Remo_WakeUp_Language_e"
+  value {
+    name: "REMO_WAKEUP_LANGUAGE_CN"
+    number: 0
+  }
+  value {
+    name: "REMO_WAKEUP_LANGUAGE_EN"
+    number: 1
+  }
+}
+syntax: "proto3"

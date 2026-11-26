@@ -1,0 +1,101 @@
+name: "bp2j_tmp_remo_stream.proto"
+dependency: "bp2j_tmp_remo_media.proto"
+message_type {
+  name: "Remo_Stream_Mode_t"
+  field {
+    name: "width"
+    number: 1
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "height"
+    number: 2
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "fps"
+    number: 3
+    label: LABEL_OPTIONAL
+    type: TYPE_UINT32
+  }
+  field {
+    name: "payload"
+    number: 4
+    label: LABEL_OPTIONAL
+    type: TYPE_ENUM
+    type_name: ".REMO_DATA_TYPE_e"
+  }
+}
+enum_type {
+  name: "REMO_STREAM_BPS_LEVEL_e"
+  value {
+    name: "REMO_STREAM_BPS_LEVEL_SFINE"
+    number: 0
+  }
+  value {
+    name: "REMO_STREAM_BPS_LEVEL_FINE"
+    number: 1
+  }
+  value {
+    name: "REMO_STREAM_BPS_LEVEL_STANDARD"
+    number: 2
+  }
+  value {
+    name: "REMO_STREAM_BPS_LEVEL_LOW"
+    number: 3
+  }
+  value {
+    name: "REMO_STREAM_BPS_LEVEL_SLOW"
+    number: 4
+  }
+}
+enum_type {
+  name: "REMO_STREAM_CHN_ID_e"
+  value {
+    name: "REMO_STREAM_CHN_MAIN"
+    number: 0
+  }
+  value {
+    name: "REMO_STREAM_CHN_SUB1"
+    number: 1
+  }
+  value {
+    name: "REMO_STREAM_CHN_SUB2"
+    number: 2
+  }
+  value {
+    name: "REMO_STREAM_CHN_SUB3"
+    number: 3
+  }
+  value {
+    name: "REMO_STREAM_CHN_SUB4"
+    number: 4
+  }
+  value {
+    name: "REMO_STREAM_CHN_SUB5"
+    number: 5
+  }
+  value {
+    name: "REMO_STREAM_CHN_SUB6"
+    number: 6
+  }
+  value {
+    name: "REMO_STREAM_CHN_CAP"
+    number: 7
+  }
+  value {
+    name: "REMO_STREAM_CHN_ACAP0"
+    number: 8
+  }
+  value {
+    name: "REMO_STREAM_CHN_ACAP1"
+    number: 9
+  }
+  value {
+    name: "REMO_STREAM_CHN_ACAP2"
+    number: 10
+  }
+}
+syntax: "proto3"
