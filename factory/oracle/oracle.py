@@ -345,8 +345,12 @@ def opcode_of(q):
 
 
 def payload_len(q):
-    """A request's payload length: 0 unless it has the payload flag (0x40)."""
-    return (q[12] | q[13] << 8) if q[4] == 12 and q[1] & 0x40 else 0
+    """A packet's payload length. A 12-byte-header packet with flag bit 0x20
+    or 0x40 carries a payload section: its length at bytes 12-13 and a
+    CRC-16/USB at 14-15 over bytes 12..16+len-1 (14-15 zeroed); every such
+    packet in the recorded traces passes that check. Without either bit
+    (plain 0x01 requests) bytes 12-15 are stale, and the length is 0."""
+    return (q[12] | q[13] << 8) if q[4] == 12 and q[1] & 0x60 else 0
 
 
 def command_entry(sets, per_set, cs, ci, q, rep):
@@ -358,7 +362,7 @@ def command_entry(sets, per_set, cs, ci, q, rep):
         "destination": q[9], "request_flags": q[1], "request_header_len": q[4],
         "request_payload_len": payload_len(q),
         "reply_flags": rep[1] if rep else None, "reply_header_len": rep[4] if rep else None,
-        "reply_payload_len": (rep[12] | rep[13] << 8) if rep and rep[4] == 12 else None,
+        "reply_payload_len": payload_len(rep) if rep and rep[4] == 12 else None,
         "seen_in": [],
     }
 
@@ -603,13 +607,6 @@ def describe_getter(g, per_set):
     return out
 
 
-def setter_payload_len(q):
-    """A setter request's payload length. The Meet 2's setters flag their
-    payload with 0x20 (flags 0x25), not the 0x40 the getters' records count
-    (payload_len), and their value bytes sit in that payload."""
-    return (q[12] | q[13] << 8) if q[4] == 12 and q[1] & 0x60 else 0
-
-
 def setter_section(windows, getter_of, secrets, sets, per_set, text, pid):
     """The "setters" section of commands/<pid>.json, from the setter windows
     and the probe's result lines. Payloads are refused if they hold any run
@@ -633,12 +630,11 @@ def setter_section(windows, getter_of, secrets, sets, per_set, text, pid):
         write = {"setting": w["name"], "value": w["value"], "rc": w["rc"], "before": w.get("before"),
                  "after": w.get("after")}
         for r in w["requests"]:
-            q, n = r["q"], setter_payload_len(r["q"])
+            q, n = r["q"], payload_len(r["q"])
             e = cmds.get(opcode_of(q))
             if e is None:
                 e = cmds[opcode_of(q)] = dict(command_entry(sets, per_set, r["cs"], r["ci"], q, r["rep"]),
                                               logged=r["cs"] is not None, sdk_calls=[], getter=getter, writes=[])
-                e["request_payload_len"] = n
                 if getter and getter.get("libdev_cmd"):
                     want = getter["libdev_cmd"].replace("_GET_", "_SET_", 1)
                     gset = g["requests"][0]["cs"]
