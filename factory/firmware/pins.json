@@ -1,9 +1,63 @@
 {
+ "Obsbot_Tail2ADV_OA_E_CM104_1.26.2.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "280ed911178d4166b3c54a3a0c3477a674e487c1c236dda01502abcb74dde58f",
+  "size": 471810432,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_Tail2ADV_OA_E_CM104_1.26.2.1_release.bin"
+ },
+ "Obsbot_hdmibox_OA_E_SSC359G_8.0.5.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "94734a353f738e880299d59d883f4d911c0aa420e58078328fe8d8bc8d8cc695",
+  "size": 63233596,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-hdmibox/Obsbot_hdmibox_OA_E_SSC359G_8.0.5.1_release.bin"
+ },
+ "Obsbot_mc101_OA_W_MC101_3.0.10.0.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "8a645be7968288357d1cb3f2c6f7e9ef5837bb54e86739333117bda10023bafd",
+  "size": 795392,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-vox-se/Obsbot_mc101_OA_W_MC101_3.0.10.0.bin"
+ },
+ "Obsbot_me_1P_OA_E_All_3.0.1.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "c3bc690e6ec094874b88a6d58de779f6c118401b16ab18ed8aa2728065a75d1f",
+  "size": 83291908,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-me/Obsbot_me_1P_OA_E_All_3.0.1.1_release.bin"
+ },
  "Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin": {
   "pinned": "2026-11-25",
   "sha256": "240591d4ab2dd39bf785e5fe289160af590138d83e0b011dac2fe4ca11b3fedd",
   "size": 64656096,
   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin"
+ },
+ "Obsbot_meet3_OA_E_PW208_1.8.19.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "c54c0a9734d4d04c53bff913ec89900bdcb47b9961a10ba47d6231913f5e7ce3",
+  "size": 84125776,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meet3_OA_E_PW208_1.8.19.1_release.bin"
+ },
+ "Obsbot_meet_OA_E_All_4.0.6.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "1289e5d7678882a5ab7d67e8415bc8ed7ddf70e6ce06cd0fb43ec1bdf2bacbd3",
+  "size": 79629836,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-meet-4k/Obsbot_meet_OA_E_All_4.0.6.1_release.bin"
+ },
+ "Obsbot_meet_OA_E_All_4.2.6.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "fca67df530cff3c233b00f1d632b8fd508239ef87ba16cd22ec10e5f90cf6a47",
+  "size": 79367744,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-meet/Obsbot_meet_OA_E_All_4.2.6.1_release.bin"
+ },
+ "Obsbot_meetflip_OA_E_PW206_4.5.5.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "c80c17ac8cc9781d9824701b802a9a0f2cbac80c899052aad0d4f409a9a5c308",
+  "size": 76207512,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meetflip_OA_E_PW206_4.5.5.1_release.bin"
+ },
+ "Obsbot_meetse2_OA_E_PW209_1.4.13.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "741b8c893194c5afc67ffb4d814e0a916a9d15f330887cb51ed5c4e460a317e7",
+  "size": 64656112,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meetse2_OA_E_PW209_1.4.13.1_release.bin"
  },
  "Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin": {
   "pinned": "2026-11-25",
@@ -11,10 +65,106 @@
   "size": 64656104,
   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin"
  },
+ "Obsbot_ndibox_OA_E_PWA05_8.2.6.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "dd66fdfd09fd7e4771e683c928ab92a184419f9461e21cefea77dc6e2836b1c0",
+  "size": 73216856,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-ndibox/Obsbot_ndibox_OA_E_PWA05_8.2.6.1_release.bin"
+ },
+ "Obsbot_tail2_OA_E_CM103_15.6.0.0_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "b9aa44037b70a773e979958e5a4e6f101602efa99c4383e2329a1f146e1b65e1",
+  "size": 158192,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-2-remote/Obsbot_tail2_OA_E_CM103_15.6.0.0_release.bin"
+ },
+ "Obsbot_tail2_OA_E_CM103_7.2.14.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "ab88c568f348c782ac9383e0c15e953a379c521ccdf3c08e0690f95fc0ff78d3",
+  "size": 383080008,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tail2_OA_E_CM103_7.2.14.1_release.bin"
+ },
+ "Obsbot_tail2s_OA_E_CM103A_15.6.0.0_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "595dd27e32e9b8318979ff83ef8e4cf922484411cd8323e1bca05c6179e17858",
+  "size": 158192,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-2s-remote/Obsbot_tail2s_OA_E_CM103A_15.6.0.0_release.bin"
+ },
+ "Obsbot_tail2s_OA_E_CM103A_7.5.5.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "2219ed6300eaefd0d2e274ff31ed73ca8f6ed874aa6b3c9e1c85f1059823e795",
+  "size": 398640724,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-2s/Obsbot_tail2s_OA_E_CM103A_7.5.5.1_release.bin"
+ },
+ "Obsbot_tailair2_OA_E_TC101_1.25.208.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "abf9c15a24faee3492468bbdce8e0af53bdf7608c0707d7379ad2e5e8354446f",
+  "size": 437038392,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tailair2_OA_E_TC101_1.25.208.1_release.bin"
+ },
+ "Obsbot_tailair_OA_E_SSC359G_15.6.0.0_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "bf10fdb9ab35e57de3ccc8bf5bb16b7bc71cb2d5ec93894ca0d146beaa5b2456",
+  "size": 158192,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-air-remote/Obsbot_tailair_OA_E_SSC359G_15.6.0.0_release.bin"
+ },
+ "Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "024da2626e680288d891dc70eecd40abf6aefe8a3634bc9c6922e17828955757",
+  "size": 176737736,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin"
+ },
  "Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin": {
   "pinned": "2026-11-25",
   "sha256": "70d0cd9b89cfd569cd693c32b9408baf6bddba1a3ea8205c92cbf2d3cfc2b9f2",
   "size": 148272024,
   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-2/Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin"
+ },
+ "Obsbot_tiny3_OA_E_PW106_6.6.11.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "db2aeb14ff883d01883de9e4dbc393c8ec49222a461580c70ef3bc0b2275c9f7",
+  "size": 158249388,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tiny3_OA_E_PW106_6.6.11.1_release.bin"
+ },
+ "Obsbot_tiny3lite_OA_E_PW105_6.5.11.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "ffde1f1637cfcb6fafb878e151543c5c816726cbc538c9656253fc883cebdb13",
+  "size": 157812368,
+  "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tiny3lite_OA_E_PW105_6.5.11.1_release.bin"
+ },
+ "Obsbot_tiny_2P_OA_E_All_1.0.6.2_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "520d6a5e0b2638b4524a53a55cb27a8338d16cab167d729db4e87ca7e60e0b3f",
+  "size": 235328096,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny/Obsbot_tiny_2P_OA_E_All_1.0.6.2_release.bin"
+ },
+ "Obsbot_tiny_2P_OA_E_All_1.2.6.2_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "0585093683ddd0cc24f845d2fa154a3a52a70e8bd95a2dd2fa4861c272d3aef2",
+  "size": 89104188,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-4k/Obsbot_tiny_2P_OA_E_All_1.2.6.2_release.bin"
+ },
+ "Obsbot_tinyse_OA_E_PW107_6.4.4.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "eedb23b96396ae3ff684e894acb7f52366e4ce038404ebea8cd1638cb43995c9",
+  "size": 92667452,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-se/Obsbot_tinyse_OA_E_PW107_6.4.4.1_release.bin"
+ },
+ "Obsbot_ty2lite_OA_E_PW103_6.2.8.1_release.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "afa02c0226abd75c11582708a28cffee95b431cdfa4224c683537f5bd290f01a",
+  "size": 92536416,
+  "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-2-lite/Obsbot_ty2lite_OA_E_PW103_6.2.8.1_release.bin"
+ },
+ "Remo_Obsbot_UGP_V7.2.2.71.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "fb3fc448b7f0d04662c0700fd114008d774901c29c44dd69b039ee8ade8365d5",
+  "size": 123459964,
+  "url": "https://resource-cdn.obsbothk.com/firmware/Remo_Obsbot_UGP_V7.2.2.71.bin"
+ },
+ "Remo_Obsbot_UGP_V7.4.1.1.bin": {
+  "pinned": "2026-11-25",
+  "sha256": "0636fd76a52d471bd78c179edfe3dcd562125058dfe2a28781e8c52624f0dc35",
+  "size": 137211038,
+  "url": "https://resource-cdn.obsbothk.com/firmware/Remo_Obsbot_UGP_V7.4.1.1.bin"
  }
 }
