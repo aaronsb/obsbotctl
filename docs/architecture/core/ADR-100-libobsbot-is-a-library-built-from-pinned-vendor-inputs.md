@@ -65,7 +65,7 @@ basis:
   - evidence: "In Meet 2 firmware v4.4.7.1, the GPL kernel module remo_multi_usb.ko holds the camera's USB IDs (3564:fefb) and its extension-unit GUID, and the closed application /root/app/bin/camera names 52 Remo_Uvc_Event handlers. Recorded with reproducing commands in notes/investigation/003-device-side-extension-unit.md (local, not published)."
   - evidence: "OBSBOT's download pages list firmware for about 29 products, more than the 17 the SDK header names. The CDN refuses unsigned requests with HTTP 403; the page obtains a signed link by POSTing the file URL to remo-api.obsbot.com/fms/v1/files/cdn/authorization."
 observable:
-  - 'run: cargo metadata --no-deps --format-version 1 | python3 -c "import sys,json;print(sorted(p[\"name\"] for p in json.load(sys.stdin)[\"packages\"]))"   # prints [''obsbot'', ''obsbotctl'']'
+  - 'run: cargo metadata --no-deps --format-version 1 | python3 -c "import sys,json;print(sorted(p[\"name\"] for p in json.load(sys.stdin)[\"packages\"]))"   # prints [''obsbot'', ''obsbot-proto'', ''obsbotctl'']'
   - 'see: no file in the repository has the SHA256 of a pinned vendor SDK file or firmware image'
   - 'see: each camera listed as supported names the evidence grade behind each of its controls'
 agent:
