@@ -1,0 +1,139 @@
+{
+ "discovered": "2026-11-25",
+ "files": [
+  {
+   "file": "Obsbot_Tail2ADV_OA_E_CM104_1.26.2.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_Tail2ADV_OA_E_CM104_1.26.2.1_release.bin"
+  },
+  {
+   "file": "Obsbot_hdmibox_OA_E_SSC359G_8.0.5.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-hdmibox/Obsbot_hdmibox_OA_E_SSC359G_8.0.5.1_release.bin"
+  },
+  {
+   "file": "Obsbot_mc101_OA_W_MC101_3.0.10.0.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-vox-se/Obsbot_mc101_OA_W_MC101_3.0.10.0.bin"
+  },
+  {
+   "file": "Obsbot_me_1P_OA_E_All_3.0.1.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-me/Obsbot_me_1P_OA_E_All_3.0.1.1_release.bin"
+  },
+  {
+   "file": "Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meet2_OA_E_PW203_4.4.7.1_release.bin"
+  },
+  {
+   "file": "Obsbot_meet3_OA_E_PW208_1.8.19.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meet3_OA_E_PW208_1.8.19.1_release.bin"
+  },
+  {
+   "file": "Obsbot_meet_OA_E_All_4.0.6.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-meet-4k/Obsbot_meet_OA_E_All_4.0.6.1_release.bin"
+  },
+  {
+   "file": "Obsbot_meet_OA_E_All_4.2.6.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-meet/Obsbot_meet_OA_E_All_4.2.6.1_release.bin"
+  },
+  {
+   "file": "Obsbot_meetflip_OA_E_PW206_4.5.5.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meetflip_OA_E_PW206_4.5.5.1_release.bin"
+  },
+  {
+   "file": "Obsbot_meetse2_OA_E_PW209_1.4.13.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meetse2_OA_E_PW209_1.4.13.1_release.bin"
+  },
+  {
+   "file": "Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_meetse_OA_E_PW204_4.6.5.1_release.bin"
+  },
+  {
+   "file": "Obsbot_ndibox_OA_E_PWA05_8.2.6.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-ndibox/Obsbot_ndibox_OA_E_PWA05_8.2.6.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tail2_OA_E_CM103_15.6.0.0_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-2-remote/Obsbot_tail2_OA_E_CM103_15.6.0.0_release.bin"
+  },
+  {
+   "file": "Obsbot_tail2_OA_E_CM103_7.2.14.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tail2_OA_E_CM103_7.2.14.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tail2s_OA_E_CM103A_15.6.0.0_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-2s-remote/Obsbot_tail2s_OA_E_CM103A_15.6.0.0_release.bin"
+  },
+  {
+   "file": "Obsbot_tail2s_OA_E_CM103A_7.5.5.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-2s/Obsbot_tail2s_OA_E_CM103A_7.5.5.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tailair2_OA_E_TC101_1.25.208.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tailair2_OA_E_TC101_1.25.208.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tailair_OA_E_SSC359G_15.6.0.0_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tail-air-remote/Obsbot_tailair_OA_E_SSC359G_15.6.0.0_release.bin"
+  },
+  {
+   "file": "Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-2/Obsbot_tiny2_OA_E_All_6.0.13.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tiny3_OA_E_PW106_6.6.11.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tiny3_OA_E_PW106_6.6.11.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tiny3lite_OA_E_PW105_6.5.11.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/download/common/Obsbot_tiny3lite_OA_E_PW105_6.5.11.1_release.bin"
+  },
+  {
+   "file": "Obsbot_tiny_2P_OA_E_All_1.0.6.2_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny/Obsbot_tiny_2P_OA_E_All_1.0.6.2_release.bin"
+  },
+  {
+   "file": "Obsbot_tiny_2P_OA_E_All_1.2.6.2_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-4k/Obsbot_tiny_2P_OA_E_All_1.2.6.2_release.bin"
+  },
+  {
+   "file": "Obsbot_tinyse_OA_E_PW107_6.4.4.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-se/Obsbot_tinyse_OA_E_PW107_6.4.4.1_release.bin"
+  },
+  {
+   "file": "Obsbot_ty2lite_OA_E_PW103_6.2.8.1_release.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/obsbot-tiny-2-lite/Obsbot_ty2lite_OA_E_PW103_6.2.8.1_release.bin"
+  },
+  {
+   "file": "Remo_Obsbot_UGP_V7.2.2.71.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/Remo_Obsbot_UGP_V7.2.2.71.bin"
+  },
+  {
+   "file": "Remo_Obsbot_UGP_V7.4.1.1.bin",
+   "url": "https://resource-cdn.obsbothk.com/firmware/Remo_Obsbot_UGP_V7.4.1.1.bin"
+  }
+ ],
+ "pages_missing": [
+  "obsbot-meet-3 (HTTP 404)"
+ ],
+ "pages_read": [
+  "obsbot-tiny-3-series",
+  "obsbot-tail-2",
+  "obsbot-tail-2-adv",
+  "obsbot-tiny-se",
+  "obsbot-meet-se",
+  "obsbot-meet-flip",
+  "obsbot-tail-air",
+  "obsbot-tail-air-2",
+  "obsbot-talent-2",
+  "obsbot-talent",
+  "obsbot-tiny-2",
+  "obsbot-tiny-2-lite",
+  "obsbot-tiny-series",
+  "obsbot-meet-2",
+  "obsbot-meet-series",
+  "obsbot-me",
+  "accessories"
+ ]
+}

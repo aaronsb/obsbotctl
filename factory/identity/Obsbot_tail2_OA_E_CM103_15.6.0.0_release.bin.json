@@ -1,0 +1,16 @@
+{
+ "image": "Obsbot_tail2_OA_E_CM103_15.6.0.0_release.bin",
+ "sha256": "b9aa44037b70a773e979958e5a4e6f101602efa99c4383e2329a1f146e1b65e1",
+ "size": 158192,
+ "header": {
+  "product": "Obsbot_tail2",
+  "region": "OA_E",
+  "version": "15.6.0.0",
+  "chip": "CM103",
+  "build": "release"
+ },
+ "partition_table_base": null,
+ "partitions": [],
+ "unpacked": false,
+ "reason": "no OBSBOT partition table found"
+}

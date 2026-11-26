@@ -1,0 +1,131 @@
+{
+ "image": "Obsbot_ndibox_OA_E_PWA05_8.2.6.1_release.bin",
+ "sha256": "dd66fdfd09fd7e4771e683c928ab92a184419f9461e21cefea77dc6e2836b1c0",
+ "size": 73216856,
+ "header": {
+  "product": "Obsbot_ndibox",
+  "region": "OA_E",
+  "version": "8.2.6.1",
+  "chip": "PWA05",
+  "build": "release"
+ },
+ "partition_table_base": 512,
+ "partitions": [
+  {
+   "name": "config",
+   "type": 0,
+   "offset": 2560,
+   "size": 3104,
+   "magic": "23212f62"
+  },
+  {
+   "name": "DTB0.bin",
+   "type": 6,
+   "offset": 5664,
+   "size": 30448,
+   "magic": "d00dfeed"
+  },
+  {
+   "name": "KERNEL0.bin",
+   "type": 7,
+   "offset": 36112,
+   "size": 4285368,
+   "magic": "1f8b0800"
+  },
+  {
+   "name": "ROOTFS.ubi",
+   "type": 9,
+   "offset": 4321480,
+   "size": 46923776,
+   "magic": "55424923"
+  },
+  {
+   "name": "UBOOT0.bin",
+   "type": 2,
+   "offset": 51245256,
+   "size": 631112,
+   "magic": "27051956"
+  },
+  {
+   "name": "UBOOT1.bin",
+   "type": 3,
+   "offset": 51876368,
+   "size": 631112,
+   "magic": "27051956"
+  },
+  {
+   "name": "UPDATERFS.ubi",
+   "type": 8,
+   "offset": 52507480,
+   "size": 20709376,
+   "magic": "55424923"
+  }
+ ],
+ "filesystems": {
+  "ROOTFS.ubi": {
+   "exit": 0,
+   "files": 1220,
+   "gadget_modules": [
+    {
+     "path": "1817307414/root/lib/modules/5.4.94/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "fa013f80424e4023cff0b3065dba99eeff2ed67c2ff7dc7898830e6d9b96dc81",
+     "modinfo": {
+      "description": "USB Function Filesystem",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "5.4.94 SMP preempt mod_unload aarch64"
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "1817307414/root/lib/modules/5.4.94/kernel/drivers/usb/gadget/legacy/g_mass_storage.ko",
+     "sha256": "c9e10073eebeb0a53eabae31db1dec4dc8b064b204cba57d6419f509e352b8de",
+     "modinfo": {
+      "description": "Mass Storage Gadget",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "usb_f_mass_storage,libcomposite",
+      "vermagic": "5.4.94 SMP preempt mod_unload aarch64"
+     },
+     "usb_ids": [],
+     "extension_units": []
+    }
+   ]
+  },
+  "UPDATERFS.ubi": {
+   "exit": 0,
+   "files": 900,
+   "gadget_modules": [
+    {
+     "path": "696582337/updater/lib/modules/5.4.94/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "fa013f80424e4023cff0b3065dba99eeff2ed67c2ff7dc7898830e6d9b96dc81",
+     "modinfo": {
+      "description": "USB Function Filesystem",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "5.4.94 SMP preempt mod_unload aarch64"
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "696582337/updater/lib/modules/5.4.94/kernel/drivers/usb/gadget/legacy/g_mass_storage.ko",
+     "sha256": "c9e10073eebeb0a53eabae31db1dec4dc8b064b204cba57d6419f509e352b8de",
+     "modinfo": {
+      "description": "Mass Storage Gadget",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "usb_f_mass_storage,libcomposite",
+      "vermagic": "5.4.94 SMP preempt mod_unload aarch64"
+     },
+     "usb_ids": [],
+     "extension_units": []
+    }
+   ]
+  }
+ },
+ "unpacked": true
+}

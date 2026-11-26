@@ -1,0 +1,213 @@
+{
+ "image": "Obsbot_me_1P_OA_E_All_3.0.1.1_release.bin",
+ "sha256": "c3bc690e6ec094874b88a6d58de779f6c118401b16ab18ed8aa2728065a75d1f",
+ "size": 83291908,
+ "header": {
+  "product": "Obsbot_me_1P",
+  "region": "OA_E",
+  "version": "3.0.1.1",
+  "chip": "SSC336Q",
+  "build": "release"
+ },
+ "partition_table_base": 512,
+ "partitions": [
+  {
+   "name": "AIFS.ubi",
+   "type": 9,
+   "offset": 2816,
+   "size": 34209792,
+   "magic": "55424923"
+  },
+  {
+   "name": "config",
+   "type": 0,
+   "offset": 34212608,
+   "size": 2820,
+   "magic": "23212f62"
+  },
+  {
+   "name": "KERNEL.bin",
+   "type": 4,
+   "offset": 34215428,
+   "size": 1803756,
+   "magic": "27051956"
+  },
+  {
+   "name": "RECOVERY.bin",
+   "type": 5,
+   "offset": 36019184,
+   "size": 1803756,
+   "magic": "27051956"
+  },
+  {
+   "name": "ROOTFS.ubi",
+   "type": 8,
+   "offset": 37822940,
+   "size": 34209792,
+   "magic": "55424923"
+  },
+  {
+   "name": "UBOOT0.bin",
+   "type": 1,
+   "offset": 72032732,
+   "size": 190100,
+   "magic": "27051956"
+  },
+  {
+   "name": "UBOOT1.bin",
+   "type": 2,
+   "offset": 72222832,
+   "size": 190100,
+   "magic": "27051956"
+  },
+  {
+   "name": "UPDATERFS.ubi",
+   "type": 10,
+   "offset": 72412932,
+   "size": 10878976,
+   "magic": "55424923"
+  }
+ ],
+ "filesystems": {
+  "AIFS.ubi": {
+   "exit": 0,
+   "files": 17,
+   "gadget_modules": []
+  },
+  "ROOTFS.ubi": {
+   "exit": 0,
+   "files": 733,
+   "gadget_modules": [
+    {
+     "path": "1136881216/root/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "sha256": "e7a8becce8d5fd1e691e9940ccf553f23c92b5759466f68f7d164f910c7069a6",
+     "modinfo": {
+      "description": "OBSBOT Me",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.84 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "a29e7641-de04-47e3-8b2b-f4341aff003b",
+       "num_controls": 7
+      },
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 7
+      }
+     ]
+    },
+    {
+     "path": "1136881216/root/lib/modules/4.9.84/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "849e86f946ee5c9fecc2b8f0a6961ef8e2f7c13b2947d788c4e6f95b477612ad",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.84 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "1136881216/root/lib/modules/4.9.84/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "dd74ed79afeb66a2b14be7cb9cc7923b46bffbb17d3106c56fdd5474f76be30e",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.84 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  },
+  "UPDATERFS.ubi": {
+   "exit": 0,
+   "files": 513,
+   "gadget_modules": [
+    {
+     "path": "2138895964/updater/lib/modules/4.9.84/extra/remo_multi_usb.ko",
+     "sha256": "e7a8becce8d5fd1e691e9940ccf553f23c92b5759466f68f7d164f910c7069a6",
+     "modinfo": {
+      "description": "OBSBOT Me",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.84 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "a29e7641-de04-47e3-8b2b-f4341aff003b",
+       "num_controls": 7
+      },
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 7
+      }
+     ]
+    },
+    {
+     "path": "2138895964/updater/lib/modules/4.9.84/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "849e86f946ee5c9fecc2b8f0a6961ef8e2f7c13b2947d788c4e6f95b477612ad",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.84 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "2138895964/updater/lib/modules/4.9.84/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "dd74ed79afeb66a2b14be7cb9cc7923b46bffbb17d3106c56fdd5474f76be30e",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.84 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "unpacked": true
+}

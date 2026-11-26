@@ -1,0 +1,16 @@
+{
+ "image": "Obsbot_tailair2_OA_E_TC101_1.25.208.1_release.bin",
+ "sha256": "abf9c15a24faee3492468bbdce8e0af53bdf7608c0707d7379ad2e5e8354446f",
+ "size": 437038392,
+ "header": {
+  "product": "Obsbot_tc101",
+  "region": "OA_W",
+  "version": "1.25.208.1",
+  "chip": "TC101",
+  "build": "release"
+ },
+ "partition_table_base": null,
+ "partitions": [],
+ "unpacked": false,
+ "reason": "no OBSBOT partition table found"
+}

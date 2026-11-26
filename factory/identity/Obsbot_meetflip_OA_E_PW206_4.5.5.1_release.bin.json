@@ -1,0 +1,231 @@
+{
+ "image": "Obsbot_meetflip_OA_E_PW206_4.5.5.1_release.bin",
+ "sha256": "c80c17ac8cc9781d9824701b802a9a0f2cbac80c899052aad0d4f409a9a5c308",
+ "size": 76207512,
+ "header": {
+  "product": "Obsbot_pw206",
+  "region": "OA_E",
+  "version": "4.5.5.1",
+  "chip": "PW206",
+  "build": "release"
+ },
+ "partition_table_base": 512,
+ "partitions": [
+  {
+   "name": "AIFS.ubi",
+   "type": 11,
+   "offset": 2816,
+   "size": 14155776,
+   "magic": "55424923"
+  },
+  {
+   "name": "config",
+   "type": 0,
+   "offset": 14158592,
+   "size": 3512,
+   "magic": "23212f62"
+  },
+  {
+   "name": "KERNEL.bin",
+   "type": 9,
+   "offset": 14162104,
+   "size": 2657404,
+   "magic": "27051956"
+  },
+  {
+   "name": "RECOVERY.bin",
+   "type": 10,
+   "offset": 16819508,
+   "size": 2657404,
+   "magic": "27051956"
+  },
+  {
+   "name": "ROOTFS.ubi",
+   "type": 12,
+   "offset": 19476912,
+   "size": 44040192,
+   "magic": "55424923"
+  },
+  {
+   "name": "UBOOT0.bin",
+   "type": 3,
+   "offset": 63517104,
+   "size": 250356,
+   "magic": "27051956"
+  },
+  {
+   "name": "UBOOT1.bin",
+   "type": 6,
+   "offset": 63767460,
+   "size": 250356,
+   "magic": "27051956"
+  },
+  {
+   "name": "UPDATERFS.ubi",
+   "type": 13,
+   "offset": 64017816,
+   "size": 12189696,
+   "magic": "55424923"
+  }
+ ],
+ "filesystems": {
+  "AIFS.ubi": {
+   "exit": 0,
+   "files": 96,
+   "gadget_modules": []
+  },
+  "ROOTFS.ubi": {
+   "exit": 0,
+   "files": 1306,
+   "gadget_modules": [
+    {
+     "path": "835699976/root/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "sha256": "6220cf59f72ee22b2b8e6d5f3c8b804e05686a0c204d2165c5ecdd2fec16e0d8",
+     "modinfo": {
+      "description": "OBSBOT Meet Flip",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,u_ether",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:ff06"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 19
+      }
+     ]
+    },
+    {
+     "path": "835699976/root/lib/modules/5.10.117/kernel/drivers/sstar/usb/gadget/legacy/g_sstar_gadget.ko",
+     "sha256": "4192406a90a36fa8fc87bb15298f116aa85ca3f1e63c0325b210e7229e0c8263",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    },
+    {
+     "path": "835699976/root/lib/modules/5.10.117/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "22604443c75933f4c1e7eb941620b0dbfdc1dbeda9e312ca3da8678575883280",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "835699976/root/lib/modules/5.10.117/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "d4a75846b226e84349f6a3e0f709f269fedcaa7c55d64e623cfec907d3b158dc",
+     "modinfo": {
+      "description": "USB Function Filesystem",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    }
+   ]
+  },
+  "UPDATERFS.ubi": {
+   "exit": 0,
+   "files": 687,
+   "gadget_modules": [
+    {
+     "path": "1482146338/updater/lib/modules/5.10.117/extra/remo_multi_usb.ko",
+     "sha256": "6220cf59f72ee22b2b8e6d5f3c8b804e05686a0c204d2165c5ecdd2fec16e0d8",
+     "modinfo": {
+      "description": "OBSBOT Meet Flip",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,u_ether",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:ff06"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 19
+      }
+     ]
+    },
+    {
+     "path": "1482146338/updater/lib/modules/5.10.117/kernel/drivers/sstar/usb/gadget/legacy/g_sstar_gadget.ko",
+     "sha256": "4192406a90a36fa8fc87bb15298f116aa85ca3f1e63c0325b210e7229e0c8263",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    },
+    {
+     "path": "1482146338/updater/lib/modules/5.10.117/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "22604443c75933f4c1e7eb941620b0dbfdc1dbeda9e312ca3da8678575883280",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "1482146338/updater/lib/modules/5.10.117/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "d4a75846b226e84349f6a3e0f709f269fedcaa7c55d64e623cfec907d3b158dc",
+     "modinfo": {
+      "description": "USB Function Filesystem",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "5.10.117 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    }
+   ]
+  }
+ },
+ "unpacked": true
+}

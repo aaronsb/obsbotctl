@@ -1,0 +1,16 @@
+{
+ "image": "Remo_Obsbot_UGP_V7.4.1.1.bin",
+ "sha256": "0636fd76a52d471bd78c179edfe3dcd562125058dfe2a28781e8c52624f0dc35",
+ "size": 137211038,
+ "header": {
+  "product": "Obsbot",
+  "region": "\u000b_\ti",
+  "version": "7.4.1.1",
+  "chip": "",
+  "build": ""
+ },
+ "partition_table_base": null,
+ "partitions": [],
+ "unpacked": false,
+ "reason": "no OBSBOT partition table found"
+}

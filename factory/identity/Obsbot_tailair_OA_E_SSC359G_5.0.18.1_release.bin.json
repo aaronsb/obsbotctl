@@ -1,0 +1,263 @@
+{
+ "image": "Obsbot_tailair_OA_E_SSC359G_5.0.18.1_release.bin",
+ "sha256": "024da2626e680288d891dc70eecd40abf6aefe8a3634bc9c6922e17828955757",
+ "size": 176737736,
+ "header": {
+  "product": "Obsbot_tailair",
+  "region": "OA_E",
+  "version": "5.0.18.1",
+  "chip": "SSC359G",
+  "build": "release"
+ },
+ "partition_table_base": 183148,
+ "partitions": [
+  {
+   "name": "AIFS.ubi",
+   "type": 10,
+   "offset": 185452,
+   "size": 66453504,
+   "magic": "55424923"
+  },
+  {
+   "name": "config",
+   "type": 0,
+   "offset": 66638956,
+   "size": 3456,
+   "magic": "23212f62"
+  },
+  {
+   "name": "KERNEL.bin",
+   "type": 7,
+   "offset": 66642412,
+   "size": 1978208,
+   "magic": "27051956"
+  },
+  {
+   "name": "RECOVERY.bin",
+   "type": 8,
+   "offset": 68620620,
+   "size": 1978208,
+   "magic": "27051956"
+  },
+  {
+   "name": "ROOTFS.ubi",
+   "type": 11,
+   "offset": 70598828,
+   "size": 78905344,
+   "magic": "55424923"
+  },
+  {
+   "name": "UBOOT0.bin",
+   "type": 4,
+   "offset": 149504172,
+   "size": 250284,
+   "magic": "27051956"
+  },
+  {
+   "name": "UBOOT1.bin",
+   "type": 5,
+   "offset": 149754456,
+   "size": 250284,
+   "magic": "27051956"
+  },
+  {
+   "name": "UPDATERFS.ubi",
+   "type": 9,
+   "offset": 150004740,
+   "size": 26607616,
+   "magic": "55424923"
+  }
+ ],
+ "filesystems": {
+  "AIFS.ubi": {
+   "exit": 0,
+   "files": 47,
+   "gadget_modules": []
+  },
+  "ROOTFS.ubi": {
+   "exit": 0,
+   "files": 1422,
+   "gadget_modules": [
+    {
+     "path": "261780802/root/lib/modules/4.9.227/extra/remo_ffs_mtp.ko",
+     "sha256": "b5803e3a21c56108a49b228ac5627da7635fe7db620fccb69321718063f26e35",
+     "modinfo": {
+      "description": "OBSBOT MTP",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "usb_f_fs,libcomposite",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fef8"
+     ],
+     "extension_units": []
+    },
+    {
+     "path": "261780802/root/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "sha256": "5e9471eefaeb97512f61efa046e641d99014127c631448710f26ad324fd98f49",
+     "modinfo": {
+      "description": "OBSBOT Tail Air",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,usb_f_uvc,u_ether,u_audio",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fef6"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 19
+      }
+     ]
+    },
+    {
+     "path": "261780802/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "d375ee4aa32f2982ef58c7068218d5439ab352f64dfd931f45a365080db2c4cf",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "261780802/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "7b1b1461420df4f85e9961cf48b49532120633d8af71fac87197a558b6aceaf2",
+     "modinfo": {
+      "description": "OBSBOT MTP",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "261780802/root/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "399d97c6013c128212ca431c8a9f99cc6314831fcdc08480de4bf6bee4af1ae5",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  },
+  "UPDATERFS.ubi": {
+   "exit": 0,
+   "files": 629,
+   "gadget_modules": [
+    {
+     "path": "548876826/updater/lib/modules/4.9.227/extra/remo_ffs_mtp.ko",
+     "sha256": "b5803e3a21c56108a49b228ac5627da7635fe7db620fccb69321718063f26e35",
+     "modinfo": {
+      "description": "OBSBOT MTP",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "usb_f_fs,libcomposite",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fef8"
+     ],
+     "extension_units": []
+    },
+    {
+     "path": "548876826/updater/lib/modules/4.9.227/extra/remo_multi_usb.ko",
+     "sha256": "5e9471eefaeb97512f61efa046e641d99014127c631448710f26ad324fd98f49",
+     "modinfo": {
+      "description": "OBSBOT Tail Air",
+      "license": "GPL",
+      "author": "ChengQun.Zhong",
+      "depends": "libcomposite,usb_f_uvc,u_ether,u_audio",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [
+      "3564:fef6"
+     ],
+     "extension_units": [
+      {
+       "unit": 2,
+       "guid": "9a1e7291-6843-4683-6d92-39bc7906ee49",
+       "num_controls": 19
+      }
+     ]
+    },
+    {
+     "path": "548876826/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ether.ko",
+     "sha256": "d375ee4aa32f2982ef58c7068218d5439ab352f64dfd931f45a365080db2c4cf",
+     "modinfo": {
+      "description": "RNDIS/Ethernet Gadget",
+      "license": "GPL",
+      "author": "David Brownell, Benedikt Spanger",
+      "depends": "libcomposite,u_ether,usb_f_rndis",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "548876826/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_ffs.ko",
+     "sha256": "7b1b1461420df4f85e9961cf48b49532120633d8af71fac87197a558b6aceaf2",
+     "modinfo": {
+      "description": "OBSBOT MTP",
+      "license": "GPL",
+      "author": "Michal Nazarewicz",
+      "depends": "libcomposite,usb_f_fs",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": []
+    },
+    {
+     "path": "548876826/updater/lib/modules/4.9.227/kernel/drivers/usb/gadget/legacy/g_webcam.ko",
+     "sha256": "399d97c6013c128212ca431c8a9f99cc6314831fcdc08480de4bf6bee4af1ae5",
+     "modinfo": {
+      "description": "Webcam Video Gadget",
+      "license": "GPL",
+      "author": "Laurent Pinchart",
+      "depends": "libcomposite,u_ether,usb_f_uvc",
+      "vermagic": "4.9.227 SMP preempt mod_unload ARMv7 thumb2 p2v8 "
+     },
+     "usb_ids": [],
+     "extension_units": [
+      {
+       "unit": 6,
+       "guid": "23e49ed0-1178-4f31-ae52-d2fb8a8d3b48",
+       "num_controls": 14
+      },
+      {
+       "unit": 2,
+       "guid": "2c49d16a-32b8-4485-3ea8-643a152362f2",
+       "num_controls": 6
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "unpacked": true
+}
