@@ -1,0 +1,12 @@
+{
+ "libdev_v2.1.0_7": {
+  "lib": "lib/libdev.so.1.0.2",
+  "sha256": "d9fc9cd7f6743a3eefd50dbae104ccaff9c3d45ee37816722cb0bd683854e7a4",
+  "obtain": "request from OBSBOT at https://www.obsbot.com/sdk"
+ },
+ "libdev_v2.1.0_8": {
+  "lib": "lib/libdev.so.1.0.0",
+  "sha256": "3eef907f5eec5cc4ee3d3df3a89cd736458bf48f815612b6bed879ea62b08c55",
+  "obtain": "request from OBSBOT at https://www.obsbot.com/sdk"
+ }
+}
